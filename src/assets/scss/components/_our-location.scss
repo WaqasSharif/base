@@ -1,0 +1,19 @@
+
+.our-location {
+    position: relative;
+    @media screen and (max-width: 575px) {
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .map {
+        height: 400px;
+        width: 100%;
+        position: relative;
+        iframe {
+            width: 100%;
+            height: inherit;
+        }
+    }
+}

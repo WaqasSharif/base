@@ -1,0 +1,251 @@
+/**
+ * Basic typography style for copy text
+ A solution for this problem is percentage. Usually default font-size of the browser is 16px.
+ Setting font-size: 100% will make 1rem = 16px. But it will make calculations a little difficult.
+ A better way is to set font-size: 62.5%. Because 62.5% of 16px is 10px. Which makes 1rem = 10px.
+ CALCULATION: Element font size in rem x 16px;
+ */
+
+ // Body text
+// -------------------------
+
+// html {
+//   font-size: 62.5%;
+// }
+
+body {
+  letter-spacing: normal;
+  font-size: 15px;
+  font-weight: $font-weight-normal;
+  line-height: 35px;
+  font-family: $font-family-base;
+  color: #333333;
+  @include media-breakpoint-up(lg) {
+    @include font-size(20px);
+  }
+}
+
+.container {
+  @media (max-width: 767px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
+
+.title.with-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paragraph {
+  margin-bottom: 1.5rem;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 2rem;
+  }
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      letter-spacing: normal;
+      color: #333333;
+      @include media-breakpoint-up(lg) {
+        font-size: 1.25rem;
+      }
+    }
+    p+p {
+      margin-top: 1rem;
+      @media (min-width: 992px) {
+          margin-top: 1.5rem;
+      }
+  }
+  &.light {
+    p,
+    ul li, 
+    ol li,
+    ol li a,
+    ul li a {
+      color: $white;
+    }
+  }
+  
+  &.small p {
+    font-size: 14px;
+    line-height: 1.5;
+    @include media-breakpoint-up(lg) {
+      font-size: 16px;
+    }
+  }
+  &.medium p {
+    font-size: 16px;
+    line-height: 24px;
+    @include media-breakpoint-up(lg) {
+      font-size: 18px;
+    }
+  }
+  &.big p {
+    font-size: 1.25rem;
+    line-height: 1.25;
+    letter-spacing: normal;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+  }
+  &.heading-font {
+    font-family:$font-family-rozha;
+  }
+}
+
+.small-heading {
+  p {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: $primary;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  &.bold {
+    p {
+      font-weight: bold;
+    }
+  }
+  &.light {
+    p {
+      color: $white;
+    }
+    span svg,
+    span svg path,
+    span svg g {
+      fill: $white;
+    }
+  }
+  &.with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      margin-bottom: 0;
+    }
+    span {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 16px;
+        height: 16px;
+        path, g {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}
+
+.l-spacing {
+  p, h1,h2,h3,h4,h5,h6, span, a {
+    letter-spacing: 0;
+  }
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+ol li,
+ul li,
+p {
+  margin: 0;
+}
+
+a {
+  color: #4a68a8;
+  &:hover,
+  &:focus {
+    color: darken(#4a68a8, 15%);;
+  }
+}
+
+//
+// Headings
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+.title {
+  h1,h2,h3,h4,h5,h6{
+      letter-spacing: 0;
+  }
+
+  &.light {
+    h1,h2,h3,h4,h5,h6, 
+    .paragraph p,
+    .small-heading p{
+      color: $white;
+    }
+  }
+  
+  h1 {
+    font-size: 3rem;
+    @include media-breakpoint-up(md) {
+      font-size: 60px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 80px;
+    }
+  }
+  h2 {
+    font-size: 2.5rem;
+    @include media-breakpoint-up(md) {
+      font-size: 3rem;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 60px;
+    }
+  }
+  h3 {
+    font-size: 2rem;
+    @include media-breakpoint-up(md) {
+      font-size: 2.5rem;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 50px;
+    }
+  }
+
+  h4 {
+    font-size: 2rem;
+    @include media-breakpoint-up(lg) {
+      font-size: 40px;
+    }
+  }
+  h5 {
+    font-size: 1.5rem;
+    @include media-breakpoint-up(md) {
+      font-size: 30px;
+    }
+  }
+  h6 {
+    font-size: 1rem;
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+    }
+  }
+}

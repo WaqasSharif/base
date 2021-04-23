@@ -1,0 +1,243 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer-wrapper {
+    background-color: #0E1544;
+    padding: 26px 0;
+    .details {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+            color: #A1ABC0;
+            text-align: center;
+            line-height: 1.1;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+    }
+}
+.quick-links-wrapper {
+    background-color: #131C52;
+    padding: 78px 0;
+    .links-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        > div {
+            margin-bottom: 70px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @media screen and (min-width: 1200px) {
+                margin-bottom: 0;
+            } 
+        }
+        @media screen and (max-width: 1199px) {
+            .logo-and-lnks {
+                order: 1;
+                width: 100% !important;
+            }
+            .contact-info {
+                order: 2;
+            }
+            .grief-support {
+                order: 3;
+            }
+        }
+        .logo-and-lnks,
+        .contact-info,
+        .grief-support {
+            width: 100%;
+            @media screen and (min-width: 768px) {
+                width: 50%;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            @media screen and (min-width: 1200px) {
+                width: 33.25%;
+            }
+        }
+    }
+}
+.contact-info {
+    text-align: center;
+    .info {
+        p {
+            color: #A1ABC0;
+            font-size: 13px;
+            line-height: 23px;
+        }
+    }
+}
+.social-links {
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        li {
+            list-style: none;
+            margin-right: 29px;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                svg, img {
+                    height: 31px;
+                }
+                &:hover {
+                    svg g,
+                    svg path {
+                        fill: #8f9cb7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.logo-and-lnks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .logo {
+        margin-bottom: 40px;
+        img {
+            width: 260px;
+            @media screen and (min-width: 414px) {
+                width: 300px;
+            }
+        }
+    }
+}
+
+
+
+
+.grief-support {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .logo,
+    .description,
+    .title {
+        margin-bottom: .75rem;
+    }
+    .title h6 {
+        color: $white;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-family: $font-family-base;
+    }
+    .description {
+        p {
+            line-height: 24px;
+            color: $white;
+            font-size: 12px;
+            text-align: center;
+            color: #A1ABC0;
+        }
+    }
+}
+
+.quick-links-wrpper {
+    background-color: $primary;
+    padding: 68px 0 71px 0;
+    @media screen and (max-width: 767px) {
+        padding: 32px 0 ;
+        text-align: center;
+    }
+    .col-12 {
+        @media screen and (max-width: 991px) {
+            margin-bottom: 1.75rem;
+        }
+    }
+}
+.list-wrap {
+    .title {
+        margin-bottom: 1.5rem;
+        h5 {
+            color: $secondary;
+            font-size: 1.5rem;
+        }
+    }
+    ul li {
+        margin-bottom: .75rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .btn-link {
+            color: $white;
+            letter-spacing: 0;
+        }
+    }
+}
+.list-wrap + .list-wrap {
+    margin-top: 2rem;
+}
+
+
+
+.footer-form {
+    .form-group {
+        margin-bottom: 12px;
+        input {
+            color: #9c9c9c;
+            border-radius: 0;
+            border: 0;
+            height: 46px;
+            font-size: 1rem;
+        }
+    }
+    .btn-wrapper .btn {
+        width: 100%;
+    }
+
+    &.inline {
+        .form-group {
+            input {
+                color: #9c9c9c;
+                border-radius: 0;
+                border: 0;
+                height: 36px;
+                font-size: 12px;
+                border-radius: 4px 0 0 4px;
+            }
+        }
+        .btn-wrapper {
+            line-height: 32px;
+            .btn {
+                width: auto;
+                font-size: 14px;
+                min-width: 75px;
+                height: 36px;
+                line-height: 36px;
+                border-radius: 0 4px 4px 0;
+                &:hover {
+                    transform: none;
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.subscribe-form {
+    .form-group {
+        input {
+            color: #333333;
+            border-radius: 4px;
+            border: 1px solid #131C52;
+            height: 52px;
+            line-height: 52px;
+            font-size: 20px;
+        }
+    }
+}

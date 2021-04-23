@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// covid info top bar.
+// -----------------------------------------------------------------------------
+.top-bar {
+    background-color: $primary;
+    padding: 4px 0;
+    height: auto;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+    min-height: 43px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+    .info {
+        display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 0 24px;
+         @media screen and (max-width: 374px) {
+            flex-direction: column;
+            .phone {
+                margin: 0;
+            }
+         }
+        .details,
+        .link {
+            font-size: 15px;
+            line-height: 1.1; 
+        }
+        .details {
+            color: #fff;
+            margin-right: 4px;
+        }
+        .link {
+            color: #ead472;
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+    .icon {
+        margin-right: 8px;
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
+        font-size: 15px;
+        img, svg {
+            width: 15px;
+            height: 15px;
+            line-height: 15px;
+        }
+    }
+    a {
+        font-size: 15px;
+        font-weight: normal;
+        color: $white;
+        line-height: 1;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// hide covid info once sccroll start 
+.menu-fixed {
+    .covid-top-bar {
+        height: 0;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+    }
+}
+
+
+.page-not-found {
+    padding: 120px 0;
+    padding-top: 220px;
+    background-color: #F4F5F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .four-o-four {
+        font-size: 250px;
+        line-height: 1;
+        font-weight: bold; 
+        color: #A1ABC0;
+    }
+}
+.menu-page-not-found {
+    background-color: $primary;
+    position: fixed;
+}
+
+
+
+
+
+
+
+

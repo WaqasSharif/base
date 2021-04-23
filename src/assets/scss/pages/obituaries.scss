@@ -1,0 +1,143 @@
+.page-obituaries-content {
+    .col-12.col-lg-9 {
+        @media screen and (max-width: 991px) {
+            order: 2;
+        }
+        @media screen and (min-width: 992px) {
+            padding-right: 38px;
+        }
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+            max-width: 675px;
+        }
+    }
+
+    .main-text-module {
+        .title {
+            margin-bottom: 1.5rem;
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 34px;
+            }
+            h2 {
+                line-height: 46px;
+            }
+        }
+    }
+}
+
+
+
+
+.subscribe-box {
+    height: 300px;
+    min-width: 264px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    @media screen and (max-width: 991px) {
+        margin-bottom: 2rem;
+    }
+    .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        img {
+            width: 100%;
+        }
+    }
+    .subscribe-content {
+        position: relative;
+        z-index: 2;
+        padding-top: 48px;
+        padding-left: 26px;
+        padding-right: 26px;
+        text-align: center;
+        .title {
+            margin-bottom: 12px;
+        }
+        .description {
+            margin-bottom: 32px;
+            p {
+                color: #333333;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+        .footer-form {
+            .form-group input {
+                height: 36px;
+                font-size: 14px;
+            }
+            .btn-wrapper .btn {
+                letter-spacing: 0;
+            }
+        }
+    }
+
+
+    
+}
+
+
+.search-field-addon {
+    padding: 24px 32px;
+    background: #F4F5F9;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    justify-content: space-between;
+
+    @media screen and (max-width: 991px) {
+        flex-direction: column;
+        text-align: center;
+        .title {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .title,
+    .input-group {
+        width: 100%;
+        @media screen and (min-width: 992px) {
+            width: 50%;
+        }
+    }
+    .input-group {
+        position: relative;
+        .form-control {
+            height: 52px;
+            border: 1px solid #3e5179;
+            border-radius: 0;
+            padding-right: 64px;
+            font-size: 18px;
+            padding-left: 25px;
+            border-radius: 33px;
+            &:focus,
+            &:active {
+                border-color: #3e5179;
+                box-shadow: none;
+                outline: none;
+            }
+        }
+        .input-group-addon {
+            position: absolute;
+            z-index: 8;
+            background: #131C52;
+            width: 64px;
+            right: 1px;
+            top: 1px;
+            height: 50px;
+            border-radius: 0 26px 26px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img, svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+
