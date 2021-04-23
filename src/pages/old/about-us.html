@@ -3,64 +3,54 @@ layout: default
 title: Home
 ---
 
-
 {{> hero-banner-inner }}
-
-{{> tabs }}
-
-
-<!-- spacer start  -->
-<!-- this is a spacer div - can be used before, after or between two modules - 
-spacer variations are - white-16 - white-24 - white-32 - white-42 - white-48 - white-60 - white-99 - white-110 - white-114 - white-118
-also, if needed to use on background same spacer varations can be used with - transparent - clsas to make it works on backgorund  -->
-<div class="spacer white-48"></div>
-<!-- spacer ends -->
+<div class="spacer white-99"></div>
 
 
 
-<!-- main text module start
-main-text- module handles all type of headings / paragraphs / lists - two cols content etc
-if required mb-0 - mb-1 - mb-2 - mb-3 - mb-4 -  can be used on headings / paragraphs / lists level for margin bottom -->
-<section class="main-text-module">
-    <div class="container">
-        <div class="title mb-32">
-            <h2>How can we help?</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-12">
+            <!-- left nav links  -->
+            <div class="nav-links-wrapper">
+                <div class="flex-column">
+                    <div class="nav-link active">
+                        <a href="about-us.html" >About Us</a>
+                    </div>
+                    <div class="nav-link">
+                        <a href="choose-us.html">Why Choose Us</a>
+                    </div>
+                    <div class="nav-link">
+                        <a href="contact-us.html">contact us</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-<!-- main text module ends  -->
+        <div class="col-lg-9 col-12">
+            <!-- page body right area  -->
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="title mb-32">
+                        <h3>Who We Are</h3>
+                    </div>
+                    <div class="paragraph medium">
+                        <p>The caring and experienced professionals at Westside Funeral Home are here to support you through this difficult time. We offer a range of personalized services to suit your family’s wishes and requirements. You can count on us to help you plan a personal, lasting tribute to your loved one. And we’ll carefully guide you through the many decisions that must be made during this challenging time. </p>
+                        <p>You are welcome to call us at any time of the day, any day of the week, for immediate assistance. Or, visit our funeral home in person at your convenience. We also provide a wealth of information here on our web site so you can learn more from the privacy of your own home.</p>
+                    </div>
+                </div>
 
-<!-- contact us form start  -->
-<section class="contact-us-form">
-    <div class="container">
-        <form>
+            </div>
+        </div>
+      </div>
+</div>
+    
+    
 
-            <div class="form-group">
-                <label for="Name">Name</label>
-                <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="text" class="form-control" id="phone" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-            </div>
-            
-            <div class="btn-wrapper">
-                <button type="submit" class="btn btn-secondary">Send Message</button>
-            </div>
+<div class="spacer white-114"></div>
 
-        </form>
-    </div>
-</section>
-<!-- contact us form ends  -->
 
-{{> our-locations }}
+
+
+
 
 

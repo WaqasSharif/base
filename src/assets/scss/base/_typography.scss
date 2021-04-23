@@ -19,7 +19,7 @@ body {
   font-weight: $font-weight-normal;
   line-height: 35px;
   font-family: $font-family-base;
-  color: #333333;
+  color: $body-copy;
   @include media-breakpoint-up(lg) {
     @include font-size(20px);
   }
@@ -100,11 +100,11 @@ body {
 
 .small-heading {
   p {
-    font-size: 24px;
-    line-height: 30px;
-    letter-spacing: 2.5px;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    color: $primary;
+    color: $black;
     margin: 0;
     margin-bottom: 25px;
   }

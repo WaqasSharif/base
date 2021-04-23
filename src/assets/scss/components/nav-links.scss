@@ -3,24 +3,23 @@
         display: none;
     }
     .nav-link {
-        border-bottom: 1px solid $primary;
         padding: 0;
         a {
-            color: $secondary;
-            font-size: 20px;
+            color: $body-copy;
+            font-size: 14px;
             line-height: 1.1;
-            
             padding: 20px 0;
-            padding-left: 30px;
             position: relative;
             display: flex;
             align-items: center;
             transition: all .3s ease-in-out;
+            text-transform: uppercase;
             &:hover {
                 text-decoration: none;
                 color: $primary;
-                padding-left: 40px;
+                padding-left: 20px;
                 font-weight: bold;
+                background-color: $bg-copy;
                 transition: all .3s ease-in-out;
                 &:after {
                     background-color: $primary;
@@ -28,22 +27,15 @@
                     transition: all .3s ease-in-out;
                 }
             }
-            &:after {
-                content: '';
-                display: block;
-                height: 3px;
-                width: 15px;
-                position: absolute;
-                left: 0;
-                background-color: $secondary;
-                transition: all .3s ease-in-out;
-            }
         }
         &.active {
             a {
                 color: $primary;
                 font-weight: bold;
+                background-color: $bg-copy;
+                padding-left: 10px;
                 &:after {
+                    background-color: $bg-copy;
                     background-color: $primary;
                 }
             }
