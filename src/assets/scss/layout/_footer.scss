@@ -3,14 +3,14 @@
 // -----------------------------------------------------------------------------
 
 .footer-wrapper {
-    background-color: #0E1544;
+    background-color: darken($primary, 15%);;
     padding: 26px 0;
     .details {
         display: flex;
         align-items: center;
         justify-content: center;
         p {
-            color: #A1ABC0;
+            color: $white;
             text-align: center;
             line-height: 1.1;
             font-size: 18px;
@@ -19,7 +19,7 @@
     }
 }
 .quick-links-wrapper {
-    background-color: #131C52;
+    background-color: $primary;
     padding: 78px 0;
     .links-wrap {
         display: flex;
@@ -65,7 +65,7 @@
     text-align: center;
     .info {
         p {
-            color: #A1ABC0;
+            color: $white;
             font-size: 13px;
             line-height: 23px;
         }
@@ -90,7 +90,7 @@
                 &:hover {
                     svg g,
                     svg path {
-                        fill: #8f9cb7;
+                        fill: $white;
                     }
                 }
             }
@@ -137,7 +137,7 @@
             color: $white;
             font-size: 12px;
             text-align: center;
-            color: #A1ABC0;
+            color: $white;
         }
     }
 }
@@ -213,7 +213,7 @@
                 font-size: 14px;
                 min-width: 75px;
                 height: 36px;
-                line-height: 36px;
+                line-height: 32px;
                 border-radius: 0 4px 4px 0;
                 &:hover {
                     transform: none;
@@ -234,7 +234,7 @@
         input {
             color: #333333;
             border-radius: 4px;
-            border: 1px solid #131C52;
+            border: 1px solid $primary;
             height: 52px;
             line-height: 52px;
             font-size: 20px;

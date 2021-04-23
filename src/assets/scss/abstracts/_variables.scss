@@ -5,11 +5,11 @@
 $white:              #fff !default;
 $black:              #000 !default;
 
-$primary:             #131c52 !default;
-$secondary:          #7a8395 !default;
-$bg-copy:         #f4f5f9;
-$body-copy: #666666;
-$body-copy-dark: #333333;
+$primary:             #7e001f !default;
+$secondary:          #ffb81f !default;
+$bg-copy:             #f8f8fa;
+$body-copy:         #2b2b2b;
+$body-copy-dark:    #333333;
 
 
 
@@ -28,7 +28,6 @@ $body-color:                $black !default;
 
 $link-color:                              $primary !default;
 $link-decoration:                         none !default;
-$link-hover-color:                        darken($link-color, 15%) !default;
 $link-hover-decoration:                   underline !default;
 
 
@@ -39,12 +38,24 @@ $link-hover-decoration:                   underline !default;
 $paragraph-margin-bottom:   0 !default;
 
 
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 980px,
+  xl: 1200px
+) !default;
+
+
 // Grid columns
 //
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           20px !default;
+$grid-gutter-width:           30 !default;
 $grid-row-columns:            6 !default;
 
 
@@ -54,9 +65,9 @@ $grid-row-columns:            6 !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-rozha:             'Rozha One', 'Roboto', serif;
-$font-family-base:            'Roboto', sans-serif;
-
+$font-family-italianno:             'Italianno', 'cursive', serif;
+$font-family-base:              'Lato', sans-serif;
+ 
 
 // stylelint-enable value-keyword-case
 
@@ -80,8 +91,8 @@ $line-height-base:            1.5 !default;
 // $h5-font-size:                $font-size-base * 1.5 !default;
 // $h6-font-size:                $font-size-base * 1.25!default;
 
-$headings-margin-bottom:      0 !default;
-$headings-font-family:        $font-family-rozha !default;
+$headings-margin-bottom:      0 !default; 
+$headings-font-family:        $font-family-base !default;
 $headings-font-weight:        normal !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              $primary !default;

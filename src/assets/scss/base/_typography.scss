@@ -94,7 +94,7 @@ body {
     }
   }
   &.heading-font {
-    font-family:$font-family-rozha;
+    font-family:$font-family-base;
   }
 }
 
@@ -172,7 +172,7 @@ a {
   color: #4a68a8;
   &:hover,
   &:focus {
-    color: darken(#4a68a8, 15%);;
+    color: darken(#4a68a8, 15%);
   }
 }
 
