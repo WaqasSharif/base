@@ -52,6 +52,14 @@
             }
         }
     }
+    &.small-icon {
+        .icon {
+            margin-right: 24px;
+            img {
+                height: 24px;
+            }
+        }
+    }
     &.icon-big-box {
         .icon {
             width: 150px;
@@ -77,6 +85,15 @@
                 }
             }
         }
+    }
+    &.white-bg {
+        margin-bottom: 1.5rem;
+        padding: 30px;
+        border: 1px solid #ebebeb;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 6px 5px 0 #0000000d;
+        box-shadow: 0 6px 5px 0 #0000000d;
+        background-color: #fff;
     }
 } 
 

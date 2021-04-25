@@ -49,6 +49,20 @@
     @media screen and (min-width: 992px) {
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     } 
+
+    &.dark {
+        .people .info {
+            .name {
+                h4 {
+                    color: #222;
+                    font-size: 24px;
+                }
+            }
+            .date {
+                color: #8694ac;
+            }
+        }
+    }
 }
 
 
@@ -79,9 +93,11 @@
             margin-top: 6px;
             .name {
                 h4 {
-                    font-size: 1.5rem;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #222;
                     @media screen and (min-width: 992px) {
-                        font-size: 2rem;
+                        font-size: 26px;
                     }
                     
                 }
@@ -90,10 +106,10 @@
                 margin-bottom: 20px;
             }
             .date {
-                font-size: 19px;
+                font-size: 15px;
                 list-style: 1.1;
                 margin-bottom: 8px;
-                color: #8694ac;
+                color: #adadad;
             }
             .btn-wrapper {
                 @media screen and (min-width: 768px) {
@@ -102,6 +118,7 @@
                 .btn {
                     margin-bottom: 9px;
                     max-width: 100%;
+                    font-size: 12px;
                     @media screen and (min-width: 768px) {
                         margin-right: 9px;
                         margin-bottom: 0;
@@ -128,7 +145,7 @@
                 font-size: 17px;
                 font-size: 17px;
                 border: none;
-                color: #8694ac;
+                color: $primary;
                 background-color: $white;
                 height: 47px;
                 display: flex;
@@ -136,10 +153,13 @@
                 justify-content: center;
                 padding: 0 21px;
                 transition: all .3s ease-in-out;
+                border-radius: 35px;
                 &:hover {
-                    background-color: #dfc965;
+                    background-color: $primary;
                     color: #3e5179;
+                    color: #fff;
                     transform: none;
+                    border-radius: 35px;
                 }
                 &:focus,
                 &:active {
@@ -149,25 +169,27 @@
             }
             &.active {
                 .page-link {
-                    background-color: #dfc965;
-                    color: #3e5179;
+                    background-color: $primary;
+                    color: #fff;
                     font-weight: bold;
                 }
             }
             &.previous,
             &.next {
                 .page-link {
-                    color: #3e5179;
+                    color: $primary;
                     background-color: #e7e9ee;
                     font-weight: bold;
                     width: 118px;
                     background-color: transparent;
-                    border: 1px solid #3e5179;
+                    border: 1px solid $primary;
                     border-radius: 0;
                     transition: all .3s ease-in-out;
+                    border-radius: 35px;
                     &:hover {
-                        background-color: darken(#3e5179, 15%);
+                        background-color: darken($primary, 15%);
                         color: #fff;
+                        border-radius: 35px;
                     }
                     &:focus,
                     &:active {
@@ -249,7 +271,7 @@
     .pagination.pages-only {
         justify-content: center;
         .page-item.active .page-link {
-            background-color: #131C52;
+            background-color: $primary;
             color: #fff;
             font-weight: bold;
             border-radius: 4px;

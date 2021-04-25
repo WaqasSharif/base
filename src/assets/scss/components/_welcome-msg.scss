@@ -1,6 +1,5 @@
 .welcome-msg {
     position: relative;
-    margin-top: -160px;
     .content {
         text-align: center;
         .img {
@@ -32,6 +31,41 @@
         .btn-wrapper {
             .btn {
                 width: 100%;
+            }
+        }
+    }
+
+
+
+    &.two-cols {
+        .small-heading {
+            p {
+                color: $primary;
+                margin-bottom: 0;
+            }
+        }
+        .title h3 {
+            color: #252525;
+        }
+        .title h4 {
+            color: #252525;
+            font-size: 36px;
+            font-family: $font-family-italianno;
+            text-transform: none;
+            font-weight: normal;
+        }
+        .banner-img {
+            height: 400px;
+            position: relative;
+            margin-right: 50px;
+            border-radius: 8px;
+            overflow: hidden;
+            .cover img {
+                height: 100%;
+                @media (min-width: 992px) {
+                  width: 100%;
+                  height: auto;
+                }
             }
         }
     }

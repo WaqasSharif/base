@@ -3,16 +3,13 @@ layout: default
 title: Home
 ---
 
-
+{{> navigation}}
 <section class="hero-banner inner">
     <div class="container">
         <div class="banner-img">
             <div class="cover">
                 <picture>
-                    <source srcset="assets/img/preplan-2.jpg" media="(min-width: 1200px)">
-                    <source srcset="assets/img/preplan-2.jpg" media="(min-width: 992px)">
-                    <source srcset="assets/img/preplan-2.jpg" media="(max-width: 576px)">
-                    <img src="assets/img/preplan-2.jpg" alt="hero banner" />
+                    <img class="cover" src="assets/img/preplan-2.jpg" alt="hero banner" />
                 </picture>
             </div>
         </div>
@@ -27,40 +24,38 @@ title: Home
 <div class="spacer white-99"></div>
 
 
-<div class="tabs-wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-12">
-                <!-- left nav title -->
-                <div class="title">
-                    <h6>Plan Ahead</h6>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-12">
+            <!-- left nav links  -->
+            <div class="nav-links-wrapper">
+                <div class="small-heading mb-6">
+                    <p>Plan Ahead</p>
                 </div>
-                <!-- left nav links  -->
-                <div class="nav-links-wrapper">
-                    <div class="flex-column">
-                         <div class="nav-link">
-                            <a href="haris-plan-ahead.html">PLAN AHEAD</a>
-                        </div>
-                        <div class="nav-link active">
-                            <a href="haris-preplanning-faq.html">PREPLANNING FAQ
-                            </a>
-                        </div>
+                <div class="flex-column">
                         <div class="nav-link">
-                            <a href="haris-Talk-of-a-lifetime.html">TALK OF A LIFETIME</a>
-                        </div>
+                        <a href="plan-ahead.html">PLAN AHEAD</a>
+                    </div>
+                    <div class="nav-link active">
+                        <a href="preplanning-faq.html">PREPLANNING FAQ
+                        </a>
+                    </div>
+                    <div class="nav-link">
+                        <a href="Talk-of-a-lifetime.html">TALK OF A LIFETIME</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9 col-12">
-                <!-- page body right area  -->
-                <div class="content-wrapper">
-                    
-                    <div class="content">
-                    <div class="title">
+        </div>
+        <div class="col-lg-9 col-12">
+            <!-- page body right area  -->
+            <div class="content-wrapper">
+                
+                <div class="content">
+                    <div class="title mb-32">
                         <h2>PREPLANNING FAQ
                         </h2>
                     </div>
-                    <div class="paragraph sepcial">
+                    <div class="paragraph medium">
                         <p>‍You’ve taken an important step by choosing to pre-plan. Congratulations. By taking steps to arrange these important plans now, you’ve taken a large burden off of your beloved family, providing them with greater peace of mind. You’re relieving your family of the cost that can be associated with planning a burial, allowing them to celebrate and honor your life. And finally, you’re ensuring that every last detail is planned according to your own wishes and needs.
                         </p>
                         <br> 
@@ -69,194 +64,174 @@ title: Home
                         <br> 
                         <p>Here are some questions that often come up from others at the same stage:
                         </p>
-                        <div class="spacer white-114"></div>
-                        <section class="why-plan">
-                            <div class="container">
-                                
-                                <div class="panel-group nv-panel" id="accordion" role="tablist" aria-multiselectable="true">
-                                    <div class="panel">
-                                        <div class="panel-heading" role="tab" id="headingOne">
-                                            <div class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">
-                                                    Pre-planning versus pre-funding? I’ve heard both terms, what is the difference?
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false">
-                                            <div class="panel-body">
-                                                
-                                                <div class="paragraph sepcial">
-                                                    <p>Pre-planning is much like it sounds, it is making the decisions of how you would like to be remembered. It allows you to make your wishes known to your loved ones and gives you the opportunity to create a unique celebration...just how you would have wanted it. Pre-funding is the next logical step in the planning process. Your loved ones will greatly appreciate you pre-planning as it alleviates questions like "I'm not sure what he would have wanted". However, knowing your choices still leaves a financial burden for those left behind. Pre-funding allows you to pay for your funeral plans, saving loved ones from incurring those costs. There are several different options of pre-funding your funeral which our pre-arrangement specialists will guide you through.
-                                                    </p>
-                                                </div>
-                                            </div>
+                         
+                    </div>
+
+
+                    <section class="why-plan padding-0">
+                        <div class="container">
+                            
+                            <div class="panel-group nv-panel" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                        <div class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">
+                                                Pre-planning versus pre-funding? I’ve heard both terms, what is the difference?
+                                            </a>
                                         </div>
                                     </div>
-
-                                    <div class="panel">
-                                        <div class="panel-heading" role="tab" id="headingOne">
-                                            <div class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">
-                                                    Can I move a previously planned arrangement?
-
-                                                </a>
+                                    <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false">
+                                        <div class="panel-body">
+                                            
+                                            <div class="paragraph medium">
+                                                <p>Pre-planning is much like it sounds, it is making the decisions of how you would like to be remembered. It allows you to make your wishes known to your loved ones and gives you the opportunity to create a unique celebration...just how you would have wanted it. Pre-funding is the next logical step in the planning process. Your loved ones will greatly appreciate you pre-planning as it alleviates questions like "I'm not sure what he would have wanted". However, knowing your choices still leaves a financial burden for those left behind. Pre-funding allows you to pay for your funeral plans, saving loved ones from incurring those costs. There are several different options of pre-funding your funeral which our pre-arrangement specialists will guide you through.
+                                                </p>
                                             </div>
                                         </div>
-                                        <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false">
-                                            <div class="panel-body">
-                                                
-                                                <div class="paragraph sepcial">
-                                                    <p>Yes, your arrangements are yours and can be transferred. The process of pre-arranging is a benefit to you and your family... It's not a way to lock you into being served by a specific or particular funeral home or cemetery.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-                                    <div class="panel">
-                                        <div class="panel-heading" role="tab" id="headingOne">
-                                            <div class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">
-                                                    Do I need to purchase a burial vault?
-
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false">
-                                            <div class="panel-body">
-                                                
-                                                <div class="paragraph sepcial">
-                                                    <p>In most areas of the country, state or local laws do not require that you buy a container to surround the casket in the grave. Harris - Nadeau Mortuary does require that you have such a container so that the ground will not sink and the safety of our visitors and staff is protected.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="panel">
-                                        <div class="panel-heading" role="tab" id="headingOne">
-                                            <div class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">
-                                                    I’ve heard about mausoleum burials - what are the benefits?
-
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false">
-                                            <div class="panel-body">
-                                                
-                                                <div class="paragraph sepcial">
-                                                    <p>People choose mausoleum crypts because they are both clean and dry. They offer a good alternative for those who prefer to not be interred in the ground.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="panel">
-                                        <div class="panel-heading" role="tab" id="headingOne">
-                                            <div class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">
-                                                    Are there vaults for cremated remains?
-
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false">
-                                            <div class="panel-body">
-                                                
-                                                <div class="paragraph sepcial">
-                                                    <p>Yes, we offer urn vaults, designed for in-ground burial of cremated remains. We have a wide selection available, so we are sure we can help you find a beautiful option that is a good fit for your taste and preferences.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="panel">
-                                        <div class="panel-heading" role="tab" id="headingOne">
-                                            <div class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">
-                                                    Can two cremations be performed at once?
-
-
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false">
-                                            <div class="panel-body">
-                                                
-                                                <div class="paragraph sepcial">
-                                                    <p>No. Not only is it illegal to do so, most modern cremation chambers are not of sufficient size to accommodate more than one adult.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="panel">
-                                        <div class="panel-heading" role="tab" id="headingOne">
-                                            <div class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">
-                                                    Can the family witness the cremation?
-
-
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false">
-                                            <div class="panel-body">
-                                                
-                                                <div class="paragraph sepcial">
-                                                    <p>Yes. Our cremation facility is set up to allow family members to be present when the body is placed into the cremation chamber. In fact, some religious groups include this as part of their funeral custom. As anything, this is a personal choice on whether you want to witness this event.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-
-
-
                                     </div>
                                 </div>
-                                </section>
-                            
+
+                                <div class="panel">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                        <div class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="collapsed">
+                                                Can I move a previously planned arrangement?
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false" style="">
+                                        <div class="panel-body">
+                                            
+                                            <div class="paragraph medium">
+                                                <p>Yes, your arrangements are yours and can be transferred. The process of pre-arranging is a benefit to you and your family... It's not a way to lock you into being served by a specific or particular funeral home or cemetery.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 
 
 
+                                <div class="panel">
+                                    <div class="panel-heading" role="tab" id="headingThree">
+                                        <div class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="collapsed">
+                                                Do I need to purchase a burial vault?
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false" style="">
+                                        <div class="panel-body">
+                                            
+                                            <div class="paragraph medium">
+                                                <p>In most areas of the country, state or local laws do not require that you buy a container to surround the casket in the grave. Harris - Nadeau Mortuary does require that you have such a container so that the ground will not sink and the safety of our visitors and staff is protected.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 
 
+                                <div class="panel">
+                                    <div class="panel-heading" role="tab" id="headingFour">
+                                        <div class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="collapsed">
+                                                I’ve heard about mausoleum burials - what are the benefits?
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour" aria-expanded="false" style="">
+                                        <div class="panel-body">
+                                            
+                                            <div class="paragraph medium">
+                                                <p>People choose mausoleum crypts because they are both clean and dry. They offer a good alternative for those who prefer to not be interred in the ground.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 
-                    </div>
-                    
-                    
 
-                 
+                                <div class="panel">
+                                    <div class="panel-heading" role="tab" id="headingSix">
+                                        <div class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix" class="collapsed">
+                                                Are there vaults for cremated remains?
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix" aria-expanded="false" style="">
+                                        <div class="panel-body">
+                                            
+                                            <div class="paragraph medium">
+                                                <p>Yes, we offer urn vaults, designed for in-ground burial of cremated remains. We have a wide selection available, so we are sure we can help you find a beautiful option that is a good fit for your taste and preferences.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel">
+                                    <div class="panel-heading" role="tab" id="headingSeven">
+                                        <div class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseSeven" class="collapsed">
+                                                Can two cremations be performed at once?
+
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven" aria-expanded="false">
+                                        <div class="panel-body">
+                                            
+                                            <div class="paragraph medium">
+                                                <p>No. Not only is it illegal to do so, most modern cremation chambers are not of sufficient size to accommodate more than one adult.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel">
+                                    <div class="panel-heading" role="tab" id="headingeight">
+                                        <div class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseeight" aria-expanded="false" aria-controls="collapseeight" class="collapsed">
+                                                Can the family witness the cremation?
+
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapseeight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingeight" aria-expanded="false" style="">
+                                        <div class="panel-body">
+                                            
+                                            <div class="paragraph medium">
+                                                <p>Yes. Our cremation facility is set up to allow family members to be present when the body is placed into the cremation chamber. In fact, some religious groups include this as part of their funeral custom. As anything, this is a personal choice on whether you want to witness this event.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                    </section>
 
 
                 </div>
             </div>
-          </div>
+        </div>
     </div>
 </div>
 
 
-
-</main>
+<div class="spacer white-99"></div>
 
 
 

@@ -17,6 +17,13 @@
             }
         }
     }
+    &.big {
+        .banner {
+            @media screen and (min-width: 992px) {
+                height: 680px;
+            }
+        }
+    }
     .thumbnails {
         display: grid;
         grid-gap: 20px;

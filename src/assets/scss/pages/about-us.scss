@@ -15,21 +15,31 @@
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
     .staff {
+        display: flex;
+        flex-direction: column;
         .img {
             position: relative;
             height: 290px;
             margin-bottom: 1.5rem;
+            
         }
         .name {
-            font-size: 22px;
+            font-size: 17px;
+            line-height: 1;
             text-align: center;
             color: $primary;
             font-weight: bold;
+            color: #222;
         }
         .designation {
-            font-size: 17px;
             text-align: center;
+            flex: 1 1 auto;
+            color: #333;
+            font-size: 14px;
         }
+    }
+    .btn-wrapper {
+        text-align: center;
     }
 }
 
@@ -41,17 +51,32 @@
     @media screen and (min-width: 992px) {
         padding: 3.25rem;
     }
+    &.white {
+        margin-bottom: 2rem;
+        padding: 40px;
+        border: 1px solid #ebebeb;
+        border-radius: 5px;
+        box-shadow: 0 6px 5px 0 #0000000d;
+        background-color: $white;
+        @media screen and (min-width: 992px) {
+            padding: 60px;
+        }
+    }
 }
 
 .author {
-    font-size: 17px;
+    font-size: 18px;
+    line-height: 1.2;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
-    margin-bottom: .25rem;
+    margin-bottom: 8px;
 }
 .date {
-    font-size: 15px;
+    font-size: 13px;
+    color: #aaa;
+    line-height: 1;
+    margin-bottom: 12px;
 }
 
 input:-internal-autofill-selected {

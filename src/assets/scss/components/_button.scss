@@ -15,11 +15,12 @@
         font-weight: normal;
         padding-top: 0;
         padding-bottom: 0;
-        font-size: 15px;
+        font-size: 12px;
+        letter-spacing: 2px;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
         @media screen and (min-width: 768px) {
-            width: auto;
+            width: auto !important;
         }
         span {
             padding-left: 8px;
@@ -90,7 +91,7 @@
     a.btn {
       padding-top: 0;
       padding-bottom: 0;
-      line-height: 52px;
+      line-height: 48px;
         &:focus {
             box-shadow: none;
         }
@@ -116,12 +117,17 @@
                 text-decoration: none;
             }
         }
+
+        &:hover {
+            background-color: transparent;
+        }
         
         &.secondary {
             color: $secondary;
             font-size: $font-size-sm;
             &:hover {
                 color: darken($secondary, 15%);
+                background-color: transparent;
             }
         }
     }

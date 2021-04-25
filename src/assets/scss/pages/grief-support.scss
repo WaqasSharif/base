@@ -59,6 +59,34 @@
             }
         }
     }
+
+    &.white {
+        column-gap: 24px;
+        row-gap: 32px;
+        .wrapp {
+            padding: 30px;
+            border: 1px solid #ebebeb;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 6px 5px 0 #0000000d;
+            box-shadow: 0 6px 5px 0 #0000000d;
+            background-color: #fff;
+            &:hover {
+                background-color: #f3f3f3;
+            }
+            a {
+                color: $primary;
+                font-size: 16px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            .icon svg {
+                path, rect {
+                    fill: $primary;
+                }
+            }
+        }
+    }
 }
 
 .two-col-paragraph {

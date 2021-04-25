@@ -180,7 +180,7 @@
     .line {
         width: 24px;
         height: 3px;
-        background-color: #fff;
+        background-color: $primary;
         display: block;
         margin: 4px auto;
         transition: all .3s ease-in-out;
@@ -215,20 +215,55 @@
     width: 100%;
     background: transparent;
     z-index: 9;
-    padding: 30px 72px;
+    padding: 30px 60px;
     padding-bottom: 0; 
     @media (max-width: 991px) {
         display: none;
+    }
+    @media (min-width: 1200px) {
+        padding: 30px 100px;
     }
     .menu-wrap {
         display: flex;
         align-items: flex-start;
     }
 
+    &.links-only {
+        .nav-links ul {
+            justify-content: flex-start;
+        }
+        padding: 0;
+        .menu-wrap {
+            align-items: center;
+        }
+        .main-nav-links > ul > li > a {
+            line-height: 60px;
+            padding-right: 24px;
+
+        }
+        .arrow {
+            position: relative;
+            &:after {
+                right: 26px;
+            }
+        }
+    }
+
     &.with-dropdown {
         background-color: $black;
-        padding-bottom: 12px;
-        .expandable {
+        padding: 12px 12px;
+        @media (min-width: 1520px) {
+            padding: 12px 125px;
+        }
+        .menu-wrap {
+            align-items: center;
+        }
+        .main-nav-links > ul > li > a {
+            line-height: 60px;
+            padding-right: 12px;
+
+        }
+        .arrow {
             position: relative;
             &:after {
                 content: '\00354';
@@ -241,13 +276,14 @@
                 line-height: 1;
                 /* transform: scale(1.5); */
                 transform: translateY(0) rotate(-91deg);
-                top: 0;
+                top: 15px;
+                right: 20px;
             }
         }
         .nav-links ul li {
             position: relative;
             > a {
-                padding-bottom: 10px;
+                padding-bottom: 0;
                 &:after {    
                     display: none;
                 }
@@ -261,7 +297,7 @@
                     transform: translate(0, 0);
                     opacity: 1;
                     z-index: 0;
-                    left: -60%;
+                    left: -50%;
                     &:before {
                         position: absolute;
                         top: -9px;
@@ -280,14 +316,17 @@
                     animation-fill-mode: backwards;
                   }
             }
+            &:last-child {
+                a {
+                    padding-right: 18px;
+                }
+            }
         }
     }
 }
 
-
-
 ul.dropdown {
-    min-width: 200px;
+    min-width: 250px;
     visibility: hidden;
     display: flex;
     position: absolute;
@@ -307,20 +346,26 @@ ul.dropdown {
     z-index: -1;
     padding: 20px !important;
     border: 1px solid #7e001f;
-  }
-  ul.dropdown > li {
-    font-size: 14px;
-    cursor: pointer;
-    line-height: 1;
-    padding: 10px;
+}
+ul.dropdown > li {
+font-size: 14px;
+cursor: pointer;
+line-height: 1;
+padding: 0;
+a {
+    color: $body-color !important;
+    padding: 0  !important;
+    padding-bottom: 16px !important;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    margin-bottom: 16px;
+    font-weight: bold !important;
+}
+}
+ul.dropdown > li:hover {
     a {
-        color: $body-color !important;
+        color: #7e001f !important;
     }
-  }
-  ul.dropdown > li:hover {
-    background: #7e001f;
-    color: #fff;
-  }
+}
   
 
 
@@ -371,19 +416,11 @@ ul.dropdown {
     .send-flower {
         .btn-wrapper {
             a {
-                height: 38px;
-                border-color: #ffffff8a;
                 font-size: 14px;
-                line-height: 38px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 min-width: auto;
-                height: 36px;
-                line-height: 36px;
-                border-radius: 20px;
-                padding: 0 12px;
-                font-weight: normal;
                 img, svg {
                     width: 16px;
                     height: 16px;
@@ -442,7 +479,7 @@ ul.dropdown {
                 }
                 @media (min-width: 1200px) {
                     font-size: 15px;
-                    padding: 0 12px;
+                    padding: 0 18px;
                     padding-bottom: 4px;
                 }
             }
@@ -476,7 +513,7 @@ ul.dropdown {
 // fixed menu 
 .menu-fixed {
     .menu-section-desktop {
-        background: $primary;
+        background: #000;
         position: fixed;
         top: 0;
         width: 100%;
@@ -490,7 +527,7 @@ ul.dropdown {
         }
     }
     .mobile-menu {
-        background-color: #131c52;
+        background-color: #ffffffe0;
         position: fixed;
         top: 0;
         width: 100%;

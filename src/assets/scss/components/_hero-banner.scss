@@ -57,9 +57,14 @@
   // hero banner inner 
   .hero-banner {
     &.inner {
-      min-height: 450px;
+      min-height: 320px;
       @media (min-width: 768px) {
-        min-height: 656px;
+        min-height: 430px;
+      }
+      .cover {
+        img {
+          width: 100%;
+        }
       }
       .content {
         margin-top: 83px;
@@ -67,6 +72,229 @@
           text-align: center;
           margin-top: 54px;
         }
+        
+        .title {
+          h1 {
+            font-family: $font-family-italianno;
+            font-weight: normal;
+          }
+        }
       }
     }
   }
+
+
+  // hero background 
+.hero-background {
+  padding-top: 60px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(43%, transparent), color-stop(81%, #202f16), to(#202f16)), url(../../assets/img/bg-7.jpg);
+  background-image: linear-gradient(180deg, transparent 43%, #202f16 81%, #202f16), url(../../assets/img/bg-7.jpg);
+  background-position: 0px 0px, 50% 0%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  padding-top: 110px;
+
+  .logo-and-contact-info {
+    @media (max-width: 992px) {
+      display: none;
+    }
+    .contact-us {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo img {
+        width: 100%;
+        min-width: 365px;
+      }
+    }
+    .phone {
+      display: flex;
+      flex-direction: column;
+      .icon {
+        margin-right: 12px;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        font-size: 18px;
+        svg {
+          width: 18px;
+          height: 18px;
+          line-height: 18px;
+          path,g {
+            fill: $primary;
+          }
+        }
+      }
+      .phone-info {
+        margin-bottom: 5px;
+        color: $primary;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+      .number {
+        display: flex;
+        align-items: center;
+        a {
+          font-size: 24px;
+          line-height: 1;
+          font-weight: 900;
+          letter-spacing: 1;
+          color: #222;
+
+        }
+      }
+    }
+  }
+  .hero-banner {
+    height: 500px;
+    min-height: 500px;
+    border: 8px solid #fff;
+    margin-top: 24px;
+    .cover img {
+      height: 100%;
+      @media (min-width: 992px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .content {
+      margin: 0;
+      text-align: left;
+      padding-left: 40px;
+      h1 {
+        font-family: $font-family-italianno;
+        text-transform: none;
+        font-weight: normal;
+        font-size: 60px;
+        @media (min-width: 992px) {
+          font-size: 122px;
+        }
+      }
+      h2 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 32px;
+        color: #fff;
+        @media (min-width: 992px) {
+          font-size: 67px;
+        }
+      }
+    }
+  }
+  .current-obituaries {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    .search-field-addon {
+      padding: 0;
+
+      ::-webkit-input-placeholder { /* Edge */
+        color: #fff !important;
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer */
+        color: #fff !important;
+      }
+      
+      ::placeholder {
+        color: #fff !important;
+      }
+
+
+      .title {
+        display: flex;
+        align-items: center;
+      }
+    }
+    
+    .input-group  {
+      max-width: 400px;
+      .form-control {
+        background-color: transparent;
+        border-color: #fff;
+        color: #fff;
+        &:focus {
+          border-color: $secondary;
+        }
+      }
+      .input-group-addon {
+        background-color: transparent;
+      }
+    }
+    
+  }
+
+  .obituaries-list {
+    .send-flower-grid {
+      display: grid;
+      row-gap: 20;
+      column-gap: 20px;
+      width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      @media screen and (min-width: 768px) {
+          row-gap: 20px;
+          grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      } 
+      @media screen and (min-width: 992px) {
+          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      }
+
+      .people {
+        display: flex;
+        flex-direction: column;
+        .thumbnail {
+          margin-right: 0;
+          margin-bottom: 12px;
+          border: 4px solid #fff;
+        }
+        .info {
+          .name *, .date {
+            color: #fff;
+          }
+          .name h4{
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 4;
+          }
+          .date {
+            font-size: 12px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .subscribe-link {
+    padding: 0;
+    padding-top: 24px;
+    padding-bottom: 32px;
+    p {
+      color: #fff !important;
+      font-size: 15px !important;
+    }
+    .link-wrapper a {
+      font-size: 15px !important;
+      padding-bottom: 0 !important;
+      color: $secondary !important;
+      background-image: none !important;
+      margin-right: 10px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .paragraph {
+      display: flex;
+      flex-direction: column;
+      @media screen and (min-width: 992px) {
+        flex-direction: row;
+      }
+    }
+  }
+
+
+}
+
+ 

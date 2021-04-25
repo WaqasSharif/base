@@ -103,6 +103,7 @@
     @media (min-width: 992px) {
         flex-direction: row;
     }
+
     .content {
         width: 100%;
         @media (min-width: 992px) {
@@ -135,7 +136,7 @@
             min-width: 408px;
         }
         img {
-            opacity: .10;
+            opacity: .6;
         }
         .text {
             position: absolute;
@@ -155,7 +156,7 @@
 
 .why-plan {
     padding: 104px 0 120px 0 ;
-    background-color: #F4F5F9;
+    
     .title {
         margin-bottom: 1.5rem;
         @media (min-width: 992px) {
@@ -172,10 +173,11 @@
         }
         .panel {
           background-color: $white;
-          border: 0 !important;
           box-shadow: none;
           padding: 42px;
           margin-bottom: 16px;
+            box-shadow: 0 6px 5px 0 #0000000d;
+            border: 1px solid #e7e7e7;
         }
       
         .panel-title {
@@ -184,30 +186,36 @@
             position: relative;
             font-size: 1.5rem;
             line-height: 1.1;
-            color: $primary;
+            color: rgb(0, 44, 244);
             font-weight: bold;
             font-size: 22px;
             padding-right: 2rem;
-
+            &.collapsed {
+                color: $primary;
+            }
             &:hover {
                 text-decoration: none;
             }
             &:after {
                 right: .5rem;
-                border: solid #6c80a3;
+                //border: solid #6c80a3;
+                color: $primary;
                 border-width: 0 1px 1px 0;
-                padding: 5.7px;
-                content: "";
+                //padding: 5.7px;
+                content: "\02794";
+                font-size: 20px;
+                line-height: 1;
                 position: absolute;
                 line-height: 1;
                 top: 50%;
-                transform: translateY(-50%) rotate(-135deg);
+                transform: translateY(-50%) rotate(90deg);
                 transition: all .3s ease-in-out;
             }
             &[aria-expanded="true"] {
                 margin-bottom: 1rem;
               &:after {
-                transform: translateY(-50%) rotate(45deg);
+                
+                transform: translateY(-50%) rotate(-90deg);
               }
             }
           }
@@ -285,6 +293,11 @@
         
     }
 }
+.why-plan {
+    &.padding-0 {
+        padding: 0 !important;
+    }
+}
 
 
 .why-plan.frequent-questions.plus-icon {
@@ -311,5 +324,9 @@
             }
         }
     }
+}
+
+.why-plan.white {
+    background-color: #fff;
 }
 
