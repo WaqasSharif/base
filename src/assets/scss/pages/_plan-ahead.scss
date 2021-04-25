@@ -135,6 +135,9 @@
             width: 408px;
             min-width: 408px;
         }
+        @media (max-width: 991px) {
+            margin-top: 2rem;
+        }
         img {
             opacity: .6;
         }
@@ -156,7 +159,7 @@
 
 .why-plan {
     padding: 104px 0 120px 0 ;
-    
+    background-color: #f5f5f6;
     .title {
         margin-bottom: 1.5rem;
         @media (min-width: 992px) {

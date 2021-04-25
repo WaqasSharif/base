@@ -10,10 +10,15 @@
     width: 100%;
     z-index: 10;
     display: flex;
-    justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
     align-items: center;
+
+    justify-content: flex-end;
+    padding: 24px;
+    background: #000;
+
+
     &.active {
         background-color: #000000a8;
         display: flex;
@@ -180,7 +185,7 @@
     .line {
         width: 24px;
         height: 3px;
-        background-color: $primary;
+        background-color: $white;
         display: block;
         margin: 4px auto;
         transition: all .3s ease-in-out;
@@ -527,12 +532,12 @@ ul.dropdown > li:hover {
         }
     }
     .mobile-menu {
-        background-color: #ffffffe0;
         position: fixed;
         top: 0;
         width: 100%;
         transition: all .3s ease-in-out;
         min-height: 66px;
+        box-shadow: 0 6px 5px 0 #0000000d;
         .logo-wrapp {
             padding-top: 0;
             img {

@@ -92,11 +92,28 @@
   background-position: 0px 0px, 50% 0%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
-  padding-top: 110px;
+  padding-top: 100px;
 
   .logo-and-contact-info {
-    @media (max-width: 992px) {
-      display: none;
+    @media (max-width: 991px) {
+      .send-flower.css-icon {
+        display: none;
+      }
+    }
+    @media (max-width: 767px) {
+      .phone {
+        display: none !important;
+      }
+      .contact-us {
+        justify-content: center !important;
+      }
+    }
+    @media (max-width: 575px) {
+      .contact-us {
+        .logo img {
+          min-width: 200px !important;
+        }
+      }
     }
     .contact-us {
       display: flex;
@@ -177,8 +194,13 @@
         font-family: 'Times New Roman', Times, serif;
         font-size: 32px;
         color: #fff;
+        margin-top: -25px;
+        margin-left: 80px;
         @media (min-width: 992px) {
           font-size: 67px;
+          margin-top: -56px;
+          margin-left: 150px;
+
         }
       }
     }
