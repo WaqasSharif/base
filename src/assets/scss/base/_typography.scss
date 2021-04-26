@@ -15,22 +15,17 @@
 
 body {
   letter-spacing: normal;
-  font-size: 15px;
-  font-weight: $font-weight-normal;
-  line-height: 35px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
   font-family: $font-family-base;
   color: $body-copy;
   @include media-breakpoint-up(lg) {
-    @include font-size(20px);
+    @include font-size(17px);
+    line-height: 26px;
   }
 }
 
-.container {
-  @media (max-width: 767px) {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
 
 
 
@@ -47,11 +42,12 @@ body {
   }
     p {
       font-size: 1rem;
-      line-height: 1.5;
+      line-height: 22px;
       letter-spacing: normal;
       color: #333333;
       @include media-breakpoint-up(lg) {
-        font-size: 1.25rem;
+        font-size: 18px;
+        line-height: 26px;
       }
     }
     p+p {
@@ -85,16 +81,16 @@ body {
     }
   }
   &.big p {
-    font-size: 1.25rem;
-    line-height: 1.25;
+    font-size: 18px;
+    line-height: 1.33;
     letter-spacing: normal;
     @include media-breakpoint-up(lg) {
-      font-size: 1.5rem;
+      font-size: 20px;
       line-height: 1.5;
     }
   }
   &.heading-font {
-    font-family:$font-family-base;
+    font-family: $font-family-Quattrocento;
   }
 }
 
@@ -107,6 +103,7 @@ body {
     color: $black;
     margin: 0;
     margin-bottom: 25px;
+    font-weight: 400;
   }
   &.bold {
     p {
@@ -184,9 +181,9 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: $headings-margin-bottom;
   font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
+  font-weight: bold;
   line-height: $headings-line-height;
-  color: $headings-color;
+  color: #202020;
 }
 
 .title {
@@ -203,21 +200,28 @@ h1, h2, h3, h4, h5, h6,
   }
   
   h1 {
-    font-size: 3rem;
+    font-family: 'Italianno', cursive;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 60px;
+    line-height: 80px;
     @include media-breakpoint-up(md) {
       font-size: 60px;
+      line-height: 70px;
     }
     @include media-breakpoint-up(xl) {
-      font-size: 80px;
+      font-size: 70px;
+      line-height: 80px;
     }
   }
   h2 {
     font-size: 2.5rem;
+    color: $primary;
     @include media-breakpoint-up(md) {
       font-size: 3rem;
     }
     @include media-breakpoint-up(xl) {
-      font-size: 60px;
+      font-size: 52px;
     }
   }
   h3 {
@@ -231,9 +235,9 @@ h1, h2, h3, h4, h5, h6,
   }
 
   h4 {
-    font-size: 2rem;
+    font-size: 28px;
     @include media-breakpoint-up(lg) {
-      font-size: 40px;
+      font-size: 36px;
     }
   }
   h5 {

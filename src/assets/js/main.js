@@ -27,31 +27,74 @@
 
 $(document).ready(function() {
 
-  var sliderSwiper = new Swiper('.swiper-container', {
-    slidesPerView: 1.5,
-    spaceBetween: 15,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      414: {
-        slidesPerView: 2.2
-      },
-      768: {
-        slidesPerView: 3
-      },
-      1024: {
-        slidesPerView: 3.2
-      },
-      1440: {
-        slidesPerView: 4
-      },
-      9999: {
-        slidesPerView: 4
-      }
+  
+
+/* Please ❤ this if you like it! */
+
+
+(function($) { "use strict";
+
+$(function() {
+  var header = $(".start-style");
+  $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+  
+    if (scroll >= 10) {
+      header.removeClass('start-style').addClass("scroll-on");
+    } else {
+      header.removeClass("scroll-on").addClass('start-style');
     }
   });
+});		
+  
+//Animation
+
+$(document).ready(function() {
+  $('body.hero-anime').removeClass('hero-anime');
+});
+
+//Menu On Hover
+  
+$('body').on('mouseenter mouseleave','.main-nav-links > ul > li',function(e){
+    if ($(window).width() > 992) {
+      var _d=$(e.target).closest('.main-nav-links > ul > li');
+      _d.addClass('show');
+      setTimeout(function(){
+      _d[_d.is(':hover')?'addClass':'removeClass']('show');
+      },1);
+    }
+});	
+  
+
+})(jQuery); 
+
+
+
+  // var sliderSwiper = new Swiper('.swiper-container', {
+  //   slidesPerView: 1.5,
+  //   spaceBetween: 15,
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  //   breakpoints: {
+  //     414: {
+  //       slidesPerView: 2.2
+  //     },
+  //     768: {
+  //       slidesPerView: 3
+  //     },
+  //     1024: {
+  //       slidesPerView: 3.2
+  //     },
+  //     1440: {
+  //       slidesPerView: 4
+  //     },
+  //     9999: {
+  //       slidesPerView: 4
+  //     }
+  //   }
+  // });
 
 
 

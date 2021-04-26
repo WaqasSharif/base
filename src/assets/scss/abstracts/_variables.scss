@@ -5,8 +5,10 @@
 $white:              #fff !default;
 $black:              #000 !default;
 
-$primary:             #7e001f !default;
-$secondary:          #ffb81f !default;
+$primary:             #690908 !default;
+$primary-hover:             #690908 ;
+$secondary:          #e0a40a !default;
+$secondary-hover: #ffbf00;
 $bg-copy:             #f8f8fa;
 $body-copy:         #2b2b2b;
 $body-copy-dark:    #333333;
@@ -63,8 +65,8 @@ $grid-row-columns:            6 !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-italianno:             'Italianno', 'cursive', serif;
-$font-family-base:                  'Lato', sans-serif;
+$font-family-Quattrocento:          'Quattrocento', serif;
+$font-family-base:                  'Arial', 'Helvetica Neue', Helvetica, sans-serif;;
  
 
 // stylelint-enable value-keyword-case
@@ -90,10 +92,10 @@ $line-height-base:            1.5 !default;
 // $h6-font-size:                $font-size-base * 1.25!default;
 
 $headings-margin-bottom:      0 !default; 
-$headings-font-family:        $font-family-base !default;
+$headings-font-family:        $font-family-Quattrocento !default;
 $headings-font-weight:        normal !default;
 $headings-line-height:        1.2 !default;
-$headings-color:              $primary !default;
+//$headings-color:              $primary !default;
 
 
 
