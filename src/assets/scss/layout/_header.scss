@@ -184,7 +184,7 @@
 
 // desktop menu start 
 .menu-section-desktop {
-    position: absolute;
+    position: relative;
     width: 100%;
     background: transparent;
     z-index: 9;
@@ -194,9 +194,13 @@
     min-height: 120px;
     display: flex;
     align-items: center;
-    padding: 0 80px;
     @media (max-width: 991px) {
         display: none;
+    }
+    .container-x {
+        @media (min-width: 1280px) {
+            max-width: 1300px;
+        }
     }
     .menu-wrap {
         display: flex;
@@ -316,9 +320,17 @@ ul.dropdown > li {
 
                 }
                 &.show {
-                     a {
+                     > a {
                         text-decoration: none;
                         color: $primary;
+                    }
+                    ul.dropdown {
+                        display: flex;
+                        li a {
+                            &:hover {
+                                color: $primary;
+                            }
+                        }
                     }
                     span svg {
                         g, polygon {

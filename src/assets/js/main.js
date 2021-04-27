@@ -70,31 +70,13 @@ $('body').on('mouseenter mouseleave','.main-nav-links > ul > li',function(e){
 
 
 
-  // var sliderSwiper = new Swiper('.swiper-container', {
-  //   slidesPerView: 1.5,
-  //   spaceBetween: 15,
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  //   breakpoints: {
-  //     414: {
-  //       slidesPerView: 2.2
-  //     },
-  //     768: {
-  //       slidesPerView: 3
-  //     },
-  //     1024: {
-  //       slidesPerView: 3.2
-  //     },
-  //     1440: {
-  //       slidesPerView: 4
-  //     },
-  //     9999: {
-  //       slidesPerView: 4
-  //     }
-  //   }
-  // });
+  var sliderSwiper = new Swiper('.hero-banner.with-slider .swiper-container', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
 
 
 

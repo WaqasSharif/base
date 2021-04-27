@@ -70,3 +70,69 @@
       }
     }
   }
+
+
+
+  // hero banner as slider 
+.hero-banner.with-slider {
+  height: 500px;
+  @media (min-width: 768px) {
+    height: 1100px;
+  }
+  div.cover img {
+    height: 500px;
+    @media (min-width: 768px) {
+      height: 1100px;
+    }
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .content {
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+    @media (min-width: 768px) {
+      padding-bottom: 390px;
+    }
+    .title  {
+      h1 {
+        font-size: 80px;
+        line-height: 90px;
+        @media (min-width: 768px) {
+          font-size: 180px;
+          line-height: 200px;
+        }
+      }
+    }
+    
+  }
+
+  // swiper overides
+  .swiper-container {
+    height: 100%;
+  }
+  .controls {
+    .swiper-button-prev,
+    .swiper-button-next {
+      &:after {
+        color: #fff;
+      }
+    }
+    .swiper-button-prev {
+      padding-left: 3rem;
+    }
+    .swiper-button-next {
+      padding-right: 3rem;
+    }
+  }
+}

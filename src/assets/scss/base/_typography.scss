@@ -183,12 +183,24 @@ h1, h2, h3, h4, h5, h6,
   font-family: $headings-font-family;
   font-weight: bold;
   line-height: $headings-line-height;
-  color: #202020;
 }
+
 
 .title {
   h1,h2,h3,h4,h5,h6{
       letter-spacing: 0;
+  }
+  &.primary { 
+    h1,h2,h3,h4,h5,h6{
+      color: $primary;
+    
+    }
+  }
+  &.default {
+    h1,h2,h3,h4,h5,h6{
+      color: #202020
+    
+    }
   }
 
   &.light {
@@ -200,56 +212,50 @@ h1, h2, h3, h4, h5, h6,
   }
   
   h1 {
+    font-size: 80px;
+    line-height: 90px;
     font-family: 'Italianno', cursive;
     font-weight: normal;
-    font-size: 50px;
-    line-height: 60px;
-    line-height: 80px;
-    @include media-breakpoint-up(md) {
-      font-size: 60px;
-      line-height: 70px;
-    }
     @include media-breakpoint-up(xl) {
-      font-size: 70px;
-      line-height: 80px;
+      font-size: 120px;
+      line-height: 140px;
     }
   }
   h2 {
     font-size: 2.5rem;
-    color: $primary;
     @include media-breakpoint-up(md) {
       font-size: 3rem;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 60px;
+    }
+  }
+  h3 {
+    font-size: 2.5rem;
+    @include media-breakpoint-up(md) {
+      font-size: 2.5rem;
     }
     @include media-breakpoint-up(xl) {
       font-size: 52px;
     }
   }
-  h3 {
-    font-size: 2rem;
-    @include media-breakpoint-up(md) {
-      font-size: 2.5rem;
-    }
-    @include media-breakpoint-up(xl) {
-      font-size: 50px;
-    }
-  }
 
   h4 {
-    font-size: 28px;
+    font-size: 2rem;
     @include media-breakpoint-up(lg) {
-      font-size: 36px;
+      font-size: 42px;
     }
   }
   h5 {
     font-size: 1.5rem;
     @include media-breakpoint-up(md) {
-      font-size: 30px;
+      font-size: 36px;
     }
   }
   h6 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     @include media-breakpoint-up(md) {
-      font-size: 20px;
+      font-size: 32px;
     }
   }
 }
