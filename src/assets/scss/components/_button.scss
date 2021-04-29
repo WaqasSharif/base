@@ -8,9 +8,21 @@
 
 
 .sec-buttons {
+    position: relative;
+    .btn + .btn {
+        margin-left: 4px;
+        @media screen and (min-width: 768px) {
+            margin-left: 8px;
+        }
+        @media screen and (max-width: 767px) {
+            margin-left: 0;
+            margin-top: 8px;
+        }
+    }
     .btn {
         border-radius: 0;
         width: 100%;
+        min-width: 200px;
         height: 48px;
         line-height: 48px;
         font-size: $font-size-base;
@@ -18,24 +30,54 @@
         padding: 0;
         padding-left: 1.75rem;
         padding-right: 1.75rem;
-        background-color: $black; 
+        background-color: $btn-default; 
         color: $white;
         transition: all 0.4s ease 0s, transform 200ms ease-in-out 0s;
         @media screen and (min-width: 768px) {
             width: auto;
         }
 
-        
+        // hover - focus and active 
+        &:hover {
+            outline: none;
+            background-color: darken($btn-default, 10%);
+        }
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+        &:active {
+            box-shadow: none;
+            outline: none;
+        }
+
+        // if radius / round btn needed
+        &.radius {
+            border-radius: 4px;
+        }
+        &.round {
+            border-radius: 100px;
+        }
+
+        // if needed as uppercase text
         &.uppercase {
-            .btn {
-                text-transform: uppercase;
-            }
+            text-transform: uppercase;
         }
+
+        // bold
         &.bold {
-            .btn {
-                font-weight: bold;
-            }
+            font-weight: bold;
         }
+
+        //fonts 16 is default font size and 12 and 14 variations added below
+        &.font-12 {
+            font-size: 12px;
+        }
+        &.font-14 {
+            font-size: 14px;
+        }
+
+        // animation styles
         &.animate-top {
             transform: translateX(0px) translateY(0px);
             &:hover {
@@ -49,80 +91,215 @@
             }
         }
 
+        // box-shadow 
+        &.shadow {
+            &:hover {
+                transform: scale(1.02);
+                box-shadow: 0px 9px 5px -5px rgba(0,0,0,0.75) !important;
+            }
+        }
+
+        // button with icon
         span {
             padding-left: 8px;
         }
-        &.small {
-            min-width: 170px;
-            height: 40px;
-            line-height: 40px;
-        }
+
+        // button sizes
         &.x-small {
             height: 36px;
             line-height: 36px;
-            min-width: auto;
+            min-width: 160px;
         }
-        &:hover {
-            
-            position: relative;
-            box-shadow: none;
-            background-color: #ac1439;
-            border-color: #ac1439;
+        &.small {
+            height: 40px;
+            line-height: 40px;
+            min-width: 180px;
         }
-        &:focus {
-            box-shadow: none;
+        &.big {
+            height: 52px;
+            line-height: 52px;
+            min-width: 240px;
         }
-        &:active {
-            box-shadow: none;
+
+        // if buttons needed full width
+        &.full {
+            width: 100%;
         }
+        // if buttons needed content width
         &.auto {
             min-width: auto;
             width: auto;
         }
-        &.full {
-            width: 100%;
-        }
-        &.secondary-hover {
+
+        // outline buttons settings
+        &.default-outline {
+            background-color: transparent;
+            border-color: $btn-default;
+            color: $btn-default;
             &:hover {
-                background-color: $secondary;
-                border-color: darken($secondary, 15%);
+                background-color: $btn-default;
+                color: $white;
             }
         }
-        &.btn-secondary {
-            &:hover {
-                background-color: darken($secondary, 15%);
-            }
-        }
-        &.reverse {
-            background-color: #8f9cb7;
-            &:hover {
-                background-color: #7a8395;
-            }
-        }
-        &.btn-outline-primary {
-            &:hover {
-                background-color: $primary;
-            }
-        }
-        &.btn-outline-light {
+
+        // outline default light for background images or solid background
+        &.default-outline-light {
             background-color: transparent;
             border-color: $white;
             color: $white;
             &:hover {
-                background-color: $white;
+                background-color: $btn-default;
+                border-color: $btn-default;
+                color: $white;
+            }
+        }
+        
+
+        //primary color settings
+        &.primary {
+            background-color: $primary;
+            &:hover {
+                outline: none;
+                background-color: lighten($primary, 10%);
+            }
+        }
+        &.primary-outline {
+            background-color: transparent;
+            border-color: $primary;
+            color: $primary;
+            &:hover {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+        &.primary-outline-light {
+            background-color: transparent;
+            border-color: $white;
+            color: $white;
+            &:hover {
+                background-color: $primary;
+                border-color: $primary;
+                color: $white;
+            }
+        }
+
+
+        //secondary color settings
+        &.secondary {
+            background-color: $secondary;
+            &:hover {
+                outline: none;
+                background-color: lighten($secondary, 10%);
+            }
+        }
+        &.secondary-outline {
+            background-color: transparent;
+            border-color: $secondary;
+            color: $secondary;
+            &:hover {
+                background-color: $secondary;
+                color: $white;
+            }
+        }
+        &.secondary-outline-light {
+            background-color: transparent;
+            border-color: $white;
+            color: $white;
+            &:hover {
+                background-color: $secondary;
+                border-color: $secondary;
+                color: $white;
+            }
+        }
+
+    } // .btn ends here  
+} // .sec-buttons ends here
+
+
+.sec-links {
+    .link {
+        position: relative;
+        &:hover {
+            text-decoration: none;
+        }
+        &.font-12 {
+            font-size: 12px;
+            line-height: 1.1;
+        }
+        &.font-14 {
+            font-size: 14px;
+            line-height: 1.1;
+        }
+        &.uppercase {
+            text-transform: uppercase;
+        }
+        &.bold {
+            font-weight: bold;
+        }
+
+        &.light {
+            color: $white;
+        }
+
+        &.default-underline {
+            background-image: linear-gradient(120deg, #007bff 0%, #007bff 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 3px;
+            padding-bottom: 3px;
+            background-position: 0 100%;
+            transition: background-size 0.25s ease-in;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &.primary {
+            color: $primary;
+            &:hover {
+                color: darken($primary, 10%);
+            }
+        }
+
+        &.primary-underline {
+            background-image: linear-gradient(120deg, $primary 0%, $primary 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 3px;
+            padding-bottom: 3px;
+            background-position: 0 100%;
+            transition: background-size 0.25s ease-in;
+        
+        }
+
+        &.primary-light {
+            color: $white;
+            &:hover {
                 color: $primary;
             }
         }
-    }
-    a.btn {
-      padding-top: 0;
-      padding-bottom: 0;
-      line-height: 48px;
-        &:focus {
-            box-shadow: none;
+
+        &.secondary {
+            color: $secondary;
+            &:hover {
+                color: darken($secondary, 10%);
+            }
         }
-        &:active {
-            box-shadow: none;
+        &.secondary-underline {
+            background-image: linear-gradient(120deg, $secondary 0%, $secondary 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 3px;
+            padding-bottom: 3px;
+            background-position: 0 100%;
+            transition: background-size 0.25s ease-in;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &.secondary-light {
+            color: $white;
+            &:hover {
+                color: $secondary;
+            }
         }
     }
 }
@@ -148,7 +325,7 @@
             color: $secondary;
             font-size: $font-size-sm;
             &:hover {
-                color: darken($secondary, 15%);
+                color: darken($secondary, 10%);
             }
         }
     }

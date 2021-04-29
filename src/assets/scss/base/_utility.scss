@@ -1,0 +1,11 @@
+div.cover {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    img {
+        opacity: .8;
+        object-fit: cover;
+        width: 100%;
+    }
+}
