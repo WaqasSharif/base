@@ -40,17 +40,17 @@ const files = {
 // COMPILE SCSS INTO CSS
 function compileSCSS() {
   log(chalk.red.bold('---------------COMPILING SCSS---------------'));
-  return src(['src/assets/scss/main.scss', 'src/assets/scss/rtl.scss'])
+  return src(['src/assets/scss/main.scss' , 'src/assets/scss/notCommon.scss'])
     .pipe(sass({
       outputStyle: 'expanded',
       sourceComments: 'map',
-      sourceMap: 'scss',
+      sourceMap: 'scss',  
       includePaths: bourbon
     }).on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions'))
     .pipe(dest('dist/assets/css'))
     .pipe(browserSync.stream());
-}
+} 
 
 // USING PANINI, TEMPLATE, PAGE AND PARTIAL FILES ARE COMBINED TO FORM HTML MARKUP
 function compileHTML() {

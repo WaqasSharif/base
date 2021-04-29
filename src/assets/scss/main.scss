@@ -1,59 +1,16 @@
 @charset 'UTF-8';
 
-// 0. Import Bourbon
-@import 'bourbon';
-
 // 1. Configuration and helpers
 @import
-  'abstracts/variables',
-  'abstracts/functions',
-  'abstracts/mixins';
+  'base/variables', 
+  'base/typography', 
+  'base/margins';
 
-// 2. Vendors
-@import
-  'vendors/normalize',
-  'vendors/bootstrap';
-
-// 3. Base stuff
-@import
-  'base/base', 
-  'base/fonts',
-  'base/typography',
-  'base/helpers';
-
-// 4. Layout-related sections
-@import
-  'layout/header',
-  'layout/footer';
-
-// 5. Components
+// 2. Components
 @import
   'components/button',
-  'components/covid-info',
-  'components/general-guidelines',
-  'components/hero-banner',
-  'components/tile-boxes',
-  'components/welcome-msg',
-  'components/our-location', 
-  'components/custom-tabs',
-  'components/image-gallery',
-  'components/contact-us-card',
-  'components/spacer',
-  'components/nav-links',
-  'components/main-slider';
+  'components/spacer';
 
-// 6. Page-specific styles
-@import
-  'pages/home',
-  'pages/grief-support',
-  'pages/plan-ahead',
-  'pages/resources',
-  'pages/our-services',
-  'pages/send-flowers',
-  'pages/obituaries',
-  'pages/about-us',
-  'pages/contact-us';
-
-// 7. Themes
-@import
-  'themes/default';
+// 3. Page-specific styles
+// @import
+//   'pages/home'; 

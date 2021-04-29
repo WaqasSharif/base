@@ -15,14 +15,14 @@
 
 body {
   letter-spacing: normal;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
+  line-height: 1.43;
+  font-size: $font-size-sm ;
+  font-weight: normal;
   font-family: $font-family-base;
-  color: $body-copy;
-  @include media-breakpoint-up(lg) {
-    @include font-size(17px);
-    line-height: 26px;
+  color: $text-color;
+  @media (min-width: 992px) {
+    font-size:  $font-size-base ; 
+    line-height: 1.5;
   }
 }
 
@@ -35,62 +35,82 @@ body {
   justify-content: space-between;
 }
 
-.paragraph {
-  margin-bottom: 1.5rem;
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 2rem;
-  }
-    p {
-      font-size: 1rem;
-      line-height: 22px;
-      letter-spacing: normal;
-      color: #333333;
-      @include media-breakpoint-up(lg) {
-        font-size: 18px;
-        line-height: 26px;
-      }
+.sec-paragraph {
+  // paragraph default settings
+  p {
+    letter-spacing: normal;
+    line-height: 1.43;
+    font-size: $font-family-base;
+    font-weight: normal;
+    font-family: $font-size-sm;
+    color: $text-color;
+    margin: 0;
+    @media (min-width: 992px) {
+      font-size: $font-size-base;
+      line-height: 1.5;
     }
-    p+p {
+  }
+  p+p {
       margin-top: 1rem;
       @media (min-width: 992px) {
           margin-top: 1.5rem;
       }
   }
+  // paragraph colors flexibility
   &.light {
     p,
-    ul li, 
-    ol li,
-    ol li a,
-    ul li a {
+    a {
       color: $white;
     }
   }
-  
+  &.primary {
+    p,
+    a {
+      color: $primary;
+    }
+  }
+  &.secondary {
+    p,
+    a {
+      color: $secondary;
+    }
+  }
+  &.heading-font-family {
+    p,
+    a {
+      font-family: $font-family-heading;
+    }
+  }
+  // paragraph sizes
+  &.bold {
+    p {
+      font-weight: bold;
+    }
+  }
   &.small p {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.5;
-    @include media-breakpoint-up(lg) {
-      font-size: 16px;
+    @media (min-width: 992px) {
+      font-size: 14px;
+      line-height: 1.5;
     }
   }
   &.medium p {
     font-size: 16px;
-    line-height: 24px;
-    @include media-breakpoint-up(lg) {
+    line-height: 1.43;
+    @media (min-width: 992px) {
       font-size: 18px;
+      line-height: 1.5;
     }
   }
   &.big p {
     font-size: 18px;
     line-height: 1.33;
     letter-spacing: normal;
-    @include media-breakpoint-up(lg) {
+    @media (min-width: 992px) {
       font-size: 20px;
       line-height: 1.5;
     }
-  }
-  &.heading-font {
-    font-family: $font-family-Quattrocento;
   }
 }
 
@@ -165,96 +185,94 @@ p {
   margin: 0;
 }
 
-a {
-  color: #4a68a8;
-  &:hover,
-  &:focus {
-    color: darken(#4a68a8, 15%);
-  }
-}
 
 //
 // Headings
 //
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: $headings-margin-bottom;
-  font-family: $headings-font-family;
-  font-weight: bold;
-  line-height: $headings-line-height;
-}
 
 
-.title {
-  h1,h2,h3,h4,h5,h6{
-      letter-spacing: 0;
+
+.sec-title {
+  // default settings
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: $font-family-heading;
+    line-height: $headings-line-height;
+    font-weight: normal;
+    letter-spacing: 0;
+    color: $black;
   }
+  // colors
   &.primary { 
     h1,h2,h3,h4,h5,h6{
       color: $primary;
-    
     }
   }
-  &.default {
+  &.secondary { 
     h1,h2,h3,h4,h5,h6{
-      color: #202020
-    
+      color: $secondary;
     }
   }
-
   &.light {
-    h1,h2,h3,h4,h5,h6, 
-    .paragraph p,
-    .small-heading p{
+    h1,h2,h3,h4,h5,h6 {
       color: $white;
     }
   }
-  
+
+  // sizes flexibility
+  &.h1-special {
+    h1 {
+      font-size: 80px;
+      line-height: 90px;
+      @media (min-width: 992px) {
+        font-size: 120px;
+        line-height: 140px;
+      }
+    }
+  }
   h1 {
     font-size: 80px;
     line-height: 90px;
-    font-family: 'Italianno', cursive;
-    font-weight: normal;
-    @include media-breakpoint-up(xl) {
+    @media (min-width: 992px) {
       font-size: 120px;
       line-height: 140px;
     }
   }
   h2 {
     font-size: 2.5rem;
-    @include media-breakpoint-up(md) {
+    @media (min-width: 768px) {
       font-size: 3rem;
     }
-    @include media-breakpoint-up(xl) {
+    @media (min-width: 992px) {
       font-size: 60px;
     }
   }
   h3 {
     font-size: 2.5rem;
-    @include media-breakpoint-up(md) {
+    @media (min-width: 768px) {
       font-size: 2.5rem;
     }
-    @include media-breakpoint-up(xl) {
+    @media (min-width: 992px) {
       font-size: 52px;
     }
   }
 
   h4 {
     font-size: 2rem;
-    @include media-breakpoint-up(lg) {
+    @media (min-width: 992px) {
       font-size: 42px;
     }
   }
   h5 {
     font-size: 1.5rem;
-    @include media-breakpoint-up(md) {
+    @media (min-width: 768px) {
       font-size: 36px;
     }
   }
   h6 {
     font-size: 1.5rem;
-    @include media-breakpoint-up(md) {
+    @media (min-width: 768px) {
       font-size: 32px;
     }
   }

@@ -2,16 +2,19 @@
 
 // Color system
 
+
+// permanent colors
 $white:              #fff !default;
 $black:              #000 !default;
 
+//variable colors
 $primary:             #690908 !default;
-$primary-hover:             #690908 ;
 $secondary:          #e0a40a !default;
-$secondary-hover: #ffbf00;
-$bg-copy:             #f8f8fa;
-$body-copy:         #2b2b2b;
-$body-copy-dark:    #333333;
+
+// can be changes as per required
+$bg:             #f8f8fa;
+$text-color:         #2b2b2b;
+$text-color-dark:    #333333;
 
 
 
@@ -20,20 +23,6 @@ $body-copy-dark:    #333333;
 // Settings for the `<body>` element.
 $body-bg:                   $white !default;
 $body-color:                $black !default;
-
-
-// Links
-//
-// Style anchor elements.
-
-$link-color:                              $secondary !default;
-$link-decoration:                         none !default;
-$link-hover-decoration:                   underline !default;
-
-
-// Paragraphs
-//
-// Style p element.
 
 $paragraph-margin-bottom:   0 !default;
 
@@ -60,20 +49,18 @@ $grid-row-columns:            6 !default;
 
 
 
-// Typography
-//
-// Font, line-height, and color for body text, headings, and more.
-
 // stylelint-disable value-keyword-case
-$font-family-Quattrocento:          'Quattrocento', serif;
+$font-family-heading:               'Quattrocento', serif;
 $font-family-base:                  'Arial', 'Helvetica Neue', Helvetica, sans-serif;;
  
 
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-lg-big:            $font-size-base * 1.5 !default;
+$font-size-lg-x:              $font-size-base * 2 !default;
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
@@ -92,7 +79,7 @@ $line-height-base:            1.5 !default;
 // $h6-font-size:                $font-size-base * 1.25!default;
 
 $headings-margin-bottom:      0 !default; 
-$headings-font-family:        $font-family-Quattrocento !default;
+$font-family-heading:        $font-family-Quattrocento !default;
 $headings-font-weight:        normal !default;
 $headings-line-height:        1.2 !default;
 //$headings-color:              $primary !default;
