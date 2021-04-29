@@ -1,0 +1,55 @@
+//For Inner pages
+.sec-obituaries-inner{
+    a{
+        &.obituaries-tile{
+            display: flex; 
+        }
+    }
+    .obituaries-tile{
+        display: flex;
+        align-items: center;
+        align-items: flex-start;
+        margin-bottom: 2.5rem;
+
+        .thumbnail {
+            position: relative;
+            margin-right: 1.25rem;
+            overflow: hidden;
+            width: 100px;
+            height: 120px;
+            min-width: 100px;
+            border-radius: 8px;
+          }
+          
+          @media screen and (min-width: 768px) {
+            .thumbnail {
+                margin-right: 2.188rem;
+                width: 194px;
+                height: 219px;
+                min-width: 219px;
+            }
+          }
+          .info {
+            text-align: left;
+            margin-top: 6px;
+          }
+    }
+}
+
+img.cover, video.cover {
+    position: absolute;
+    left: -9999px;
+    right: -9999px;
+    top: -9999px;
+    bottom: -9999px;
+    margin: auto;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  div.cover {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
