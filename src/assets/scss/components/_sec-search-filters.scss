@@ -1,7 +1,35 @@
 //Component varialbes
-// permanent colors
-$gray:#D6D6D6 !default;
 
+.ob-search{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+//Search Block Box 
+  &.box{
+    box-shadow: 0px 6px 6px #00000012;
+    border: 1px solid $text-color;
+    padding: 2rem;
+    border-radius: 0;
+  }
+  &.var-1{
+    flex-direction: column;
+  }
+  &.var-2{
+    flex-direction: row;
+    align-items: center;
+    @media (max-width: 991.98px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .sec-title {
+      width: 45%;
+      @media (max-width: 991.98px) {
+        width: 100%;
+      }
+    }
+  }
+}
  
 /* line 83, src/assets/scss/pages/obituaries.scss */
 .sec-search-filters {
@@ -10,24 +38,12 @@ $gray:#D6D6D6 !default;
     align-items: flex-start;
     border-radius: 8px;
     justify-content: flex-start;
-    &.horizontal{
-      align-items: center;
-      @media (max-width: 991.98px) {
-        align-items: flex-start;
-      }
-      .title {
-        width: 45%;
-        @media (max-width: 991.98px) {
-          width: 100%;
-        }
-      }
-    }
-    &.vertical{
-      flex-direction: column;
-    }
+    width: 100%;
+    
+    
     @media (max-width: 991.98px) {
       flex-direction: column;
-      .title {
+      .sec-title {
         margin-bottom: 1.5rem;
       }
     }
@@ -56,6 +72,88 @@ $gray:#D6D6D6 !default;
       
     }
 
+    // Input Sizes
+    &.x-small{
+      .input-group{
+        .form-control{
+          height: 36px;
+        }
+        .input-group-addon{
+          height: 34px;
+        }
+      }
+      
+    }
+    &.small{
+      .input-group{
+        .form-control{
+          height: 40px;
+        }
+        .input-group-addon{
+          height: 38px;
+        }
+      }
+    }
+    &.big{
+      .input-group{
+        .form-control{
+          height: 52px;
+        }
+        .input-group-addon{
+          height: 50px;
+        }
+      }
+    }
+
+    // Input Colors
+    &.primary{
+      .input-group{
+        .form-control{
+          &:focus{
+            border: 1px solid $primary;
+          }
+        }
+        .input-group-addon{
+          svg {
+            fill: $primary;
+          }
+        }
+      }
+    }
+
+    &.secondary{
+      .input-group{
+        .form-control{
+          &:focus{
+            border: 1px solid $secondary;
+          }
+        }
+        .input-group-addon{
+          svg {
+            fill: $secondary;
+          }
+        }
+      }
+    }
+
+    // Input Light
+    &.light{
+      .input-group{
+        .form-control{
+          border: 1px solid $white;
+          background-color: $white;
+          &:focus{
+            border: 1px solid $white;
+          }
+        }
+        .input-group-addon{
+          svg {
+            fill: $white;
+          }
+        }
+      }
+    }
+
     .input-group{
       width: 100%;
       position: relative;
@@ -63,16 +161,17 @@ $gray:#D6D6D6 !default;
         width: 100%;
       }
       .form-control {
-        height: 50px;
-        border: 1px solid $gray;
+        height: 48px;
+        border: 1px solid $text-color;
         border-radius: 0;
         padding-right: 64px;
         font-size: 18px;
         padding-left: 25px;
         &:focus{
           box-shadow: none;
-          border: 1px solid $primary
+          border: 1px solid $black;
         }
+        
       }
       .input-group-addon{
         position: absolute;
@@ -81,7 +180,7 @@ $gray:#D6D6D6 !default;
         width: 64px;
         right: 1px;
         top: 1px;
-        height: 48px;
+        height: 46px;
         border-radius: 0;
         display: flex;
         align-items: center;
@@ -92,7 +191,7 @@ $gray:#D6D6D6 !default;
         svg {
           width: 20px;
           height: 20px;
-          fill: $primary;
+          fill: $black;
         }
         &:hover, :focus{
           background: $primary;
@@ -104,14 +203,7 @@ $gray:#D6D6D6 !default;
       }
       
     }
-   //Search Block Box 
-    &.box{
-      box-shadow: 0px 6px 6px #00000012;
-      border: 1px solid $gray;
-      padding: 2rem;
-      border-radius: 0;
-      margin-bottom: 24px;
-    }
+   
   }
   
   

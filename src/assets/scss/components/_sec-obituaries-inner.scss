@@ -16,9 +16,10 @@
             margin-right: 1.25rem;
             overflow: hidden;
             border-radius: 8px;
-            width: 300px;
+            width: 125px;
+            min-width: 125px;
             img {
-              height: 300px;
+              height: 125px;
             }
           }
 
@@ -28,8 +29,11 @@
             .thumbnail {
                 margin-right: 2.188rem;
                 width: 194px;
-                // height: 219px;
-                // min-width: 219px;
+                min-width: 194px;
+                img {
+                    height: 219px;
+                  }
+                
             }
           }
           .info {
