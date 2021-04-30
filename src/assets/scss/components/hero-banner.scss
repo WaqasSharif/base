@@ -1,6 +1,7 @@
   .hero-banner {
     position: relative;
     display: flex;
+    overflow: hidden;
     min-height: 497px;
     @media (min-width: 768px) {
       min-height: 754px;
@@ -37,7 +38,72 @@
     // max content width
     &.half {
       .content {
-        max-width: 600px;
+        @media (min-width: 992px) {
+          max-width: 600px;
+        }
+      }
+    }
+
+    &.solid-bg {
+      .content {
+        background: $secondary;
+        padding-left: 32px;
+        padding-right: 32px;
+        position: absolute;
+        left: 0;
+
+        @media (max-width: 991px) {
+          height: auto;
+          padding: 32px;
+          text-align: center;
+          left: 32px;
+          right: 32px;
+          bottom: 32px;
+        }
+
+
+        
+      }
+    } 
+
+    &.two-col {
+      .content {
+        @media (min-width: 992px) {
+          display: flex;
+          flex-direction: row;
+          .sec-title {
+            width: 60%;
+          }
+          .banner-details  {
+            width: 40%;
+            padding-left: 2rem;
+          }
+        }
+      }
+      &.v-top {
+        .content {
+          align-items: flex-start;
+          padding-top: 2rem;
+          @media (min-width: 768px) {
+            padding-top: 3rem;
+          }
+        }
+      }
+
+      &.v-middle {
+        .content {
+          align-items: center;
+        }
+      }
+
+      &.v-bottom {
+        .content {
+          align-items: flex-end;
+          padding-bottom: 2rem;
+          @media (min-width: 768px) {
+            padding-bottom: 3rem;
+          }
+        }
       }
     }
 
@@ -76,7 +142,7 @@
     }
     &.h-left {
       .content {
-        align-items: left;
+        align-items: flex-start;
       }
     }
 
