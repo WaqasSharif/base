@@ -1,7 +1,6 @@
   .hero-banner {
     position: relative;
     display: flex;
-    align-items: center;
     min-height: 497px;
     @media (min-width: 768px) {
       min-height: 754px;
@@ -25,24 +24,48 @@
     .content {
       z-index: 2;
       position: relative;
-      text-align: center;
-      margin-top: 92px;
-      @media (max-width: 767px) {
-        text-align: center;
-        margin-top: 60px;
-      }
-      .btn-wrapper {
-        .btn {width: auto;}
-      }
-      h1, h3 {
-        color: $white;
-      }
-      h3 {
-          margin-bottom: 1.5rem;
-          text-transform: uppercase;
-          letter-spacing: .65rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    // content alignments on banner vertical middle top and bottom
+    &.v-middle {
+      .content {
+        justify-content: center;
       }
     }
+    &.v-top {
+      .content {
+        justify-content: flex-start;
+        padding-top: 2rem;
+        @media (min-width: 768px) {
+          padding-top: 3rem;
+        }
+      }
+    }
+    &.v-bottom {
+      .content {
+        justify-content: flex-end;
+        padding-bottom: 2rem;
+        @media (min-width: 768px) {
+          padding-bottom: 3rem;
+        }
+      }
+    }
+    // content alignments on banner horizontally middle top and bottom
+    &.h-center {
+      .content {
+        align-items: center;
+        text-align: center;
+      }
+    }
+    &.h-left {
+      .content {
+        align-items: left;
+      }
+    }
+
   }
 
 
@@ -62,11 +85,8 @@
             }
         }
         .content {
-        margin-top: 83px;
-        @media (max-width: 767px) {
-            text-align: center;
-            margin-top: 54px;
-        }
+          @media (max-width: 767px) {
+          }
         }
     }
 }

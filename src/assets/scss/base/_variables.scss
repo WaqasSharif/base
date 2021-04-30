@@ -17,6 +17,7 @@ $secondary:          #e0a40a !default;
 $bg:             #f8f8fa;
 $text-color:         #969696;
 $text-color-dark:    #656565;
+$border:            #D6D6D6;
 
 
 // Interactions
@@ -55,8 +56,8 @@ $grid-row-columns:            6 !default;
 
 
 // stylelint-disable value-keyword-case
-$font-family-heading:               'Quattrocento', serif;
-$font-family-base:                  'Arial', 'Helvetica Neue', Helvetica, sans-serif;;
+$font-family-heading:               'Playfair Display', serif;
+$font-family-base:                  'Arial', 'Helvetica Neue', Helvetica, sans-serif;
  
 
 // stylelint-enable value-keyword-case
