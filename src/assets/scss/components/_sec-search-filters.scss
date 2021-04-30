@@ -5,7 +5,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-//Search Block Box 
+  //Search Block Box 
   &.box{
     box-shadow: 0px 6px 6px #00000012;
     border: 1px solid $border;
@@ -29,12 +29,13 @@
       }
     }
   }
+  &.var-3 {
+    
+  }
 }
  
 /* line 83, src/assets/scss/pages/obituaries.scss */
 .sec-search-filters {
-  
-    padding: 24px 0px;
     display: flex;
     align-items: flex-start;
     border-radius: 8px;
