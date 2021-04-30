@@ -37,10 +37,24 @@
             width: auto;
         }
 
+        // with icons / img
+        span {
+            img,
+            svg {
+                width: 16px;
+                height: 16px;
+                margin-top: -4px;
+                margin-right: 4px;
+                path, g {
+                    fill: $white;
+                }
+            }
+        }
+        
         // hover - focus and active 
         &:hover {
             outline: none;
-            background-color: darken($btn-default, 10%);
+            background-color: lighten($btn-default, 10%);
         }
         &:focus {
             box-shadow: none;
@@ -99,21 +113,20 @@
             }
         }
 
-        // button with icon
-        span {
-            padding-left: 8px;
-        }
-
         // button sizes
         &.x-small {
             height: 36px;
             line-height: 36px;
             min-width: 160px;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
         }
         &.small {
             height: 40px;
             line-height: 40px;
             min-width: 180px;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
         }
         &.big {
             height: 52px;
@@ -136,10 +149,29 @@
             background-color: transparent;
             border-color: $btn-default;
             color: $btn-default;
+            span {
+                img,
+                svg {
+                    path, g {
+                        fill: $btn-default;
+                    }
+                }
+            }
             &:hover {
                 background-color: $btn-default;
                 color: $white;
+
+                span {
+                    img,
+                    svg {
+                        path, g {
+                            fill: $white;
+                        }
+                    }
+                }
             }
+            
+
         }
 
         // outline default light for background images or solid background
@@ -147,6 +179,16 @@
             background-color: transparent;
             border-color: $white;
             color: $white;
+
+            span {
+                img,
+                svg {
+                    path, g {
+                        fill: $white;
+                    }
+                }
+            }
+
             &:hover {
                 background-color: $btn-default;
                 border-color: $btn-default;
@@ -167,15 +209,39 @@
             background-color: transparent;
             border-color: $primary;
             color: $primary;
+            span {
+                img,
+                svg {
+                    path, g {
+                        fill: $primary;
+                    }
+                }
+            }
             &:hover {
                 background-color: $primary;
                 color: $white;
+                span {
+                    img,
+                    svg {
+                        path, g {
+                            fill: $white;
+                        }
+                    }
+                }
             }
         }
         &.primary-outline-light {
             background-color: transparent;
             border-color: $white;
             color: $white;
+            span {
+                img,
+                svg {
+                    path, g {
+                        fill: $white;
+                    }
+                }
+            }
             &:hover {
                 background-color: $primary;
                 border-color: $primary;
@@ -196,15 +262,39 @@
             background-color: transparent;
             border-color: $secondary;
             color: $secondary;
+            span {
+                img,
+                svg {
+                    path, g {
+                        fill: $secondary;
+                    }
+                }
+            }
             &:hover {
                 background-color: $secondary;
                 color: $white;
+                span {
+                    img,
+                    svg {
+                        path, g {
+                            fill: $white;
+                        }
+                    }
+                }
             }
         }
         &.secondary-outline-light {
             background-color: transparent;
             border-color: $white;
             color: $white;
+            span {
+                img,
+                svg {
+                    path, g {
+                        fill: $white;
+                    }
+                }
+            }
             &:hover {
                 background-color: $secondary;
                 border-color: $secondary;
@@ -217,18 +307,74 @@
 
 
 .sec-links {
+    .link + .link {
+        margin-left: 8px;
+        @media screen and (min-width: 768px) {
+            margin-left: 16px;
+        }
+        @media screen and (max-width: 767px) {
+            margin-left: 0;
+            margin-top: 8px;
+        }
+    }
     .link {
         position: relative;
+        font-size: 16px;
+        line-height: 1.25;
+        transition: all 0.4s ease 0s, transform 200ms ease-in-out 0s;
+        // with icons / img
+        span {
+            img,
+            svg {
+                width: 16px;
+                height: 16px;
+                margin-top: -4px;
+                margin-right: 6px;
+                path, g {
+                    fill:  $anchor-color;
+                }
+            }
+        }
         &:hover {
             text-decoration: none;
+            color: lighten($anchor-color, 10%);
+            span {
+                img,
+                svg {
+                    path, g {
+                        fill:  lighten($anchor-color, 10%);
+                    }
+                }
+            }
+        }
+        
+
+        &.arrow {
+            padding-right: 12px;
+            &:before {
+                border: solid $anchor-color;
+                border-width: 0 1.75px 1.75px 0;
+                padding: 3px;
+                content: "";
+                position: absolute;
+                line-height: 1;
+                top: 50%;
+                transition: all .3s ease-in-out;
+                transform: translateY(-50%) rotate(-45deg);
+                right: 0;
+            }
         }
         &.font-12 {
             font-size: 12px;
-            line-height: 1.1;
+            line-height: 1.5;
         }
         &.font-14 {
             font-size: 14px;
-            line-height: 1.1;
+            line-height: 1.5;
+        }
+        &.font-18 {
+            font-size: 18px;
+            line-height: 1.25;
         }
         &.uppercase {
             text-transform: uppercase;
@@ -239,10 +385,21 @@
 
         &.light {
             color: $white;
+            span {
+                img,
+                svg {
+                    path, g {
+                        fill:  $white;
+                    }
+                }
+            }
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         &.default-underline {
-            background-image: linear-gradient(120deg, #007bff 0%, #007bff 100%);
+            background-image: linear-gradient(120deg, $anchor-color 0%, $anchor-color 100%);
             background-repeat: no-repeat;
             background-size: 100% 3px;
             padding-bottom: 3px;
@@ -255,8 +412,32 @@
 
         &.primary {
             color: $primary;
+            span {
+                img,
+                svg {
+                    path, g {
+                        fill:  $primary;
+                    }
+                }
+            }
+            &.arrow {
+                &:before {
+                    border-color: $primary;
+                }
+            }
             &:hover {
-                color: darken($primary, 10%);
+                color: lighten($primary, 10%);
+                span {
+                    img,
+                    svg {
+                        path, g {
+                            fill:  lighten($primary, 10%);
+                        }
+                    }
+                }
+                &:before {
+                    border-color: lighten($primary, 10%);
+                }
             }
         }
 
@@ -267,20 +448,67 @@
             padding-bottom: 3px;
             background-position: 0 100%;
             transition: background-size 0.25s ease-in;
-        
         }
 
         &.primary-light {
             color: $white;
+            span {
+                img,
+                svg {
+                    path, g {
+                        fill:  $white;
+                    }
+                }
+            }
+            &.arrow {
+                &:before {
+                    border-color: $white;
+                }
+            }
             &:hover {
                 color: $primary;
+                span {
+                    img,
+                    svg {
+                        path, g {
+                            fill:  $primary;
+                        }
+                    }
+                }
+                &:before {
+                    border-color: $primary;
+                }
             }
         }
 
         &.secondary {
             color: $secondary;
+            span {
+                img,
+                svg {
+                    path, g {
+                        fill:  $secondary;
+                    }
+                }
+            }
+            &.arrow {
+                &:before {
+                    border-color: $secondary;
+                }
+            }
             &:hover {
-                color: darken($secondary, 10%);
+                color: lighten($secondary, 10%);
+                span {
+                    img,
+                    svg {
+                        path, g {
+                            fill: lighten($secondary, 10%);
+                        }
+                    }
+                }
+                &:before {
+                    border-color: lighten($secondary, 10%);
+                }
             }
         }
         &.secondary-underline {
@@ -297,39 +525,37 @@
 
         &.secondary-light {
             color: $white;
+            span {
+                img,
+                svg {
+                    path, g {
+                        fill:  $white;
+                    }
+                }
+            }
+            &.arrow {
+                &:before {
+                    border-color: $white;
+                }
+            }
             &:hover {
                 color: $secondary;
+                span {
+                    img,
+                    svg {
+                        path, g {
+                            fill:  $secondary;
+                        }
+                    }
+                }
+                &:before {
+                    border-color: $secondary;
+                }
             }
         }
     }
 }
 
-.link-wrapper {
-    .btn-link {
-        text-transform: uppercase;
-        position: relative;
-        font-size: $font-size-base;
-        &.underline {
-            background-image: linear-gradient(120deg, #dfc965 0%, #dfc965 100%);
-            background-repeat: no-repeat;
-            background-size: 100% 3px;
-            padding-bottom: 2px;
-            background-position: 0 100%;
-            transition: background-size 0.25s ease-in;
-            &:hover {
-                text-decoration: none;
-            }
-        }
-        
-        &.secondary {
-            color: $secondary;
-            font-size: $font-size-sm;
-            &:hover {
-                color: darken($secondary, 10%);
-            }
-        }
-    }
-}
 
 
 
