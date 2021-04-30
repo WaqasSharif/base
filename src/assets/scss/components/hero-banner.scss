@@ -1,0 +1,138 @@
+  .hero-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 497px;
+    @media (min-width: 768px) {
+      min-height: 754px;
+    }
+    .banner-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+    }
+    div.cover {
+        img {
+            height: 497px;
+            @media (min-width: 768px) {
+                height: 754px;
+            }
+        }
+    }
+    .content {
+      z-index: 2;
+      position: relative;
+      text-align: center;
+      margin-top: 92px;
+      @media (max-width: 767px) {
+        text-align: center;
+        margin-top: 60px;
+      }
+      .btn-wrapper {
+        .btn {width: auto;}
+      }
+      h1, h3 {
+        color: $white;
+      }
+      h3 {
+          margin-bottom: 1.5rem;
+          text-transform: uppercase;
+          letter-spacing: .65rem;
+      }
+    }
+  }
+
+
+  // hero banner inner 
+  .hero-banner {
+    &.inner {
+        min-height: 450px;
+        @media (min-width: 768px) {
+            min-height: 656px;
+        }
+        div.cover {
+            img {
+                height: 450px;
+                @media (min-width: 768px) {
+                    height: 656px;
+                }
+            }
+        }
+        .content {
+        margin-top: 83px;
+        @media (max-width: 767px) {
+            text-align: center;
+            margin-top: 54px;
+        }
+        }
+    }
+}
+
+
+
+  // hero banner as slider 
+.hero-banner.with-slider {
+  height: 500px;
+  @media (min-width: 768px) {
+    height: 1100px;
+  }
+  div.cover img {
+    height: 500px;
+    @media (min-width: 768px) {
+      height: 1100px;
+    }
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .content {
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+    @media (min-width: 768px) {
+      padding-bottom: 390px;
+    }
+    .title  {
+      h1 {
+        font-size: 80px;
+        line-height: 90px;
+        @media (min-width: 768px) {
+          font-size: 180px;
+          line-height: 200px;
+        }
+      }
+    }
+    
+  }
+
+  // swiper overides
+  .swiper-container {
+    height: 100%;
+  }
+  .controls {
+    .swiper-button-prev,
+    .swiper-button-next {
+      &:after {
+        color: #fff;
+      }
+    }
+    .swiper-button-prev {
+      padding-left: 3rem;
+    }
+    .swiper-button-next {
+      padding-right: 3rem;
+    }
+  }
+}
