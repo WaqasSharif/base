@@ -33,19 +33,69 @@
  
 /* line 83, src/assets/scss/pages/obituaries.scss */
 .sec-search-filters {
+  
     padding: 24px 0px;
     display: flex;
     align-items: flex-start;
     border-radius: 8px;
     justify-content: flex-start;
     width: 100%;
-    
-    
     @media (max-width: 991.98px) {
       flex-direction: column;
       .sec-title {
         margin-bottom: 1.5rem;
       }
+    }
+
+    .input-group{
+      width: 100%;
+      position: relative;
+      @media (max-width: 991.98px) {
+        width: 100%;
+      }
+      .form-control {
+        height: 48px;
+        border: 1px solid $text-color;
+        border-radius: 0;
+        padding-right: 64px;
+        font-size: 18px;
+        padding-left: 25px;
+        &:focus{
+          box-shadow: none;
+          border: 1px solid $black;
+        }
+        
+      }
+      .input-group-addon{
+        position: absolute;
+        z-index: 8;
+        background-color: $white;
+        width: 64px;
+        right: 1px;
+        top: 1px;
+        height: 46px;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        outline: none;
+        transition: $transitions;
+        
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: $black;
+        }
+        &:hover, &:focus{
+          background-color: $black;
+          box-shadow: none;
+          svg {
+            fill: $white;
+          }
+        }
+      }
+      
     }
 
     &.radius{
@@ -114,6 +164,13 @@
           }
         }
         .input-group-addon{
+          &:hover, &:focus{
+            background-color: $primary;
+            box-shadow: none;
+            svg {
+              fill: $white;
+            }
+          }
           svg {
             fill: $primary;
           }
@@ -129,6 +186,13 @@
           }
         }
         .input-group-addon{
+          &:hover, &:focus{
+            background-color: $secondary;
+            box-shadow: none;
+            svg {
+              fill: $white;
+            }
+          }
           svg {
             fill: $secondary;
           }
@@ -154,54 +218,68 @@
       }
     }
 
-    .input-group{
-      width: 100%;
-      position: relative;
-      @media (max-width: 991.98px) {
-        width: 100%;
-      }
-      .form-control {
-        height: 48px;
-        border: 1px solid $text-color;
-        border-radius: 0;
-        padding-right: 64px;
-        font-size: 18px;
-        padding-left: 25px;
-        &:focus{
-          box-shadow: none;
-          border: 1px solid $black;
+    // Input Light Transparent
+    &.light-transparent{
+      .input-group{
+        .form-control{
+          border: 1px solid $white;
+          background-color: transparent;
+          color:$white;
         }
-        
-      }
-      .input-group-addon{
-        position: absolute;
-        z-index: 8;
-        background-color: $white;
-        width: 64px;
-        right: 1px;
-        top: 1px;
-        height: 46px;
-        border-radius: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 0;
-        outline: none;
-        transition: $transitions;
-        svg {
-          width: 20px;
-          height: 20px;
-          fill: $black;
-        }
-        &:hover, :focus{
-          background: $primary;
-          box-shadow: none;
+        .input-group-addon{
           svg {
             fill: $white;
           }
         }
       }
-      
+    }
+
+    &.active{
+      .input-group{
+        .form-control{
+          &:focus{
+            border: 1px solid $black;
+          }
+        }
+        .input-group-addon{
+          background-color: $black;
+          svg {
+            fill: $white;
+          }
+        }
+      }
+  
+      &.primary{
+        .input-group{
+          .form-control{
+            &:focus{
+              border: 1px solid $primary;
+            }
+          }
+          .input-group-addon{
+            background-color: $primary;
+              svg {
+                fill: $white;
+              }
+          }
+        }
+      }
+  
+      &.secondary{
+        .input-group{
+          .form-control{
+            &:focus{
+              border: 1px solid $secondary;
+            }
+          }
+          .input-group-addon{
+              background-color: $secondary;
+              svg {
+                fill: $white;
+              }
+          }
+        }
+      }
     }
    
   }
