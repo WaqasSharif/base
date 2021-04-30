@@ -139,7 +139,7 @@
         // Variation parallel round img Tile
         &.var-5{
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             text-align: left;
             border-radius: 0;
             .thumbnail {
@@ -169,7 +169,7 @@
             justify-content: flex-start;
             text-align: left;
             border-radius: 0;
-            background-color: #efefef;
+            background-color: $border;
             .thumbnail {
                 width: 203px;
                 min-width: 203px;
@@ -188,6 +188,73 @@
                       }
                     
                 }
+              }
+        }
+
+        // Variation flat img Tile
+        &.var-7{
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            border-radius: 0;
+            position: relative;
+            height: 387px;
+            a{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%; 
+                height: 100%;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 20%;
+                z-index: 1;
+                background: transparent linear-gradient(180deg, #00000000 0%, #000000A6 100%) 0% 0% no-repeat padding-box;
+            }
+            .thumbnail {
+                width: 100%;
+                min-width: 100%;
+                border-radius: 0;
+                margin-right: 0;
+                position: absolute;
+                z-index: 0;
+                img {
+                  height: 387px;
+                  transition: $transitions;
+                  transform: scale(1);
+                }
+                &:hover{
+                    img {
+                        transform: scale(1.2);
+                      }
+                    
+                }
+              }
+              @media screen and (min-width: 768px) {
+                .thumbnail {
+                    width: 100%;
+                    min-width: 100%;
+                    img {
+                        height: 387px;
+                      }
+                    
+                }
+              }
+              .info{
+                position: absolute;
+                bottom:10px;
+                left: 0;
+                width: 100%;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
               }
         }
 
