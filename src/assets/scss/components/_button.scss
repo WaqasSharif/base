@@ -91,7 +91,10 @@
             font-size: 14px;
         }
         &.font-18 {
-            font-size: 18px;
+            font-size: 16px;
+            @media (min-width: 992px) {
+                font-size: 18px;
+            }
         }
 
         // animation styles
@@ -376,8 +379,12 @@
             line-height: 1.5;
         }
         &.font-18 {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.25;
+            @media (min-width: 992px) {
+                font-size: 18px;
+            }
+            
         }
         &.uppercase {
             text-transform: uppercase;
