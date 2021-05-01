@@ -68,6 +68,11 @@ body {
       color: $white;
     }
   }
+  &.dark {
+    p, a {
+      color: $text-color-dark;
+    }
+  }
   &.primary {
     p,
     a {

@@ -369,4 +369,53 @@
         }
     }
 
+// obituaries bottom link and description
+.sec-subscribe {
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    text-align: center;
+    .sec-links {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+// sliders options
+.obituaries-slider {
+  position: relative;
+  .slider-var-1-prev,
+  .slider-var-1-next {
+    position: absolute;
+    top: 34%;
+    transition: all .2s ease;
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+  .slider-var-1-prev {
+    left: -32px;
+    transform: translateY(-0) rotate(-180deg);
+    &:hover {
+      svg {
+        transform: translateX(0px) translateY(3px);
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      left: -60px;
+    }
+  }
+  .slider-var-1-next {
+    right: -32px;
+    &:hover {
+      svg {
+        transform: translateX(0px) translateY(-3px);
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      right: -60px;
+    }
+  }
+}
 
