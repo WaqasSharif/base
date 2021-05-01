@@ -32,7 +32,7 @@ $(document).ready(function() {
   // get window inner height and apply to hero-banner
   var windowHeight = window.innerHeight;
   var heroBanner = $('.dynamic-height');
-  heroBanner.css('min-height', windowHeight);
+  heroBanner.css('height', windowHeight);
   heroBanner.find('.cover img').css('height', windowHeight);
 
   

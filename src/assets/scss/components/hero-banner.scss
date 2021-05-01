@@ -2,9 +2,9 @@
     position: relative;
     display: flex;
     overflow: hidden;
-    min-height: 497px;
+    height: 497px;
     @media (min-width: 768px) {
-      min-height: 754px;
+      height: 754px;
     }
     .banner-img {
       position: absolute;
@@ -152,9 +152,9 @@
   // hero banner inner 
   .hero-banner {
     &.inner {
-        min-height: 450px;
+        height: 450px;
         @media (min-width: 768px) {
-            min-height: 656px;
+            height: 656px;
         }
         div.cover {
             img {
@@ -175,53 +175,19 @@
 
   // hero banner as slider 
 .hero-banner.with-slider {
-  height: 500px;
-  @media (min-width: 768px) {
-    height: 1100px;
-  }
-  div.cover img {
-    height: 500px;
-    @media (min-width: 768px) {
-      height: 1100px;
-    }
-  }
 
-  .container-fluid {
+
+  .container {
     height: 100%;
   }
-
-  .content {
-    z-index: 2;
-    position: relative;
-    text-align: center;
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    
-    @media (min-width: 768px) {
-      padding-bottom: 390px;
-    }
-    .title  {
-      h1 {
-        font-size: 80px;
-        line-height: 90px;
-        @media (min-width: 768px) {
-          font-size: 180px;
-          line-height: 200px;
-        }
-      }
-    }
-    
-  }
-
   // swiper overides
   .swiper-container {
     height: 100%;
   }
   .controls {
+    @media (max-width: 767px) {
+      display: none;
+    }
     .swiper-button-prev,
     .swiper-button-next {
       &:after {
