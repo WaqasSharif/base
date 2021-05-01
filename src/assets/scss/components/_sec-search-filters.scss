@@ -99,6 +99,7 @@
       @media (max-width: 991.98px) {
         width: 100%;
         order: 2;
+        margin-bottom: 16px;
       }
     }
     .sec-title {
@@ -109,12 +110,16 @@
         width: 100%;
         text-align: left;
         order: 1;
+        margin-bottom: 16px;
       }
     }
     .sec-buttons{
       order: 2;
+      margin-left: 16px;
       @media (max-width: 991.98px) {
         order: 2;
+        margin-left: 0px;
+        width: 100%;
       }
     }
   }
@@ -131,6 +136,7 @@
       width: 33%;
       @media (max-width: 991.98px) {
         width: 100%;
+        margin-bottom: 16px;
       }
     }
     .sec-title {
@@ -141,12 +147,16 @@
         width: 100%;
         text-align: left;
         order: 0;
+        margin-bottom: 16px;
       }
     }
     .sec-buttons{
       order: 1;
+      margin-left: 16px;
       @media (max-width: 991.98px) {
         order: 1;
+        margin-left: 0px;
+        width: 100%;
       }
     }
   }
@@ -167,8 +177,9 @@
       right: 0;
       @media (max-width: 991.98px) {
         width: 100%;
-        order: 2;
+        order: 1;
         position: static;
+        margin-bottom: 16px;
       }
     }
     .sec-title {
@@ -179,25 +190,22 @@
       padding-right: 20px;
       margin-right: 20px;
       border-right: solid 1px $black;
-      // &::before{
-      //   content:"";
-      //   width: 1px;
-      //   height: 30px;
-      //   background-color: $black;
-      //   position: absolute;
-      //   right: 0;
-      //   top: 0;
-      // }
       @media (max-width: 991.98px) {
         width: auto;
         text-align: left;
         order: 0;
+        border-right:0;
+        padding-right: 0px;
+        margin-right: 0px;
+        margin-bottom: 16px;
       }
     }
-    .sec-buttons{
+    .sec-links{
       order: 1;
+      margin-left: 16px;
       @media (max-width: 991.98px) {
-        order: 1;
+        order: 2;
+        margin-left: 0px;
       }
     }
   } 
