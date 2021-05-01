@@ -7,10 +7,13 @@
   flex-direction: column;
   //Search Block Box 
   &.box{
-    box-shadow: 0px 6px 6px #00000012;
+    box-shadow: 0px 6px 6px $border;
     border: 1px solid $border;
     padding: 2rem;
     border-radius: 0;
+    @media (max-width: 767.98px) {
+                padding: 1rem;
+            }
     .sec-search-filters{
       .input-group{
         .input-group-addon{
