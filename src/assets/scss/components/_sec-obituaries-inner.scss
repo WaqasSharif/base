@@ -54,7 +54,7 @@
           }
 
           &.box{
-            box-shadow: 0px 2px 6px #f6f6f6;
+            box-shadow: 0px 2px 6px $border;
             border: 1px solid $border;
             padding: 2rem;
             border-radius: 0;
@@ -321,7 +321,7 @@
             justify-content: flex-start;
             text-align: left;
             border-radius: 0;
-            background-color: $border;
+            background-color: $white;
             @media screen and (max-width: 767.98px) {
               flex-direction: column;
           }
@@ -653,5 +653,16 @@
     @media screen and (min-width: 1325px) {
       grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
     }
+  }
+}
+
+// bg option
+.obituaries-bg-wrapper{
+  padding: 78px;
+  @media screen and (max-width: 991px) {
+    padding: 20px;
+  }
+  &.with-bg{
+   background-color: $bg; 
   }
 }
