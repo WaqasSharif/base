@@ -110,6 +110,17 @@
                     color: $black;
                 }
               }
+              a{
+                text-decoration: none;
+                &:hover{
+                  .info{
+                    h1,h2,h3,h4,h5,h6{
+                      color: $anchor-color;
+                    }
+                  }
+                }
+                
+              }
         }
 
         // Variation radius
@@ -153,6 +164,17 @@
                 a{
                     color: $black;
                 }
+              }
+              a{
+                text-decoration: none;
+                &:hover{
+                  .info{
+                    h1,h2,h3,h4,h5,h6{
+                      color: $anchor-color;
+                    }
+                  }
+                }
+                
               }
         }
 
@@ -201,8 +223,32 @@
               &:hover {
                 background-color: $black;
                 .info{
+                  h1,h2,h3,h4,h5,h6{
                     color: $white;
                   }
+                  .sec-paragraph{
+                    p{
+                      color: $white;
+                    }
+                  }
+                }
+              }
+
+              a{
+                text-decoration: none;
+                &:hover{
+                  .info{
+                    h1,h2,h3,h4,h5,h6{
+                      color: $white;
+                    }
+                    .sec-paragraph{
+                      p{
+                        color: $white;
+                      }
+                    }
+                  }
+                }
+                
               }
         }
 
@@ -251,6 +297,22 @@
                     color: $black;
                 }
               }
+              a{
+                text-decoration: none;
+                color: $black;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: left;
+                display: flex;
+                &:hover{
+                  .info{
+                    h1,h2,h3,h4,h5,h6{
+                      color: $anchor-color;
+                    }
+                  }
+                }
+                
+              }
         }
 
         // Variation parallel flat img Tile
@@ -268,7 +330,7 @@
                 width: 203px;
                 min-width: 203px;
                 border-radius: 0;
-                margin-right: 2.5rem;
+                margin-right: 1.5rem;
                 @media screen and (max-width: 575.98px) {
                     width: 100%;
                     min-width: 100%;
@@ -294,6 +356,22 @@
                     text-align:center;
                     
                 }
+              }
+              a{
+                text-decoration: none;
+                color: $black;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: left;
+                display: flex;
+                &:hover{
+                  .info{
+                    h1,h2,h3,h4,h5,h6{
+                      color: $anchor-color;
+                    }
+                  }
+                }
+                
               }
         }
 
@@ -380,6 +458,15 @@
       margin-bottom: 4px;
     }
   }
+  &.dark{
+    background-color: $black;
+    padding: 1rem;
+    .sec-paragraph{
+      p{
+        color: $white;
+      }
+    }
+  }
 }
 
 // sliders options
@@ -417,5 +504,75 @@
       right: -60px;
     }
   }
+  &.var-2{
+    .slider-var-2-prev,
+    .slider-var-2-next {
+      position: absolute;
+      top: 34%;
+      transition: all .2s ease;
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+    }
+    .slider-var-2-prev {
+      left: -32px;
+      transform: translateY(-0) rotate(-180deg);
+      &:hover {
+        svg {
+          transform: translateX(0px) translateY(3px);
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        left: -60px;
+      }
+    }
+    .slider-var-2-next {
+      right: -32px;
+      &:hover {
+        svg {
+          transform: translateX(0px) translateY(-3px);
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        right: -60px;
+      }
+    }
+  }
+
+  &.var-3{
+    .slider-var-3-prev,
+    .slider-var-3-next {
+      position: absolute;
+      top: 34%;
+      transition: all .2s ease;
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+    }
+    .slider-var-3-prev {
+      left: -32px;
+      transform: translateY(-0) rotate(-180deg);
+      &:hover {
+        svg {
+          transform: translateX(0px) translateY(3px);
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        left: -60px;
+      }
+    }
+    .slider-var-3-next {
+      right: -32px;
+      &:hover {
+        svg {
+          transform: translateX(0px) translateY(-3px);
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        right: -60px;
+      }
+    }
+  }
+
 }
 

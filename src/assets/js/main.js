@@ -114,6 +114,66 @@ $('body').on('mouseenter mouseleave','.main-nav-links > ul > li',function(e){
   });
 
 
+  var obituariesSliderVar1 = new Swiper('.obituaries-slider.var-2 .swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.slider-var-2-next',
+      prevEl: '.slider-var-2-prev',
+    },
+    breakpoints: {
+      414: {
+        slidesPerView: 2.5
+      },
+      768: {
+        slidesPerView: 3.5
+      },
+      1024: {
+        slidesPerView: 4
+      },
+      1200: {
+        slidesPerView: 5
+      },
+      1440: {
+        slidesPerView: 6
+      },
+      9999: {
+        slidesPerView: 6
+      }
+    }
+  });
+
+
+  var obituariesSliderVar1 = new Swiper('.obituaries-slider.var-3 .swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.slider-var-3-next',
+      prevEl: '.slider-var-3-prev',
+    },
+    breakpoints: {
+      414: {
+        slidesPerView: 2.5
+      },
+      768: {
+        slidesPerView: 3.5
+      },
+      1024: {
+        slidesPerView: 4
+      },
+      1200: {
+        slidesPerView: 5
+      },
+      1440: {
+        slidesPerView: 6
+      },
+      9999: {
+        slidesPerView: 6
+      }
+    }
+  });
+
+
 
   // hover on menu add class to handle backdrop
   // $('.menu-section-desktop  .main-nav-links ul  li').mouseover(function (e) {
