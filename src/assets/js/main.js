@@ -40,24 +40,6 @@ $(document).ready(function() {
 
 (function($) { "use strict";
 
-$(function() {
-  var header = $(".start-style");
-  $(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-  
-    if (scroll >= 10) {
-      header.removeClass('start-style').addClass("scroll-on");
-    } else {
-      header.removeClass("scroll-on").addClass('start-style');
-    }
-  });
-});		
-  
-//Animation
-
-$(document).ready(function() {
-  $('body.hero-anime').removeClass('hero-anime');
-});
 
 //Menu On Hover
   
@@ -93,7 +75,7 @@ $('body').on('mouseenter mouseleave','.main-nav-links > ul > li',function(e){
     },
     breakpoints: {
       414: {
-        slidesPerView: 2.5
+        slidesPerView: 1.8
       },
       768: {
         slidesPerView: 3.5
@@ -153,7 +135,7 @@ $('body').on('mouseenter mouseleave','.main-nav-links > ul > li',function(e){
     },
     breakpoints: {
       414: {
-        slidesPerView: 2.5
+        slidesPerView: 1.8
       },
       768: {
         slidesPerView: 3.5
@@ -212,16 +194,18 @@ $('.dismiss').on('click', function(e){
 
 
 
-  var navExpand = [].slice.call(document.querySelectorAll('.expandable'));
+var navExpand = [].slice.call(document.querySelectorAll('.mobile-menu .expandable'));
 
-  if ( window.innerWidth < 991 ) {
-    navExpand.forEach(function(item) {
-      item.querySelector('.mobile-menu .expandable > a').addEventListener('click', function(e) {
-        e.preventDefault();
-        item.classList.add('active')
-      });
-      item.querySelector('.back-to-menu').addEventListener('click', function() {item.classList.remove('active')});
+if (window.innerWidth < 991) {
+  navExpand.forEach(function (item) {
+    item.querySelector('.mobile-menu .expandable > a').addEventListener('click', function (e) {
+      e.preventDefault();
+      item.classList.add('active');
     });
-  }
+    item.querySelector('.back-to-menu').addEventListener('click', function () {
+      item.classList.remove('active');
+    });
+  });
+}
   
 }); 

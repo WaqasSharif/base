@@ -1,0 +1,50 @@
+.subscribe-box {
+    height: 400px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    @media screen and (max-width: 991px) {
+        margin-top: 2rem;
+    }
+
+    .subscribe-content {
+        position: relative;
+        z-index: 2;
+        padding: 24px;
+        text-align: center;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    // color variations
+    &.default {
+        background-color: $btn-default;
+    }
+    &.primary {
+        background-color: $primary;
+    }
+    &.secondary {
+        background-color: $secondary;
+    }
+
+    // with image variation
+    .background-image {
+        display: none;
+    }
+    &.with-image {
+        .background-image {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            img {
+                height: 400px;
+            }
+        }
+    }
+}
