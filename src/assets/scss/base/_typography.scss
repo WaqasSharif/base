@@ -27,6 +27,11 @@ body {
 }
 
 
+.container-xl {
+  @media (min-width: 1200px) {
+    max-width: 1640px;
+  }
+}
 
 
 .title.with-action {
@@ -40,9 +45,9 @@ body {
   p {
     letter-spacing: normal;
     line-height: 1.43;
-    font-size: $font-family-base;
+    font-size: $font-size-sm;
     font-weight: normal;
-    font-family: $font-size-sm;
+    font-family: $font-family-base ;
     color: $text-color;
     margin: 0;
     @media (min-width: 992px) {

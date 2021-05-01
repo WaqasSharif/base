@@ -1,0 +1,76 @@
+// big icons settings
+.phone-info {
+    display: flex;
+    .text {
+        .immediate p {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .phone p {
+            font-size: 21px;
+            line-height: 1;
+        }
+    }
+}
+
+.icon-ircle-big {
+    .link {
+        &:hover {
+            text-decoration: none;
+            transform: translateX(0px) translateY(-3px)
+        }
+    } 
+} 
+
+// top bar sections start 
+.top-bar-section {
+    background-color: transparent;
+    padding: 12px 0;
+    &.default {
+        background-color: $btn-default;
+    }
+    &.white {
+        background-color: $white;
+    }
+    &.primary {
+        background-color: $primary;
+    }
+    &.secondary {
+        background-color: $secondary;
+    }
+
+    .top-bar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .phone-info {
+        display: flex;
+    }
+    .sec-links {
+        display: flex;
+        align-items: center;
+    }
+
+
+    &.with-logo {
+        padding: 24px 0;
+        .logo-wrapper {
+            img {
+                width: 221px;
+            }
+        }
+
+        .phone-and-snedflower {
+            display: flex;
+            align-items: center;
+            .phone-info {
+                margin-right: 28px;
+            }
+        }
+    }
+
+    
+}
