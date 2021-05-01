@@ -12,12 +12,11 @@
     z-index: 10;
     display: flex;
     justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 12px 20px;
     align-items: center;
-    background-color: red;
+    
     &.active {
-        background-color: #000000a8;
+        background-color: #000000a8 !important;
         display: flex;
         height: 100%;
         .menu-wrapper {
@@ -27,6 +26,19 @@
     @media (min-width: 992px) {
         display: none;
     }
+    &.default {
+        background-color: $btn-default;
+    }
+    &.white {
+        background-color: $white;
+    }
+    &.primary {
+        background-color: $primary;
+    }
+    &.secondary {
+        background-color: $secondary;
+    }
+
     .logo-wrapp {
         padding-top: 12px;
     }
@@ -83,7 +95,7 @@
     display: none;
     position: fixed;
     padding-top: 84px;
-    background: #fff;
+    background: $white;
     width: 100%;
     left: 0;
     height: 100%;
@@ -112,7 +124,7 @@
             width: 12px;
             height: 12px;
             g, path {
-                stroke: #131C52;
+                stroke: $btn-default;
                 stroke-width: 2px;
             }
         }
@@ -124,13 +136,11 @@
             padding-right: 26px;
             a {
                 position: relative;
-                color: green;
                 font-size: 15px;
                 line-height: 18px;
                 text-transform: uppercase;
                 padding: 11px 0;
                 display: flex;
-                color: #333333;
                 font-weight: bold;
                 padding-right: 1rem;
                 &:hover {
@@ -142,7 +152,7 @@
                     &:after {
                         content: "";
                         right: .5rem;
-                        border: solid #131C52;
+                        border: solid $btn-default;
                         border-width: 0 2px 2px 0;
                         padding: 2.75px;
                         position: absolute;
@@ -153,19 +163,112 @@
                     }
                 }
             }
-            &:hover {
-                background-color: $primary;
-               > a {
-                    color: #fff;
+            // &:hover {
+            //     background-color: $primary;
+            //    > a {
+            //         color: #fff;
+            //         &:after {
+            //             border-color: #fff;
+            //         }
+            //     }
+            // }
+        }
+    }
+
+   
+
+}
+
+// mobile menu themeing {
+.mobile-menu {
+    &.white {
+        .menu-wrapper ul {
+            background-color: $white;
+            border: 1px solid lighten($btn-default, 15%);
+            > li {
+                a {
+                    border-bottom: 1px solid lighten($btn-default, 15%);
+                    color: $btn-default;
+                    &:hover {
+                        text-decoration: none;
+                        
+                        background-color: darken($bg , 3%);
+                    }
+                }
+                
+            }
+        }
+    }
+    &.default {
+        .menu-wrapper ul {
+            > li {
+                a {
+                    color: $btn-default;
                     &:after {
-                        border-color: #fff;
+                        border-color: $btn-default;
+                    }
+                }
+
+                &:hover {
+                    background-color: $btn-default;
+                   > a {
+                        color: $white;
+                        &:after {
+                            border-color: $white;
+                        }
                     }
                 }
             }
         }
     }
-}
+    &.primary {
+        .menu-wrapper ul {
+            > li {
+                a {
+                    color: $btn-default;
+                    &:after {
+                        border-color: $btn-default;
+                    }
+                }
 
+                &:hover {
+                    background-color: $primary;
+                   > a {
+                        color: $white;
+                        &:after {
+                            border-color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    &.secondary {
+        .menu-wrapper ul {
+            > li {
+                a {
+                    color: $btn-default;
+                    &:after {
+                        border-color: $btn-default;
+                    }
+                }
+
+                &:hover {
+                    background-color: $secondary;
+                   > a {
+                        color: $white;
+                        &:after {
+                            border-color: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
 
 // hamburger icons
 .hamburger {
@@ -565,18 +668,17 @@ ul.dropdown {
 
 // fixed menu 
 .menu-fixed {
-    .mobile-menu {
-        background-color: #131c52;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        transition: all .3s ease-in-out;
-        min-height: 66px;
-        .logo-wrapp {
-            padding-top: 0;
-            img {
-                width: 150px;
-            }
-        }
-    }
+    // .mobile-menu {
+    //     position: fixed;
+    //     top: 0;
+    //     width: 100%;
+    //     transition: all .3s ease-in-out;
+    //     min-height: 66px;
+    //     .logo-wrapp {
+    //         padding-top: 0;
+    //         img {
+    //             width: 150px;
+    //         }
+    //     }
+    // }
 }

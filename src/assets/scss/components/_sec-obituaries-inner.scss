@@ -499,6 +499,7 @@
     position: absolute;
     top: 34%;
     transition: all .2s ease;
+    z-index: 2;
     @media screen and (max-width: 991px) {
       display: none;
     }
@@ -532,6 +533,7 @@
       position: absolute;
       top: 34%;
       transition: all .2s ease;
+      z-index: 2;
       @media screen and (max-width: 991px) {
         display: none;
       }
@@ -567,6 +569,7 @@
       position: absolute;
       top: 34%;
       transition: all .2s ease;
+      z-index: 2;
       @media screen and (max-width: 991px) {
         display: none;
       }
