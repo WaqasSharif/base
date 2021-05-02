@@ -29,6 +29,30 @@
     &.secondary {
         background-color: $secondary;
     }
+    &.dark-text {
+        border: 1px solid $btn-default;
+        border-radius: 8px;
+        background-color: $white;
+        .sec-title,
+        .sec-paragraph {
+            h1,h2,h3,h4,h5,h6,p {
+                color: $black;
+            }
+        }
+
+        .input-group .form-control {
+            border: 1px solid $btn-default !important;
+        }
+        .sec-buttons {
+            .btn {
+                background-color: $btn-default;
+                border-color: $btn-default;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
 
     // with image variation
     .background-image {

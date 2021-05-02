@@ -35,17 +35,7 @@
                 
             }
           }
-          .info {
-            .sec-links{
-              @media (max-width: 414.98px) {
-                a{
-                  width:100%;
-                  display:block;
-                }
-                
-              }
-            }
-          }
+          
 
           &.separator{
               border-bottom: solid 1px $border;
