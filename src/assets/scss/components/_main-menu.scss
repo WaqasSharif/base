@@ -489,7 +489,7 @@ ul.dropdown {
                         }
                         &.show {
                             > a {
-                                color: $white;
+                                color: darken($white, 10%);
                             }
                             span {
                                 svg {
@@ -514,7 +514,7 @@ ul.dropdown {
                         }
                         &.show {
                             > a {
-                                color: $white;
+                                color: darken($white, 10%);
                             }
                             span {
                                 svg {
@@ -539,7 +539,7 @@ ul.dropdown {
                         }
                         &.show {
                             > a {
-                                color: $white;
+                               color: darken($white, 10%);
                             }
                             span {
                                 svg {
@@ -553,6 +553,32 @@ ul.dropdown {
                 }
             }
         }
+    }
+    &.main-link-bg-hover {
+        .nav-links {
+            .main-nav-links {
+                > ul {
+                    > li {
+                        > a {
+                            color: $white;
+                        }
+                        &.show {
+                            background-color: #0000002b;
+                            > a {
+                               color: darken($white, 10%);
+                            }
+                            span {
+                                svg {
+                                    g, polygon {
+                                        fill: darken($white, 10%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
     }
 }
 
