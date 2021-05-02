@@ -53,28 +53,6 @@ $(document).ready(function() {
     }
   });
 
-
-
-  // hover on menu add class to handle backdrop
-  // $('.menu-section-desktop  .main-nav-links ul  li').mouseover(function (e) {
-  //   $(this).addClass('active');
-  // });
-  // $('.menu-section-desktop  .main-nav-links ul  li').mouseleave(function (e) {
-  //   $(this).removeClass('active');
-  // });
-
-  // $('.menu-section-desktop  .main-nav-links ul  li').on("click",function(){  
-  //   $(this).addClass("active");
-  //  });
-
-
-  // $(".navbar-hide").on("click",function(){ 
-  //     $(".navbar-toggle").removeClass("active")
-  //  $(".navbar-collap").removeClass("active");
-  // });
-
- 
-  
 $('.hamburger').on('click', function(e){
   e.preventDefault();
   $(this).hide();
@@ -103,5 +81,7 @@ $('.dismiss').on('click', function(e){
       item.querySelector('.back-to-menu').addEventListener('click', function() {item.classList.remove('active')});
     });
   }
+
+
   
 }); 

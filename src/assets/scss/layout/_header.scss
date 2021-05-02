@@ -330,6 +330,11 @@
     }
 }
 
+// make hover background change for main links
+.menu-section-desktop .nav-links .main-nav-links > ul > li:hover {
+    background-color: $primary;
+}
+
 ul.dropdown {
     min-width: 250px;
     visibility: hidden;

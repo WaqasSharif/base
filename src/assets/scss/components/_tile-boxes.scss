@@ -99,6 +99,13 @@
                         margin-right: 0;
                     }
                 }
+                .title h4 {
+                    text-transform: uppercase;
+                }
+                &:hover {
+                    transform: scale(1.03);
+                    transition: all 0.7s ease-in-out;
+                }
             }
         }
     }
