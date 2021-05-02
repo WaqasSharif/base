@@ -85,3 +85,13 @@ $('.dismiss').on('click', function(e){
 
   
 }); 
+
+//lightgallery lightbox
+$(document).ready(function() {
+  $("#lightgallery").lightGallery({
+    thumbnail:true,
+    pager: true,
+    speed: 500,
+        
+  });
+});
