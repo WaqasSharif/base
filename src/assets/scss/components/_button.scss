@@ -517,6 +517,36 @@
                 }
             }
         }
+        &.default {
+            color: $btn-default;
+            span {
+                img,
+                svg {
+                    path, g {
+                        fill:  $btn-default;
+                    }
+                }
+            }
+            &.arrow {
+                &:before {
+                    border-color: $btn-default;
+                }
+            }
+            &:hover {
+                color: lighten($btn-default, 10%);
+                span {
+                    img,
+                    svg {
+                        path, g {
+                            fill:  lighten($btn-default, 10%);
+                        }
+                    }
+                }
+                &:before {
+                    border-color: lighten($btn-default, 10%);
+                }
+            }
+        }
 
         &.primary-underline {
             background-image: linear-gradient(120deg, $primary 0%, $primary 100%);

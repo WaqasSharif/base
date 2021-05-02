@@ -46,7 +46,6 @@
 
     &.solid-bg {
       .content {
-        background: $secondary;
         padding-left: 32px;
         padding-right: 32px;
         position: absolute;
@@ -63,6 +62,21 @@
 
 
         
+      }
+    }
+    &.default {
+      .content {
+        background-color: $btn-default;
+      }
+    }
+    &.secondary {
+      .content {
+        background-color: $secondary;
+      }
+    }
+    &.primary {
+      .content {
+        background-color: $primary;
       }
     } 
 
