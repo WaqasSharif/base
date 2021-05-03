@@ -58,19 +58,26 @@
   .hero-banner {
     &.inner {
       min-height: 320px;
+      
       @media (min-width: 768px) {
-        min-height: 430px;
+        min-height: 380px;
       }
+      @media (min-width: 992px) {
+        
+        margin-top: 84px;
+      }
+
+
       .cover {
         img {
           width: 100%;
         }
       }
       .content {
-        margin-top: 83px;
+        margin-top: 0;
         @media (max-width: 767px) {
           text-align: center;
-          margin-top: 54px;
+          margin-top: 0;
         }
         
         .title {
@@ -265,6 +272,11 @@
       .people {
         display: flex;
         flex-direction: column;
+        &:hover {
+          transform: scale(1.05);
+          text-decoration: none;
+          transition: all .3s ease-in-out;
+        }
         .thumbnail {
           margin-right: 0;
           margin-bottom: 12px;

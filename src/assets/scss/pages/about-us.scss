@@ -133,6 +133,75 @@
     }
 }
 
+
+
+.testimonials-modal {
+    position: relative;
+    .modal  {
+        align-items: center;
+        justify-content: center;
+        
+        display: none;
+        .modal-dialog {
+            max-width: 550px;
+            width: 100%;
+        }
+
+        &.show {
+            display: flex !important;
+        }
+    }
+    .modal-body {
+        padding: 78px 52px;
+    }
+    .close {
+        position: absolute;
+        top: -62px;
+        background: #dfc965;
+        opacity: 1;
+        border-radius: 45px;
+        padding: 0;
+        height: 45px;
+        width: 45px;
+        right: 0;
+        svg {
+            width: 24px;
+            height: 20px;
+            g {
+                stroke: #3e5179;
+            }
+        }
+    }
+
+
+    .contact-us-form {
+        .form-group {
+            margin-bottom: 26px;
+            label {
+                margin-bottom: 8px;
+                color: #000;
+            }
+            input,
+            textarea {
+                border: 0;
+                border-radius: 0;
+                border-bottom: 2px solid #8694ac;
+                height: 52px;
+                padding: 0;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                border: 1px solid #8694ac;
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                    border: none;
+                    border: 1px solid #8694ac;
+                }
+            }
+        }
+    }
+}
+
 .author {
     font-size: 18px;
     line-height: 1.2;

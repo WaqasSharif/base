@@ -222,6 +222,7 @@
     z-index: 9;
     padding: 30px 60px;
     padding-bottom: 0; 
+    top: -84px;
     @media (max-width: 991px) {
         display: none;
     }
@@ -234,6 +235,7 @@
     }
 
     &.links-only {
+        top: 0;
         .nav-links ul {
             justify-content: flex-start;
         }
