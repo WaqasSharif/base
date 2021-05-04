@@ -29,6 +29,10 @@
             @media screen and (min-width: 992px) {
                 height: 400px;
             }
+            img {
+                object-fit: cover;
+                height: 400px;
+            }
         }
         &:hover {
             img {
