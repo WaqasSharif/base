@@ -26,7 +26,7 @@
         min-height: 293px;
         height: 100%;
         order: 0;
-        margin-bottom: 50px;
+        margin-bottom: 24px;
         @media screen and (min-width: 992px) {
             order: 1;
             min-height: 493px;
@@ -43,15 +43,18 @@
         grid-template-columns:none;
         .info{
             order: 1;
-            margin-top: 43px;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             text-align: center;
+            margin-top: 24px;
+            margin-bottom: 24px;
             @media screen and (min-width: 992px) {
                 order: 1;
+                margin-top: 43px;
+                margin-bottom: 0px;
             }
         }
         .map{
@@ -112,6 +115,7 @@
             align-items: flex-start;
             justify-content: space-around;
             flex-direction: column;
+            margin-top: 0;
             @media screen and (min-width: 992px) {
                 width: 460px;
                 height: 464px;
@@ -137,10 +141,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 43px; 
     flex-direction: column;
     @media screen and (min-width: 992px) {
         flex-direction: row;
-        gap: 90px; 
+        
+    }
+    .sec-location{
+        margin-right: 0px; 
+        @media screen and (min-width: 992px) {
+            margin-right: 60px;
+            max-width: 512px;
+            &:last-child{
+                margin-right: 0;
+            } 
+        }
+        
     }
 }
