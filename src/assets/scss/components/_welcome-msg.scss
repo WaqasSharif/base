@@ -58,9 +58,14 @@
         .banner-img {
             height: 400px;
             position: relative;
-            margin-right: 50px;
+            
             border-radius: 8px;
             overflow: hidden;
+            margin-bottom: 24px;
+            @media (min-width: 992px) {
+                margin-right: 50px;
+                margin-bottom: 0;
+            }
             .cover img {
                 height: 100%;
                 @media (min-width: 992px) {

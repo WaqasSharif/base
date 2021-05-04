@@ -25,6 +25,7 @@
         height: 100%;
         .menu-wrapper {
             display: flex;
+            top: 0;
         }
     }
     @media (min-width: 992px) {
@@ -254,6 +255,24 @@
                 right: 26px;
             }
         }
+
+        .nav-links ul {
+            padding: 0 40px;
+            li {
+                flex: auto;
+            }
+        }
+
+        .arrow:after {
+            right: 30px !important;
+            @media (min-width: 1200px) {
+                right: 40px !important;
+            }
+        }
+
+        
+
+
     }
 
     &.with-dropdown {
