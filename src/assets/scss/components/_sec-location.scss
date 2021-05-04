@@ -1,0 +1,32 @@
+.sec-location-wrapper{
+
+}
+.sec-location{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    display: grid;
+    gap: 0;
+    row-gap: 0;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      row-gap: 0;
+    }
+    @media screen and (min-width: 992px) {
+      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+    @media screen and (min-width: 1325px) {
+      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+        
+    .info{
+        max-width: 270px;
+        margin: auto;
+    }
+    .map{
+        min-height: 493px;
+        height: 100%;
+    }
+}
