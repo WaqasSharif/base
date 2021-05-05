@@ -132,6 +132,7 @@
     .tiles-boxes-wrapper {
         display: flex;
         flex-wrap: wrap;
+        
         .tile-box {
             width: 100%;
             margin-bottom: 16px;
@@ -147,8 +148,8 @@
         }
     }
 
+    // border radius
     .tiles-boxes-wrapper {
-        // border radius
         &.radius {
             .tile-box {
                 border-radius: 8px;
@@ -323,7 +324,24 @@
 
     // big tile
     .single-tile-big {
+
+        display: grid;
+        gap: 0;
+        width: 100%;
+        //row-gap: 24px;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        @media screen and (min-width: 768px) {
+            grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+            // column-gap: 10px;
+        }
+        @media screen and (min-width: 992px) {
+            grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+            column-gap: 10px;
+        }
+
+
         .tile-box {
+            width: 100%;
             .img-box {
                 @media (min-width: 992px) {
                     height: 510px;
@@ -360,16 +378,22 @@
 
     // single-tile-big-x 
     .single-tile-big-x {
+
+        display: grid;
+        gap: 0;
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        @media screen and (min-width: 768px) {
+            grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+        }
+        @media screen and (min-width: 992px) {
+            grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+            column-gap: 10px;
+        }
+
+
         .tile-box {
-            @media (min-width: 992px) {
-                margin: 0 5px;
-                &:first-child {
-                    margin-left: 0;
-                }
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
+            width: 100%;
             .img-box {
                 @media (min-width: 992px) {
                     height: 800px;
