@@ -73,6 +73,11 @@ body {
       color: $text-color-dark;
     }
   }
+  &.black {
+    p, a {
+      color: $black;
+    }
+  }
   &.primary {
     p,
     a {
@@ -140,6 +145,15 @@ body {
       line-height: 1.33;
     }
   }
+  &.font-35 p {
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: normal;
+    @media (min-width: 992px) {
+      font-size: 35px;
+      line-height: 1.33;
+    }
+  }
   &.heading-font-family {
     font-family: $font-family-heading;
   }
@@ -196,11 +210,47 @@ body {
   }
 }
 
-.l-spacing {
-  p, h1,h2,h3,h4,h5,h6, span, a {
-    letter-spacing: 0;
+
+.sec-paragraph,
+.sec-title {
+  &.letter-spacing-0 {
+    p, h1,h2,h3,h4,h5,h6, span, a {
+      letter-spacing: 0;
+    }
+  }
+  
+  &.letter-spacing-1 {
+    p, h1,h2,h3,h4,h5,h6, span, a {
+      letter-spacing: 1px;
+    }
+  }
+  &.letter-spacing-2 {
+    p, h1,h2,h3,h4,h5,h6, span, a {
+      letter-spacing: 2px;
+    }
+  }
+  &.letter-spacing-3 {
+    p, h1,h2,h3,h4,h5,h6, span, a {
+      letter-spacing: 3px;
+    }
+  }
+  &.letter-spacing-4 {
+    p, h1,h2,h3,h4,h5,h6, span, a {
+      letter-spacing: 4px;
+    }
   }
 }
+
+
+.sec-paragraph,
+.sec-title {
+  &.uppercase {
+    p, h1,h2,h3,h4,h5,h6, span, a {
+      text-transform: uppercase;
+    }
+  }
+}
+
 
 
 ol,
@@ -264,6 +314,17 @@ p {
   &.light {
     h1,h2,h3,h4,h5,h6 {
       color: $white;
+    }
+  }
+
+  &.dark {
+    h1,h2,h3,h4,h5,h6 {
+      color: $text-color-dark;
+    }
+  }
+  &.black {
+    h1,h2,h3,h4,h5,h6 {
+      color: $black;
     }
   }
 
