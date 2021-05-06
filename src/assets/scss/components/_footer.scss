@@ -2,10 +2,10 @@
   padding: 24px;
   background-color: darken($black, 20%);
   &.primary{
-    background-color: darken($primary, 20%);
+    background-color: $primary;
   }
   &.secondary{
-    background-color: darken($secondary, 20%);
+    background-color: $secondary;
   }
   @media screen and (min-width: 992px) {
     padding: 5rem;
@@ -54,7 +54,7 @@
   }
     .social-links{
       flex-direction: column;
-      align-items: flex-start;
+      align-items: flex-end;
     }
   }
 }
@@ -145,11 +145,12 @@
         fill: $black;
       }
       &:hover{
-        background-color: $black;
+        background-color: $white;
         svg, *{
-          fill: $white;
-        }
-      }
+          fill: $black;
+        
+    }
+  }
     }
   }
   &.radius{
