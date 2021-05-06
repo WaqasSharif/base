@@ -24,11 +24,65 @@
       $('body').removeClass('menu-fixed');
     }
   });
-}())
+}());
+
+
+function initSwiper() {
+  // plans table slider for CMS modules start
+  $(document).find('.sec-testimonails').each(function (index) {
+    $(this).addClass('slider'+index);
+    var $slider = $(this);
+    $slider.find('.swiper-button-next').addClass('right'+index);
+    $slider.find('.swiper-button-prev').addClass('left'+index);
+    $slider.find('.swiper-pagination').addClass('pagination-'+index);
+
+    if($slider.hasClass('single')) {
+      var $testimonialsSlider = new Swiper('.slider'+index+' .swiper-container', {
+        slidesPerView: 1,
+        navigation: {
+          nextEl: '.swiper-button-next.right'+index,
+          prevEl: '.swiper-button-prev.left'+index,
+        },
+        pagination: {
+          el: ".swiper-pagination.pagination-"+index,
+          clickable: true
+        },
+      });
+    } else {
+      var $testimonialsSlider = new Swiper('.slider'+index+' .swiper-container', {
+        navigation: {
+          nextEl: '.swiper-button-next.right'+index,
+          prevEl: '.swiper-button-prev.left'+index,
+        },
+        pagination: {
+          el: ".swiper-pagination.pagination-"+index,
+          clickable: true
+        },
+        slidesPerView: 1.2,
+        breakpoints: {
+          540: {
+              slidesPerView: 1.5
+          },
+          768: {
+              slidesPerView: 2.5
+          },
+          1024: {
+              slidesPerView: 3
+          }
+        }
+      });
+    }
+    
+  });
+}
 
 
 
 $(document).ready(function() {
+
+  // init swiper
+  initSwiper();
+
   // get window inner height and apply to hero-banner
   var windowHeight = window.innerHeight;
   var heroBanner = $('.dynamic-height');
@@ -154,26 +208,6 @@ $('body').on('mouseenter mouseleave','.main-nav-links > ul > li',function(e){
       }
     }
   });
-
-
-
-  // hover on menu add class to handle backdrop
-  // $('.menu-section-desktop  .main-nav-links ul  li').mouseover(function (e) {
-  //   $(this).addClass('active');
-  // });
-  // $('.menu-section-desktop  .main-nav-links ul  li').mouseleave(function (e) {
-  //   $(this).removeClass('active');
-  // });
-
-  // $('.menu-section-desktop  .main-nav-links ul  li').on("click",function(){  
-  //   $(this).addClass("active");
-  //  });
-
-
-  // $(".navbar-hide").on("click",function(){ 
-  //     $(".navbar-toggle").removeClass("active")
-  //  $(".navbar-collap").removeClass("active");
-  // });
 
  
   
