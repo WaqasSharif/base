@@ -5,6 +5,7 @@
 
 
 
+// put the 'menu-fixed' class on body while scrolling
 (function(){
   var lastScroll = parseInt(localStorage.getItem('position', scroll));
   var sticky = $('.stand-alone-menu');
@@ -26,6 +27,15 @@
   });
 }());
 
+// (function(){
+//   // check menu has fixed class, if yes make it sticky
+//   var menuisFixed = $('body').find('.menu-section-desktop').hasClass('fixed');
+//   var menuHeight = $('.menu-section-desktop').outerHeight();
+//   if(menuisFixed) {
+//     //$('body').css('padding-top', menuHeight+'px');
+//   }
+// }());
+
 
 function initSwiper() {
   // plans table slider for CMS modules start
@@ -36,7 +46,7 @@ function initSwiper() {
     $slider.find('.swiper-button-prev').addClass('left'+index);
     $slider.find('.swiper-pagination').addClass('pagination-'+index);
 
-    if($slider.hasClass('single')) {
+    if($slider.hasClass('single-tile')) {
       var $testimonialsSlider = new Swiper('.slider'+index+' .swiper-container', {
         slidesPerView: 1,
         navigation: {
@@ -224,9 +234,6 @@ $('.dismiss').on('click', function(e){
   $('body').removeClass('freeze');
   $('.hamburger').show();
 })
-
-
-
 
 var navExpand = [].slice.call(document.querySelectorAll('.mobile-menu .expandable'));
 

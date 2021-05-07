@@ -23,9 +23,43 @@
     }
 
     // single tile testimonails 
-    &.single {
+    &.single-tile {
         .swiper-slide {
             flex-basis: 100%;
+        }
+    }
+
+    // no slider - image and tile-boxes only vertical
+    &.testimonials-6 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        @media screen and (min-width: 992px) {
+            flex-direction: row;
+        }
+        .art-box {
+            position: relative;
+            width: 100%;
+            height: 666px;
+            @media screen and (min-width: 992px) {
+                width: 40%;
+            }
+            img {
+                object-fit: cover;
+                height: 666px;
+                width: 100%;
+            }
+        }
+        .boxes-vertical {
+            width: 100%;
+            padding: 0 42px;
+            padding-top: 24px;
+            @media screen and (min-width: 992px) {
+                width: 40%;
+                margin-right: 10%;
+                padding: 0;
+            }
         }
     }
 
@@ -66,7 +100,33 @@
         background-color: $primary;
     }
 
-    // siper classes overides
+    &.no-box {
+        .testimonial-box {
+            background-color: transparent;
+            box-shadow: none;
+        }
+        &.default,
+        &.primary,
+        &.secondary {
+            .sec-paragraph {
+                p {
+                    color: $white;
+                }
+            }
+        }
+        &.default {
+            background-color: $black;
+        }
+        &.secondary {
+            background-color: $secondary;
+        }
+        &.primary {
+            background-color: $primary;
+        }
+    }
+
+
+    // swiper classes overides
     .swiper-slide {
         padding: 15px;
     }
