@@ -1,15 +1,23 @@
 .sec-footer{
-  padding: 24px;
-  background-color: darken($black, 20%);
+  &.default{
+    background-color: darken($black, 20%);
+  }
   &.primary{
     background-color: $primary;
   }
   &.secondary{
     background-color: $secondary;
   }
-  @media screen and (min-width: 992px) {
-    padding: 5rem;
-}
+  &.default,
+    &.primary,
+    &.secondary {
+      padding: 24px;
+        @media screen and (min-width: 992px) {
+          padding: 5rem;
+      }
+    }
+
+  
 }
 
 //Footer Section
@@ -55,6 +63,9 @@
     .social-links{
       flex-direction: column;
       align-items: flex-end;
+      @media screen and (max-width: 991.98px) {
+        align-items: center;
+      }
     }
   }
 }
@@ -194,6 +205,9 @@
       @media screen and (max-width: 767.98px) {
         text-align: center;
       }
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -201,13 +215,23 @@
 
 //Footer Section Copyright
 .sec-copyrights{
-  padding: 12px 0;
+  &.default{
+    background-color: darken($black, 20%);
+  }
   &.primary{
-    background-color: darken($primary, 20%);
+    background-color: $primary;
   }
   &.secondary{
-    background-color: darken($secondary, 20%);
+    background-color: $secondary;
   }
+  &.default,
+    &.primary,
+    &.secondary {
+      padding: 1rem;
+        @media screen and (min-width: 992px) {
+          padding: 1rem;
+      }
+    }
   .copyrights-wrapper{
     display: flex;
       align-items: center;
