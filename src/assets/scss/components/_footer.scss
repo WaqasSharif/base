@@ -8,9 +8,122 @@
   &.secondary{
     background-color: $secondary;
   }
+  &.white{
+    background-color: $white;
+    .sec-title{
+      p, h1,h2,h3,h4,h5,h6, span, a {
+        color: $btn-default;
+      }
+      
+    }
+    .sec-paragraph{
+      p{
+        color: $btn-default;
+      }
+    }
+    .sec-link-wrapper{
+      .sec-links li{
+        .link.light{
+          color: $btn-default;
+        }
+        
+      }
+    }
+    .footer-logo{
+      background-color: $btn-default;
+      padding: 10px;
+    }
+    .social-links ul li{
+      a{
+        background-color: $btn-default;
+        &:hover{
+          background-color: $white;
+        }
+      }
+
+    }
+  }
+//white primary
+  &.white-primary{
+    background-color: $white;
+    .sec-title{
+      p, h1,h2,h3,h4,h5,h6, span, a {
+        color: $primary;
+      }
+      
+    }
+    .sec-paragraph{
+      p{
+        color: $primary;
+      }
+    }
+    .sec-link-wrapper{
+      .sec-links li{
+        .link.light{
+          color: $primary;
+        }
+        
+      }
+    }
+    .footer-logo{
+      background-color: $primary;
+      padding: 10px;
+    }
+    .social-links ul li{
+      a{
+        background-color: $primary;
+        &:hover{
+          background-color: $primary;
+    
+        }
+      }
+
+    }
+  }
+
+  //white secondary
+  &.white-secondary{
+    background-color: $white;
+    .sec-title{
+      p, h1,h2,h3,h4,h5,h6, span, a {
+        color: $secondary;
+      }
+      
+    }
+    .sec-paragraph{
+      p{
+        color: $secondary;
+      }
+    }
+    .sec-link-wrapper{
+      .sec-links li{
+        .link.light{
+          color: $secondary;
+        }
+        
+      }
+    }
+    .footer-logo{
+      background-color: $secondary;
+      padding: 10px;
+    }
+    .social-links ul li{
+      a{
+        background-color: $secondary;
+        &:hover{
+          background-color: $secondary;
+        }
+      }
+
+    }
+  }
+
   &.default,
     &.primary,
-    &.secondary {
+    &.secondary,
+    &.white,
+    &.white-primary,
+    &.white-secondary {
       padding: 24px;
         @media screen and (min-width: 992px) {
           padding: 5rem;
@@ -202,6 +315,12 @@
   ul{
     li{
       margin-bottom: 1rem;
+      //for all link hover underline
+      a{
+        &:hover{
+          text-decoration: underline !important;
+        }
+      }
       @media screen and (max-width: 767.98px) {
         text-align: center;
       }
@@ -227,9 +346,9 @@
   &.default,
     &.primary,
     &.secondary {
-      padding: 1rem;
+      padding: 1.5rem;
         @media screen and (min-width: 992px) {
-          padding: 1rem;
+          padding: 2rem;
       }
     }
   .copyrights-wrapper{
