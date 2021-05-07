@@ -730,7 +730,7 @@ ul.dropdown {
 
 // fixed menu desktop
 .menu-fixed {
-    .menu-section-desktop {
+    .menu-section-desktop.fixed {
         &.default {
             background-color: $btn-default;
         }

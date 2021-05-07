@@ -30,7 +30,7 @@
     }
 
     // no slider - image and tile-boxes only vertical
-    &.testimonials-6 {
+    &.testimonials-7 {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -153,22 +153,12 @@
         }
 
         &:after {
-            background: transparent;
             font-size: 32px;
-            border-radius: 100%;
-            min-width: 64px;
-            min-height: 64px;
-            font-size: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.4s ease 0s, transform 200ms ease-in-out 0s;
         }
 
         &:hover {
             &:after {
-                background: #ffffff87;
-                    color: $black;
+                    color: $secondary;
                     transition: all 0.4s ease 0s, transform 200ms ease-in-out 0s;
             }
         }
