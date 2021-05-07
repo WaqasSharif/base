@@ -151,6 +151,27 @@
         @media screen and (max-width: 991px) {
             display: none;
         }
+
+        &:after {
+            background: transparent;
+            font-size: 32px;
+            border-radius: 100%;
+            min-width: 64px;
+            min-height: 64px;
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease 0s, transform 200ms ease-in-out 0s;
+        }
+
+        &:hover {
+            &:after {
+                background: #ffffff87;
+                    color: $black;
+                    transition: all 0.4s ease 0s, transform 200ms ease-in-out 0s;
+            }
+        }
     }
     .swiper-button-next {
         right: -24px;
