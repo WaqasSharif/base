@@ -1,13 +1,198 @@
 .sec-footer{
   &.default{
     background-color: darken($black, 20%);
+    .social-links{
+      ul li{
+        a{
+          &:hover{
+            background-color: $white;
+            svg *{
+              fill: $btn-default;
+            }
+          }
+        }
+      }
+      &.round{
+        ul li{
+          a{
+            background-color: $white;
+            svg *{
+              fill: $btn-default;
+            }
+            &:hover{
+              background-color: $btn-default;
+              svg *{
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+      &.radius{
+        ul li{
+          a{
+            background-color: $white;
+            svg *{
+              fill: $btn-default;
+            }
+            &:hover{
+              background-color: $btn-default;
+              svg *{
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+      &.flat{
+        ul li{
+          a{
+            background-color: $white;
+            svg *{
+              fill: $btn-default;
+            }
+            &:hover{
+              background-color: $btn-default;
+              svg *{
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+    }
   }
+ //primary footer 
   &.primary{
     background-color: $primary;
+    .social-links{
+      ul li{
+        a{
+          background-color: $primary;
+          &:hover{
+            background-color: $white;
+            svg *{
+              fill: $primary;
+            }
+          }
+        }
+      }
+      &.round{
+        ul li{
+          a{
+            background-color: $white;
+            svg *{
+              fill: $primary;
+            }
+            &:hover{
+              background-color: $primary;
+              svg *{
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+      &.radius{
+        ul li{
+          a{
+            background-color: $white;
+            svg *{
+              fill: $primary;
+            }
+            &:hover{
+              background-color: $primary;
+              svg *{
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+      &.flat{
+        ul li{
+          a{
+            background-color: $white;
+            svg *{
+              fill: $primary;
+            }
+            &:hover{
+              background-color: $primary;
+              svg *{
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+    }
   }
+  //secondary footer 
   &.secondary{
     background-color: $secondary;
+    .social-links{
+      ul li{
+        a{
+          background-color: $secondary;
+          &:hover{
+            background-color: $white;
+            svg *{
+              fill: $secondary;
+            }
+          }
+        }
+      }
+      &.round{
+        ul li{
+          a{
+            background-color: $white;
+            svg *{
+              fill: $secondary;
+            }
+            &:hover{
+              background-color: $secondary;
+              svg *{
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+      &.radius{
+        ul li{
+          a{
+            background-color: $white;
+            svg *{
+              fill: $secondary;
+            }
+            &:hover{
+              background-color: $secondary;
+              svg *{
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+      &.flat{
+        ul li{
+          a{
+            background-color: $white;
+            svg *{
+              fill: $secondary;
+            }
+            &:hover{
+              background-color: $secondary;
+              svg *{
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+    }
   }
+  //white footer
   &.white{
     background-color: $white;
     .sec-title{
@@ -33,17 +218,105 @@
       background-color: $btn-default;
       padding: 10px;
     }
-    .social-links ul li{
-      a{
-        background-color: $btn-default;
-        &:hover{
-          background-color: $white;
+    .social-links{
+      ul li{
+        a{
+          background-color: $btn-default;
+          &:hover{
+            background-color: $white;
+            svg *{
+              fill: $btn-default;
+            }
+          }
         }
       }
-
+      &.round{
+        ul li{
+          a{
+            background-color: $btn-default;
+            svg *{
+              fill: $white;
+            }
+            &:hover{
+              background-color: $white;
+              svg *{
+                fill: $btn-default;
+              }
+            }
+          }
+        }
+      }
+      &.radius{
+        ul li{
+          a{
+            background-color: $btn-default;
+            svg *{
+              fill: $white;
+            }
+            &:hover{
+              background-color: $white;
+              svg *{
+                fill: $btn-default;
+              }
+            }
+          }
+        }
+      }
+      &.flat{
+        ul li{
+          a{
+            background-color: $btn-default;
+            svg *{
+              fill: $white;
+            }
+            &:hover{
+              background-color: $white;
+              svg *{
+                fill: $btn-default;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sec-search-filters{
+      &.light {
+        .input-group{
+          .form-control{
+            border: 1px solid $btn-default;
+            background-color: $white;
+            color:$btn-default;
+          }
+        }
+        .input-group .form-control::-webkit-input-placeholder {
+          color: $btn-default;
+        }
+        
+        .input-group .form-control:-ms-input-placeholder {
+          color: $btn-default;
+        }
+        
+        .input-group .form-control::-ms-input-placeholder {
+          color: $btn-default;
+        }
+        
+        .input-group .form-control::placeholder {
+          color: $btn-default;
+        }
+      }
+    }
+    .sec-buttons{
+      .btn.default-outline-light{
+        border-color: $btn-default;
+        color: $btn-default;
+      }
+    }
+    .subscribe-logo{
+      background-color: $btn-default;
+      padding: 10px;
     }
   }
-//white primary
+//white primary footer
   &.white-primary{
     background-color: $white;
     .sec-title{
@@ -69,19 +342,106 @@
       background-color: $primary;
       padding: 10px;
     }
-    .social-links ul li{
-      a{
-        background-color: $primary;
-        &:hover{
+    .social-links{
+      ul li{
+        a{
           background-color: $primary;
-    
+          &:hover{
+            background-color: $white;
+            svg *{
+              fill: $primary;
+            }
+          }
         }
       }
-
+      &.round{
+        ul li{
+          a{
+            background-color: $primary;
+            svg *{
+              fill: $white;
+            }
+            &:hover{
+              background-color: $white;
+              svg *{
+                fill: $primary;
+              }
+            }
+          }
+        }
+      }
+      &.radius{
+        ul li{
+          a{
+            background-color: $primary;
+            svg *{
+              fill: $white;
+            }
+            &:hover{
+              background-color: $white;
+              svg *{
+                fill: $primary;
+              }
+            }
+          }
+        }
+      }
+      &.flat{
+        ul li{
+          a{
+            background-color: $primary;
+            svg *{
+              fill: $white;
+            }
+            &:hover{
+              background-color: $white;
+              svg *{
+                fill: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sec-search-filters{
+      &.light {
+        .input-group{
+          .form-control{
+            border: 1px solid $primary;
+            background-color: $primary;
+            color:$white;
+          }
+        }
+        .input-group .form-control::-webkit-input-placeholder {
+          color: $white;
+        }
+        
+        .input-group .form-control:-ms-input-placeholder {
+          color: $white;
+        }
+        
+        .input-group .form-control::-ms-input-placeholder {
+          color: $white;
+        }
+        
+        .input-group .form-control::placeholder {
+          color: $white;
+        }
+      }
+    }
+    .sec-buttons{
+      .btn.default-outline-light{
+        border-color: $primary;
+        color: $primary;
+      }
+    }
+    .subscribe-logo{
+      background-color: $primary;
+      padding: 10px;
     }
   }
 
-  //white secondary
+//white secondary footer
   &.white-secondary{
     background-color: $white;
     .sec-title{
@@ -107,17 +467,105 @@
       background-color: $secondary;
       padding: 10px;
     }
-    .social-links ul li{
-      a{
-        background-color: $secondary;
-        &:hover{
+    .social-links{
+      ul li{
+        a{
           background-color: $secondary;
+          &:hover{
+            background-color: $white;
+            svg *{
+              fill: $secondary;
+            }
+          }
         }
       }
-
+      &.round{
+        ul li{
+          a{
+            background-color: $secondary;
+            svg *{
+              fill: $white;
+            }
+            &:hover{
+              background-color: $white;
+              svg *{
+                fill: $secondary;
+              }
+            }
+          }
+        }
+      }
+      &.radius{
+        ul li{
+          a{
+            background-color: $secondary;
+            svg *{
+              fill: $white;
+            }
+            &:hover{
+              background-color: $white;
+              svg *{
+                fill: $secondary;
+              }
+            }
+          }
+        }
+      }
+      &.flat{
+        ul li{
+          a{
+            background-color: $secondary;
+            svg *{
+              fill: $white;
+            }
+            &:hover{
+              background-color: $white;
+              svg *{
+                fill: $secondary;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sec-search-filters{
+      &.light {
+        .input-group{
+          .form-control{
+            border: 1px solid $secondary;
+            background-color: $secondary;
+            color:$white;
+          }
+        }
+        .input-group .form-control::-webkit-input-placeholder {
+          color: $white;
+        }
+        
+        .input-group .form-control:-ms-input-placeholder {
+          color: $white;
+        }
+        
+        .input-group .form-control::-ms-input-placeholder {
+          color: $white;
+        }
+        
+        .input-group .form-control::placeholder {
+          color: $white;
+        }
+      }
+    }
+    .sec-buttons{
+      .btn.default-outline-light{
+        border-color: $secondary;
+        color: $secondary;
+      }
+    }
+    .subscribe-logo{
+      background-color: $secondary;
+      padding: 10px;
     }
   }
-
+//footer theme classes
   &.default,
     &.primary,
     &.secondary,
@@ -136,6 +584,16 @@
 //Footer Section
 .footer-wrapper{
   .subscribe-content{
+    .subscribe-logo{
+      margin-bottom: .75rem;
+      @media screen and (max-width: 767.98px) {
+        text-align: center;
+        padding-top: 2rem;
+      }
+      img{
+        max-width: 100%;
+      }
+    }
     .sec-title{
       @media screen and (max-width: 767.98px) {
         text-align: center;
@@ -218,6 +676,7 @@
         border-radius: 50px;
         transition: $transitions;
         display: flex;
+        position: relative;
         svg{
           fill: $white;
         }
@@ -225,12 +684,15 @@
           background-color: $white;
           svg, *{
             fill: $black;
-          
-      }
+          }
     }
+    
       }
     }
   }
+
+ 
+//Footer Social Icons round
   &.round{
     ul{
       li{
@@ -255,6 +717,7 @@
       }
     }
   }
+  //Footer Social Icons flat
   &.flat{
     a{
       width: 60px;
@@ -277,6 +740,7 @@
   }
     }
   }
+    //Footer Social Icons radius
   &.radius{
     a{
       width: 60px;
@@ -294,6 +758,44 @@
         background-color: $black;
         svg, *{
           fill: $white;
+        }
+      }
+    }
+  }
+//Footer Social Icons primary
+  &.primary{
+    ul{
+      li{
+        a{
+          svg *{
+            fill: $white;
+          }
+          &:hover{
+            background-color: $white;
+            svg, *{
+              fill: $primary;
+            
+        }
+      }
+        }
+      }
+    }
+  }
+  //Footer Social Icons secondary
+  &.secondary{
+    ul{
+      li{
+        a{
+          svg *{
+            fill: $white;
+          }
+          &:hover{
+            background-color: $white;
+            svg, *{
+              fill: $secondary;
+            
+        }
+      }
         }
       }
     }
@@ -317,8 +819,23 @@
       margin-bottom: 1rem;
       //for all link hover underline
       a{
+        &::after{
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          height: 1px;
+          content: '';
+          opacity: 0;
+          background: $white;
+          transform: translate(0,10px);
+          transition: all .2s;
+        }
         &:hover{
-          text-decoration: underline !important;
+          &::after{
+            transform: translate(0,0);
+            opacity: 1;
+          }
         }
       }
       @media screen and (max-width: 767.98px) {
@@ -332,20 +849,71 @@
 }
 
 
-//Footer Section Copyright
+//Copyright
 .sec-copyrights{
   &.default{
     background-color: darken($black, 5%);
   }
+//Copyright primary 
   &.primary{
     background-color: darken($primary, 5%);
   }
+//Copyright secondary 
   &.secondary{
     background-color:darken($secondary, 5%);
   }
+ //Copyright white  
+  &.white{
+    background-color: $white;
+    .sec-paragraph{
+      p{
+        color: $btn-default;
+      }
+    }
+    .sec-links{
+      .link.light{
+        color: $btn-default;
+      }
+
+    }
+  }
+//Copyright white-primary
+  &.white-primary{
+    background-color: $white;
+    .sec-paragraph{
+      p{
+        color: $primary;
+      }
+    }
+    .sec-links{
+      .link.light{
+        color: $primary;
+      }
+
+    }
+  }
+  //Copyright white-secondary
+  &.white-secondary{
+    background-color: $white;
+    .sec-paragraph{
+      p{
+        color: $secondary;
+      }
+    }
+    .sec-links{
+      .link.light{
+        color: $secondary;
+      }
+
+    }
+  }
+  //Copyright all theme classes
   &.default,
     &.primary,
-    &.secondary {
+    &.secondary,
+    &.white,
+    &.white-primary,
+    &.white-secondary {
       padding: 1.5rem;
         @media screen and (min-width: 992px) {
           padding: 2rem;

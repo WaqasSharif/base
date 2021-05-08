@@ -22,6 +22,7 @@
               }
             img {
               height: 125px;
+              transition: $transitions;
             }
           }
           @media screen and (min-width: 768px) {
@@ -78,11 +79,11 @@
             .thumbnail {
                 width: 165px;
                 min-width: 165px;
-                border-radius: 100%;
+                border-radius: 100px;
                 margin-right: 0;
                 img {
                   height: 165px;
-                  transition: none;
+                  border-radius: 100px;
                 }
               }
               @media screen and (min-width: 768px) {
@@ -260,11 +261,11 @@
             .thumbnail {
                 width: 122px;
                 min-width: 122px;
-                border-radius: 100%;
+                border-radius: 100px;
                 margin-right: 1rem;
                 img {
                   height: 122px;
-                  transition: none;
+                  border-radius: 100px;
                 }
               }
               @media screen and (min-width: 768px) {
