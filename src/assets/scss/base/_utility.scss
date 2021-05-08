@@ -9,3 +9,15 @@ div.cover {
         width: 100%;
     }
 }
+
+// background-color for all sections
+.has-bg {
+    padding: 48px 0;
+    background-color: $bg;
+    &.bg-primary {
+        background-color: $primary;
+    }
+    &.bg-secondary {
+        background-color: $secondary;
+    }
+}
