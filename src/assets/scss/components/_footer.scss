@@ -335,13 +335,13 @@
 //Footer Section Copyright
 .sec-copyrights{
   &.default{
-    background-color: darken($black, 20%);
+    background-color: darken($black, 5%);
   }
   &.primary{
-    background-color: $primary;
+    background-color: darken($primary, 5%);
   }
   &.secondary{
-    background-color: $secondary;
+    background-color:darken($secondary, 5%);
   }
   &.default,
     &.primary,
