@@ -468,7 +468,7 @@
       margin-bottom: 4px;
     }
   }
-  &.dark{
+  &.default {
     background-color: $black;
     padding: 1rem;
     .sec-paragraph{
@@ -477,6 +477,25 @@
       }
     }
   }
+  &.primary {
+    background-color: $primary;
+    padding: 1rem;
+    .sec-paragraph{
+      p{
+        color: $white;
+      }
+    }
+  }
+  &.secondary {
+    background-color: $secondary;
+    padding: 1rem;
+    .sec-paragraph{
+      p{
+        color: $white;
+      }
+    }
+  }
+
 }
 
 // sliders options
