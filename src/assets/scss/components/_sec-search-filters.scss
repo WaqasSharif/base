@@ -70,10 +70,10 @@
     }
     
   }
-  &.var-1{
+  &.obituaries-inner-search-1{
     flex-direction: column;
   }
-  &.var-2{
+  &.obituaries-inner-search-2{
     flex-direction: row;
     align-items: center;
     @media (max-width: 991.98px) {
@@ -87,10 +87,10 @@
       }
     }
   }
-  &.var-3 {
+  &.obituaries-inner-search-3 {
     
   }
-  &.var-4{
+  &.obituaries-home-search-2{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -129,7 +129,7 @@
     }
   }
 
-  &.var-5{
+  &.obituaries-home-search-1{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -166,7 +166,7 @@
     }
   }
 
-  &.var-6{
+  &.obituaries-home-search-3{
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;

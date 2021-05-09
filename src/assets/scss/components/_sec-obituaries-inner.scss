@@ -534,7 +534,42 @@
       right: -60px;
     }
   }
-  &.var-2{
+  &.obituaries-slider-home-1{
+    .slider-var-2-prev,
+    .slider-var-2-next {
+      position: absolute;
+      top: 34%;
+      transition: all .2s ease;
+      z-index: 2;
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+    }
+    .slider-var-2-prev {
+      left: -32px;
+      transform: translateY(-0) rotate(-180deg);
+      &:hover {
+        svg {
+          transform: translateX(0px) translateY(3px);
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        left: -60px;
+      }
+    }
+    .slider-var-2-next {
+      right: -32px;
+      &:hover {
+        svg {
+          transform: translateX(0px) translateY(-3px);
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        right: -60px;
+      }
+    }
+  }
+  &.obituaries-slider-home-2{
     .slider-var-2-prev,
     .slider-var-2-next {
       position: absolute;
@@ -570,7 +605,7 @@
     }
   }
 
-  &.var-3{
+  &.obituaries-slider-home-3{
     .slider-var-3-prev,
     .slider-var-3-next {
       position: absolute;
@@ -610,7 +645,7 @@
 
 // grid options
 .obituaries-grid-wrapper {
-  &.grid-var-1 {
+  &.obituaries-grid-home-1 {
     display: grid;
     gap: 0;
     row-gap: 24px;
@@ -628,7 +663,7 @@
     }
   }
 
-  &.grid-var-2 {
+  &.obituaries-grid-home-2 {
     display: grid;
     gap: 0;
     width: 100%;
@@ -645,7 +680,7 @@
     }
   }
 
-  &.grid-var-3 {
+  &.obituaries-grid-home-3 {
     display: grid;
     gap: 16px;
     width: 100%;
@@ -660,16 +695,5 @@
     @media screen and (min-width: 1325px) {
       grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
     }
-  }
-}
-
-// bg option
-.obituaries-bg-wrapper{
-  padding: 78px;
-  @media screen and (max-width: 991px) {
-    padding: 20px;
-  }
-  &.with-bg{
-   background-color: $bg; 
   }
 }

@@ -131,7 +131,7 @@ $('body').on('mouseenter mouseleave','.main-nav-links > ul > li',function(e){
   });
 
 
-  var obituariesSliderVar1 = new Swiper('.obituaries-slider.var-1 .swiper-container', {
+  var obituariesSliderVar1 = new Swiper('.obituaries-slider.obituaries-slider-home-1 .swiper-container', {
     slidesPerView: 1,
     navigation: {
       nextEl: '.slider-var-1-next',
@@ -160,7 +160,7 @@ $('body').on('mouseenter mouseleave','.main-nav-links > ul > li',function(e){
   });
 
 
-  var obituariesSliderVar1 = new Swiper('.obituaries-slider.var-2 .swiper-container', {
+  var obituariesSliderVar1 = new Swiper('.obituaries-slider.obituaries-slider-home-2 .swiper-container', {
     slidesPerView: 1,
     spaceBetween: 30,
     navigation: {
@@ -190,7 +190,7 @@ $('body').on('mouseenter mouseleave','.main-nav-links > ul > li',function(e){
   });
 
 
-  var obituariesSliderVar1 = new Swiper('.obituaries-slider.var-3 .swiper-container', {
+  var obituariesSliderVar1 = new Swiper('.obituaries-slider.obituaries-slider-home-3 .swiper-container', {
     slidesPerView: 1,
     spaceBetween: 30,
     navigation: {
