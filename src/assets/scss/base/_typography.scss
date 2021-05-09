@@ -167,7 +167,6 @@ body {
     text-transform: uppercase;
     color: $black;
     margin: 0;
-    margin-bottom: 25px;
     font-weight: 400;
   }
   &.bold {
@@ -208,11 +207,32 @@ body {
       }
     }
   }
+  &.dark {
+    p {
+      color: $text-color-dark;
+    }
+  }
+  &.black {
+    p {
+      color: $black;
+    }
+  }
+  &.primary {
+    p{
+      color: $primary;
+    }
+  }
+  &.secondary {
+    p {
+      color: $secondary;
+    }
+  }
 }
 
 
 .sec-paragraph,
-.sec-title {
+.sec-title,
+.small-heading {
   &.letter-spacing-0 {
     p, h1,h2,h3,h4,h5,h6, span, a {
       letter-spacing: 0;
@@ -375,13 +395,13 @@ p {
     }
   }
   h5 {
-    font-size: 1.5rem;
+    font-size: 20px;
     @media (min-width: 768px) {
       font-size: 24px;
     }
   }
   h6 {
-    font-size: 1.5rem;
+    font-size: 16px;
     @media (min-width: 768px) {
       font-size: 18px;
     }
