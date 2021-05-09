@@ -15,9 +15,9 @@ div.cover {
     padding: 48px 0;
     background-color: $bg;
     &.bg-primary {
-        background-color: $primary;
+        background-color: $primary !important;
     }
     &.bg-secondary {
-        background-color: $secondary;
+        background-color: $secondary !important;
     }
 }

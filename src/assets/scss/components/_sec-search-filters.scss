@@ -25,6 +25,7 @@
       &.primary{
         .input-group{
           .form-control{
+            border: 1px solid $primary;
             &:focus{
               border: 1px solid $primary;
             }
@@ -47,6 +48,7 @@
       &.secondary{
         .input-group{
           .form-control{
+            border: 1px solid $secondary;
             &:focus{
               border: 1px solid $secondary;
             }
@@ -340,6 +342,7 @@
     &.primary{
       .input-group{
         .form-control{
+          border: 1px solid $primary;
           &:focus{
             border: 1px solid $primary;
           }
@@ -362,6 +365,7 @@
     &.secondary{
       .input-group{
         .form-control{
+          border: 1px solid $secondary;
           &:focus{
             border: 1px solid $secondary;
           }
@@ -450,6 +454,7 @@
       &.primary{
         .input-group{
           .form-control{
+            border: 1px solid $primary;
             &:focus{
               border: 1px solid $primary;
             }
@@ -466,6 +471,7 @@
       &.secondary{
         .input-group{
           .form-control{
+            border: 1px solid $secondary;
             &:focus{
               border: 1px solid $secondary;
             }
