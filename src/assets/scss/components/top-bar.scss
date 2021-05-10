@@ -27,6 +27,9 @@
 .top-bar-section {
     background-color: transparent;
     padding: 12px 0;
+    position: relative;
+    top: 0;
+    z-index: 2;
     &.default {
         background-color: $btn-default;
     }

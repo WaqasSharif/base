@@ -294,7 +294,6 @@
     z-index: 9;
     padding-bottom: 0; 
     background-color: transparent;
-    min-height: 120px;
     display: flex;
     align-items: center;
     @media (max-width: 991px) {
@@ -355,11 +354,10 @@
         }
     }
 }
-// if desktop menu is fixed
+// if desktop menu is sticky
 .menu-section-desktop {
-    &.fixed {
-        position: fixed;
-        top: 0;
+    &.sticky {
+        position: absolute;
         right: 0;
         left: 0;
         z-index: 1030;
@@ -368,6 +366,11 @@
 
 
 // drop down styling spacing
+.menu-section-desktop .expandable:last-child {
+    ul.dropdown {
+        left: auto;
+    }
+}
 ul.dropdown {
     min-width: 200px;
     display: flex;
@@ -452,10 +455,11 @@ ul.dropdown {
 .logo-wrapp a,
 .logo-wrapp img,
 .logo-wrapp svg {
-    width: 110px;
+    width: 100%;
+    max-width: 110px;
     display: block;
     @media (min-width: 1200px) {
-        width: 143px;
+        max-width: 143px;
     }
 }
 
@@ -730,7 +734,21 @@ ul.dropdown {
 
 // fixed menu desktop
 .menu-fixed {
-    .menu-section-desktop.fixed {
+    .menu-section-desktop.sticky {
+        top: 0;
+        transition: $transitions;
+        position: fixed;
+        .nav-links .main-nav-links > ul > li > a {
+            padding: 24px 0;
+        }
+
+        .logo-wrapp,
+        .logo-wrapp a,
+        .logo-wrapp img,
+        .logo-wrapp svg {
+            max-width: 110px;
+        }
+
         &.default {
             background-color: $btn-default;
         }
