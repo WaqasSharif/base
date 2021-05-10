@@ -1,90 +1,106 @@
-
+// spacer sizes
 .spacer {
-    &.white-16 {
-      background-color: $white;
+    &.height-16 {
+      
       height: 1rem;
       @media (max-width: 991px) {
         height: .5rem;
       }
     }
-    &.white-24 {
-      background-color: $white;
+    &.height-24 {
+      
       height: 1.5rem;
       @media (max-width: 991px) {
         height: .75rem;
       }
     }
-    &.white-32 {
-      background-color: $white;
+    &.height-32 {
+      
       height: 2rem;
       @media (max-width: 991px) {
         height: 1rem;
       }
     }
-    &.white-38 {
-      background-color: $white;
+    &.height-38 {
+      
       height: 38px;
       @media (max-width: 991px) {
         height: 1.5rem;
       }
     }
-    &.white-42 {
-      background-color: $white;
+    &.height-42 {
+      
       height: 2.5rem;
       @media (max-width: 991px) {
         height: 1.25rem;
       }
     }
-    &.white-48 {
-      background-color: $white;
+    &.height-48 {
+      
       height: 3rem;
       @media (max-width: 991px) {
         height: 1.5rem;
       }
     }
-    &.white-60 {
-      background-color: $white;
+    &.height-60 {
+      
       height: 60px;
       @media (max-width: 991px) {
         height: 2rem;
       }
     }
-    &.white-80 {
-      background-color: $white;
+    &.height-80 {
+      
       height: 80px;
       @media (max-width: 991px) {
         height: 40px;
       }
     }
-    &.white-99 {
-      background-color: $white;
+    &.height-99 {
+      
       height: 6.1875rem;
       @media (max-width: 991px) {
         height: 3rem;
       }
     }
-    &.white-110 {
-      background-color: $white;
+    &.height-110 {
+      
       height: 6.875rem;
       @media (max-width: 991px) {
         height: 4rem;
       }
     }
-    &.white-114 {
-        background-color: $white;
+    &.height-114 {
+        
         height: 7.125rem;
         @media (max-width: 991px) {
           height: 4rem;
         }
-      }
-      &.white-118 {
-        background-color: $white;
-        height: 7.375rem;
-        @media (max-width: 991px) {
-          height: 4rem;
-        }
-      }
-    &.transparent {
-      background-color: transparent;
     }
+    &.height-118 {
+      
+      height: 7.375rem;
+      @media (max-width: 991px) {
+        height: 4rem;
+      }
+    }
+}
+
+// spacer with white background
+.spacer {
+  &.white {
+    background-color: $white;
   }
+}
+// spacer with default background
+.spacer {
+  &.default-bg {
+    background-color: $bg;
+  }
+}
+// spacer with transparent background
+.spacer {
+  &.transparent {
+    background-color: transparent;
+  }
+}
