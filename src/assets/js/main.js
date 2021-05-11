@@ -5,39 +5,7 @@
 
 
 
-// put the 'menu-fixed' class on body while scrolling
-(function(){
-  var lastScroll = parseInt(localStorage.getItem('position', scroll));
-  var sticky = $('.stand-alone-menu');
-  var scroll = $(window).scrollTop();
-  if (lastScroll) {
-      sticky.addClass('fixed');
-      $('body').addClass('menu-fixed');
-  }
-  $(window).scroll(function () {
-    scroll = $(window).scrollTop();
-    localStorage.setItem('position', scroll);
-    if (scroll >= tobarHeight) {
-      sticky.addClass('fixed');
-      $('body').addClass('menu-fixed');
-    } else {
-      sticky.removeClass('fixed');
-      $('body').removeClass('menu-fixed');
-    }
-  });
 
-  // check if topbar has sticky class, if yes make it sticky
-  var topbarSticky = $('body').find('.top-bar-section').hasClass('sticky');
-  var tobarHeight = $('.top-bar-section').outerHeight() || 10;
-  if(topbarSticky) {
-    $('body').find('.menu-section-desktop').css('top', menuHeight+'px');
-  }
-
-}());
-
-(function(){
-  
-}());
 
 
 function initSwiper() {
@@ -96,11 +64,7 @@ $(document).ready(function() {
   // init swiper
   initSwiper();
 
-  // get window inner height and apply to hero-banner
-  var windowHeight = window.innerHeight;
-  var heroBanner = $('.dynamic-height');
-  heroBanner.css('height', windowHeight);
-  heroBanner.find('.cover img').css('height', windowHeight);
+
 
   
 
@@ -125,13 +89,7 @@ $('body').on('mouseenter mouseleave','.main-nav-links > ul > li',function(e){
 
 
 
-  var sliderSwiper = new Swiper('.hero-banner.with-slider .swiper-container', {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-  });
+
 
 
   var obituariesSliderVar1 = new Swiper('.obituaries-slider.obituaries-slider-home-1 .swiper-container', {
