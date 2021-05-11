@@ -215,8 +215,9 @@
       }
     }
     .footer-logo{
-      background-color: $btn-default;
-      padding: 10px;
+      img{
+        max-width: 220px;
+      }
     }
     .social-links{
       ul li{
@@ -312,8 +313,6 @@
       }
     }
     .subscribe-logo{
-      background-color: $btn-default;
-      padding: 10px;
     }
   }
 //white primary footer
@@ -339,8 +338,6 @@
       }
     }
     .footer-logo{
-      background-color: $primary;
-      padding: 10px;
     }
     .social-links{
       ul li{
@@ -436,8 +433,6 @@
       }
     }
     .subscribe-logo{
-      background-color: $primary;
-      padding: 10px;
     }
   }
 
@@ -464,8 +459,6 @@
       }
     }
     .footer-logo{
-      background-color: $secondary;
-      padding: 10px;
     }
     .social-links{
       ul li{
@@ -561,8 +554,6 @@
       }
     }
     .subscribe-logo{
-      background-color: $secondary;
-      padding: 10px;
     }
   }
 //footer theme classes
@@ -574,10 +565,15 @@
     &.white-secondary {
       padding: 24px;
         @media screen and (min-width: 992px) {
-          padding: 5rem;
+          padding: 5rem 0;
       }
     }
-
+    &.text-center{
+      .footer-header{
+        align-items: center;
+        justify-content: center;
+      }
+    }
   
 }
 

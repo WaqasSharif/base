@@ -13,7 +13,7 @@ div.cover {
 // background-color for all sections
 .has-bg {
     padding: 48px 0;
-    background-color: $bg;
+    background-color: $bg !important;
     &.bg-primary {
         background-color: $primary !important;
     }
