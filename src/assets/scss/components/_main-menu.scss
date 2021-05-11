@@ -286,6 +286,23 @@
     }
 }
 
+// fixed menu mobile
+.menu-fixed {
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: all .3s ease-in-out;
+        min-height: 66px;
+        .logo-wrapp {
+            padding-top: 0;
+            img {
+                width: 150px;
+            }
+        }
+    }
+}
+
 
 // desktop menu start 
 .menu-section-desktop {
@@ -353,14 +370,42 @@
             }
         }
     }
+
+    // border bottom
+    &.menu-border-bottom {
+        border-bottom: 1px solid #FFFFFF1A;
+    }
+    &.menu-border-top {
+        border-top: 1px solid #FFFFFF1A;
+    }
+
 }
+
 // if desktop menu is sticky
 .menu-section-desktop {
-    &.sticky {
+    &.fixed {
         position: absolute;
         right: 0;
         left: 0;
         z-index: 1030;
+    }
+}
+
+
+// if topbar sticky with main menu
+.menu-section-desktop {
+    flex-direction: column;
+    .top-bar-section {
+        background-color: transparent !important;
+        width: 100%;
+        border-bottom: 1px solid #FFFFFF1A;
+    }
+}
+.menu-fixed {
+    .menu-section-desktop {
+        .top-bar-section {
+            display: none;
+        }
     }
 }
 
@@ -371,6 +416,8 @@
         left: auto;
     }
 }
+
+// dropdown list styling
 ul.dropdown {
     min-width: 200px;
     display: flex;
@@ -393,6 +440,7 @@ ul.dropdown {
             position: relative;
             padding: 16px 20px;
             display: flex;
+            font-weight: bold;
         }
         &:last-child {
             a {
@@ -401,6 +449,7 @@ ul.dropdown {
         }
     }
 }
+
 // nav link elements styling spacing
 .nav-links {
     display: flex;
@@ -414,27 +463,25 @@ ul.dropdown {
             display: flex;
             > li {
                 display: inline-block;
-                flex: 1;
+                flex: auto;
                 align-items: center;
                 justify-content: center;
                 display: flex;
                 &.logo {
-                    min-width: 304px;
+                    min-width: 210px;
                     @media (min-width: 1300px)  {
-                        min-width: 520px;
-                    }
-                    @media (min-width: 1440px)  {
-                        min-width: 620px;
+                        min-width: 300px;
                     }
                 }
                 > a {
-                    padding: 52px 0;
+                    padding: 38px 0;
                     font-size: 16px;
                     line-height: 1;
                     letter-spacing: normal;
                     display: flex;
                     position: relative;
                     justify-content: center;
+                    font-weight: bold;
                     &:hover {
                         text-decoration: none;
                     }
@@ -465,7 +512,7 @@ ul.dropdown {
 
 
 
-// theming for deskto main links
+// theming for desktop main links
 .menu-section-desktop {
 
 
@@ -603,9 +650,80 @@ ul.dropdown {
             }
         } 
     }
+
+    // main links primary text hover 
+    &.primary-link-hover {
+        .nav-links {
+            .main-nav-links {
+                > ul {
+                    > li {
+                        &:hover {
+                            > a {
+                                color: $primary;
+                             }
+                             span {
+                                svg {
+                                    g, polygon {
+                                        fill: $primary;
+                                    }
+                                }
+                            }
+                        }
+                        &.show {
+                            > a {
+                               color: $primary;
+                            }
+                            span {
+                                svg {
+                                    g, polygon {
+                                        fill: $primary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    &.secondary-link-hover {
+        .nav-links {
+            .main-nav-links {
+                > ul {
+                    > li {
+                        &:hover {
+                            > a {
+                                color: $secondary;
+                             }
+                             span {
+                                svg {
+                                    g, polygon {
+                                        fill: $secondary;
+                                    }
+                                }
+                            }
+                        }
+                        &.show {
+                            > a {
+                               color: $secondary;
+                            }
+                            span {
+                                svg {
+                                    g, polygon {
+                                        fill: $secondary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    
 }
 
-// theming for deskto menu dropdowns
+// theming for desktop menu dropdowns
 .menu-section-desktop {
 
     ul.dropdown {
@@ -628,15 +746,14 @@ ul.dropdown {
     &.white {
         ul.dropdown {
             background-color: $white;
-            border: 1px solid lighten($btn-default, 15%);
             > li {
                 a {
-                    border-bottom: 1px solid lighten($btn-default, 15%);
+                    border-bottom: 1px solid lighten($btn-default, 50%);
                     color: $btn-default;
                     &:hover {
                         text-decoration: none;
-                        
-                        background-color: darken($bg , 3%);
+                        color: $white;
+                        background-color: $btn-default;
                     }
                 }
                 
@@ -644,50 +761,49 @@ ul.dropdown {
         }
     }
     &.default {
-
         ul.dropdown {
-            background-color: $btn-default;
-            border: 1px solid darken($btn-default, 15%) ;
+            background-color: $white;
             > li {
                 a {
-                    color: $white;
-                    border-bottom: 1px solid lighten($btn-default, 15%);
+                    border-bottom: 1px solid lighten($btn-default, 50%);
+                    color: $btn-default;
                     &:hover {
                         text-decoration: none;
-                        background-color: lighten($btn-default, 15%);
+                        color: $white;
+                        background-color: $btn-default;
                     }
                 }
+                
             }
         }
     }
     &.primary {
         ul.dropdown {
-            background-color: $primary;
-            border: 1px solid darken($primary, 15%) ;
+            background-color: $white;
             > li {
                 a {
-                    color: $white;
-                    border-bottom: 1px solid lighten($primary, 15%);
+                    color: $primary;
+                    border-bottom: 1px solid lighten($btn-default, 50%);
                     &:hover {
+                        color: $white;
                         text-decoration: none;
-                        background-color: lighten($primary, 15%);
+                        background-color: $primary;
                     }
                 }
             }
         }
-        
     }
     &.secondary {
         ul.dropdown {
-            background-color: $secondary;
-            border: 1px solid darken($secondary, 15%) ;
+            background-color: $white;
             > li {
                 a {
-                    color: $white;
-                    border-bottom: 1px solid lighten($secondary, 15%);
+                    color: $secondary;
+                    border-bottom: 1px solid lighten($btn-default, 50%);
                     &:hover {
+                        color: $white;
                         text-decoration: none;
-                        background-color: lighten($secondary, 15%);
+                        background-color: $secondary;
                     }
                 }
             }
@@ -697,15 +813,14 @@ ul.dropdown {
     &.default-dropdown {
         ul.dropdown {
             background-color: $white;
-            border: 1px solid lighten($btn-default, 15%);
             > li {
                 a {
-                    border-bottom: 1px solid lighten($btn-default, 15%);
+                    border-bottom: 1px solid lighten($btn-default, 50%);
                     color: $btn-default;
                     &:hover {
                         text-decoration: none;
-                        
-                        background-color: darken($bg , 3%);
+                        color: $white;
+                        background-color: $btn-default;
                     }
                 }
                 
@@ -715,27 +830,12 @@ ul.dropdown {
 }
 
 
-// fixed menu mobile
-.menu-fixed {
-    .mobile-menu {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        transition: all .3s ease-in-out;
-        min-height: 66px;
-        .logo-wrapp {
-            padding-top: 0;
-            img {
-                width: 150px;
-            }
-        }
-    }
-}
+
 
 // fixed menu desktop
 .menu-fixed {
-    .menu-section-desktop.sticky {
-        top: 0;
+    .menu-section-desktop.fixed {
+        top: 0 !important;
         transition: $transitions;
         position: fixed;
         .nav-links .main-nav-links > ul > li > a {
@@ -757,6 +857,40 @@ ul.dropdown {
         }
         &.secondary {
             background-color: $secondary;
+        }
+    }
+}
+
+
+
+
+// desktop menu variations
+.menu-desktop-1 {
+
+}
+
+.menu-desktop-2 {
+    .menu-wrap {
+        align-items: center;
+    }
+    .nav-links .main-nav-links > ul {
+        justify-content: flex-end;
+        > li {
+            flex: inherit;
+            padding: 0 24px;
+        }
+    }
+}
+
+.menu-desktop-3 {
+    .nav-links .main-nav-links > ul {
+        justify-content: center;
+        > li {
+            flex: inherit;
+            padding: 0 24px;
+            > a {
+                padding: 24px 0;
+            }
         }
     }
 }

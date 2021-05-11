@@ -344,6 +344,7 @@
 
 
 .sec-links {
+    display: flex;
     .link + .link {
         margin-left: 8px;
         @media screen and (min-width: 414px) {
@@ -566,7 +567,6 @@
                     border-color: lighten($btn-default, 10%);
                 }
             }
-            background-image: linear-gradient(120deg, $btn-default 0%, $btn-default 100%);
         }
 
         &.primary-underline {

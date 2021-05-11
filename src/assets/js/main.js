@@ -17,7 +17,7 @@
   $(window).scroll(function () {
     scroll = $(window).scrollTop();
     localStorage.setItem('position', scroll);
-    if (scroll >= 40) {
+    if (scroll >= tobarHeight) {
       sticky.addClass('fixed');
       $('body').addClass('menu-fixed');
     } else {
@@ -25,16 +25,19 @@
       $('body').removeClass('menu-fixed');
     }
   });
+
+  // check if topbar has sticky class, if yes make it sticky
+  var topbarSticky = $('body').find('.top-bar-section').hasClass('sticky');
+  var tobarHeight = $('.top-bar-section').outerHeight() || 10;
+  if(topbarSticky) {
+    $('body').find('.menu-section-desktop').css('top', menuHeight+'px');
+  }
+
 }());
 
-// (function(){
-//   // check menu has fixed class, if yes make it sticky
-//   var menuisFixed = $('body').find('.menu-section-desktop').hasClass('fixed');
-//   var menuHeight = $('.menu-section-desktop').outerHeight();
-//   if(menuisFixed) {
-//     //$('body').css('padding-top', menuHeight+'px');
-//   }
-// }());
+(function(){
+  
+}());
 
 
 function initSwiper() {
