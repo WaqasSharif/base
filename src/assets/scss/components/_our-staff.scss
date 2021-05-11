@@ -1,0 +1,173 @@
+// Our Staff Tile
+.our-staff-tile{
+    .thumbnail {
+        position: relative;
+        margin-right: 1.25rem;
+        overflow: hidden;
+        width: 160px;
+        min-width: 160px;
+        img {
+            height: 220px;
+          }
+        @media (max-width: 575.98px) {
+            margin-bottom:10px;
+            width: 160px;
+            min-width: 160px;
+          }
+      }
+      @media screen and (min-width: 768px) {
+        .thumbnail {
+            margin-right: 2.188rem;
+            width: 260px;
+            min-width: 260px;
+            img {
+                height: 286px;
+              }
+            
+        }
+      }
+      .info{
+        @media (max-width: 575.98px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+      }
+      &.separator{
+          border-bottom: solid 1px $border;
+          padding-bottom: 39.5px;
+          margin-bottom: 39.5px;
+      }
+
+      &.box{
+        box-shadow: 0px 2px 6px $border;
+        border: 1px solid $border;
+        padding: 2rem;
+        border-radius: 0;
+        @media (max-width: 767.98px) {
+            padding: 1rem;
+        }
+        &.radius{
+            border-radius: 10px;   
+        }
+        &.round{
+            border-radius: 50px;   
+        }
+      }
+     
+}
+// Our Staff Wrapper
+.sec-our-staff{
+    // Our Staff Variation: 1
+    &.our-staff-1{
+        display: grid;
+        gap: 0;
+        row-gap: 24px;
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        @media screen and (min-width: 768px) {
+            row-gap: 40px;
+          }
+        .our-staff-tile{
+            display: flex;
+            align-items: center;
+            position: relative;
+            @media (max-width: 575.98px) {
+              flex-direction:column;
+            }
+        }
+    }
+    // Our Staff Variation: 2
+    &.our-staff-2{
+            display: grid;
+            gap: 0;
+            row-gap: 24px;
+            width: 100%;
+            grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        @media screen and (min-width: 768px) {
+            row-gap: 40px;
+          }
+        .our-staff-tile{
+            display: flex;
+            align-items: center;
+            align-items: center;
+            position: relative;
+            @media (max-width: 575.98px) {
+              flex-direction:column;
+            }
+            .thumbnail {
+                margin-right: 1.25rem;
+                overflow: hidden;
+                width: 160px;
+                min-width: 160px;
+                border-radius: 100%;
+                img {
+                    height: 163px;
+                    border-radius: 100%;
+                }
+              }
+              @media screen and (min-width: 768px) {
+                .thumbnail {
+                    margin-right: 2.188rem;
+                    width: 260px;
+                    min-width: 260px;
+                    img {
+                        height: 263px;
+                      }
+                    
+                }
+              }
+        }
+    }
+
+    // Our Staff Variation: 2
+    &.our-staff-3{
+        display: grid;
+        gap: 20px;
+        row-gap: 30px;
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    @media screen and (min-width: 768px) {
+        row-gap: 60px;
+      }
+    .our-staff-tile{
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        flex-direction:column;
+        @media (max-width: 575.98px) {
+          flex-direction:column;
+        }
+        .thumbnail {
+            margin-right: 0;
+            width: 100%;
+            min-width: 100%;
+            img {
+                height: 286px;
+            }
+          }
+          @media screen and (min-width: 768px) {
+            .thumbnail {
+                margin-right:0;
+                width: 100%;
+                min-width: 100%;
+                img {
+                    height: 286px;
+                  }
+                
+            }
+          }
+        .info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 20px;
+          }
+        
+    }
+}
+}
