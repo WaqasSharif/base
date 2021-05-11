@@ -322,18 +322,6 @@
     }
     &.white {
         background-color: $white;
-        &.with-dropdown {
-            .expandable {
-                position: relative;
-                span {
-                    svg {
-                        g, polygon {
-                            fill: $btn-default;
-                        }
-                    }
-                }
-            }
-        }
     }
     &.primary {
         background-color: $primary;
@@ -517,8 +505,20 @@ ul.dropdown {
 
 
     &.white {
-        box-shadow: 0px 2px 6px #d6d6d6;
-        border-bottom: 1px solid #D6D6D6;
+        box-shadow: 0px 1px 5px #4c4c4c70;
+        .top-bar-content {
+            align-items: center;
+            .phone-info {
+                align-items: center;
+            }
+            .sec-paragraph,
+            .sec-links {
+                p, a {
+                    align-items: center;
+                }
+            }
+        }
+        
         .nav-links {
             .main-nav-links {
                 > ul {
@@ -528,16 +528,27 @@ ul.dropdown {
                         }
                         &.show {
                             > a {
-                                color: darken($secondary, 10%);
-                                font-weight: bold;
+                                color: darken($btn-default, 10%);
                             }
                             span {
                                 svg {
                                     g, polygon {
-                                        fill: darken($secondary, 10%);
+                                        fill: darken($btn-default, 10%);
                                     }
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+        &.with-dropdown {
+            .expandable {
+                position: relative;
+                span {
+                    svg {
+                        g, polygon {
+                            fill: $btn-default;
                         }
                     }
                 }
@@ -568,8 +579,62 @@ ul.dropdown {
                 }
             }
         }
+        .top-bar-content {
+            .phone-info {
+                align-items: center;
+            }
+            .sec-paragraph,
+            .sec-links {
+                p, a {
+                    color: $white;
+                    align-items: center;
+                }
+                a:hover {
+                    span img path,
+                    span img g,
+                    span svg g,
+                    span svg path {
+                        fill: $white;
+                    } 
+                }
+            }
+            
+            span img path,
+            span img g,
+            span svg g,
+            span svg path {
+                fill: $white;
+            }
+        }
     }
     &.primary {
+        .top-bar-content {
+            .phone-info {
+                align-items: center;
+            }
+            .sec-paragraph,
+            .sec-links {
+                p, a {
+                    color: $white;
+                    align-items: center;
+                }
+                a:hover {
+                    span img path,
+                    span img g,
+                    span svg g,
+                    span svg path {
+                        fill: $white;
+                    } 
+                }
+            }
+            
+            span img path,
+            span img g,
+            span svg g,
+            span svg path {
+                fill: $white;
+            }
+        }
         .nav-links {
             .main-nav-links {
                 > ul {
@@ -595,6 +660,33 @@ ul.dropdown {
         }
     }
     &.secondary {
+        .top-bar-content {
+            .phone-info {
+                align-items: center;
+            }
+            .sec-paragraph,
+            .sec-links {
+                p, a {
+                    color: $white;
+                    align-items: center;
+                }
+                a:hover {
+                    span img path,
+                    span img g,
+                    span svg g,
+                    span svg path {
+                        fill: $white;
+                    } 
+                }
+            }
+            
+            span img path,
+            span img g,
+            span svg g,
+            span svg path {
+                fill: $white;
+            }
+        }
         .nav-links {
             .main-nav-links {
                 > ul {
@@ -944,14 +1036,17 @@ ul.dropdown {
                 padding-bottom: 0;
             }
         }
-        .top-bar-content {
-            display: none;
+        &.fixed {
+            .top-bar-content {
+                display: none;
+            }
         }
     }
 }
 
 
 .menu-desktop-5 {
+    padding: 10px 0;
     .menu-wrap {
         padding-top: 20px;
         align-items: center;
@@ -1005,8 +1100,82 @@ ul.dropdown {
 }
 .menu-fixed {
     .menu-desktop-5 {
+        padding: 0;
         .menu-wrap {
             padding-top: 0;
+        }
+    }
+}
+
+
+
+// desktop innner menu variations
+.menu-desktop-inner-1 {
+    min-height: auto;
+    .nav-links .main-nav-links > ul > li > a {
+        padding: 21px 0;
+    }
+}
+.menu-desktop-inner-2 {
+    .nav-links .main-nav-links > ul  {
+        justify-content: flex-end;
+        > li {
+            padding: 0 24px;
+            flex: inherit;
+            &:last-child {
+                padding-right: 0;
+            }
+            > a {
+                padding: 32px 0;
+            }
+        }
+    }
+    .menu-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.menu-desktop-inner-3 {
+    .nav-links .main-nav-links > ul  {
+        justify-content: flex-end;
+        > li {
+            padding: 0 24px;
+            flex: inherit;
+            &:last-child {
+                padding-right: 0;
+            }
+            > a {
+                padding: 32px 0;
+            }
+        }
+    }
+    .menu-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .top-bar-content {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 16px;
+    }
+    .nav-links {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.menu-fixed {
+    .menu-desktop-inner-3 {
+        &.fixed {
+            .top-bar-content {
+                display: none;
+            }
         }
     }
 }

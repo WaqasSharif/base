@@ -1,47 +1,15 @@
 .menu-section-desktop {
     &.innder-desktop{
-        min-height: auto;
-        .nav-links .main-nav-links > ul > li > a {
-            padding: 21px 0;
-        }
+       
     }
 
     &.with-left-logo {
-        .nav-links .main-nav-links > ul  {
-            justify-content: flex-end;
-            > li {
-                padding: 0 24px;
-                flex: inherit;
-                &:last-child {
-                    padding-right: 0;
-                }
-                > a {
-                    padding: 32px 0;
-                    font-weight: bold;
-                }
-            }
-        }
-        .menu-wrap {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        
         
     }
 
     &.with-top-bar {
-        .top-bar-content {
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            padding-top: 16px;
-        }
-        .nav-links {
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            flex-direction: column;
-        }
+        
     }
 
 
