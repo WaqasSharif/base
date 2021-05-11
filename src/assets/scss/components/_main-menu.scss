@@ -503,10 +503,10 @@ ul.dropdown {
 .logo-wrapp img,
 .logo-wrapp svg {
     width: 100%;
-    max-width: 110px;
+    max-width: 143px;
     display: block;
     @media (min-width: 1200px) {
-        max-width: 143px;
+        
     }
 }
 
@@ -891,6 +891,120 @@ ul.dropdown {
             > a {
                 padding: 24px 0;
             }
+        }
+    }
+}
+
+
+.menu-desktop-4 {
+    .menu-wrap {
+        align-items: flex-end;
+        .logo-wrapp {
+            padding-bottom: 20px;
+        }
+    }
+    .nav-links .main-nav-links > ul {
+        justify-content: flex-end;
+        > li {
+            flex: inherit;
+            padding: 0 24px;
+            &:last-child {
+                padding-right: 0;
+            }
+            > a {
+                padding: 20px 0;
+            }
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .top-bar-content {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 16px;
+        align-items: center;
+        .phone-info {
+            align-items: center;
+        }
+    }
+}
+.menu-fixed {
+    .menu-desktop-4 {
+        .menu-wrap {
+            align-items: center;
+            .logo-wrapp {
+                padding-bottom: 0;
+            }
+        }
+        .top-bar-content {
+            display: none;
+        }
+    }
+}
+
+
+.menu-desktop-5 {
+    .menu-wrap {
+        padding-top: 20px;
+        align-items: center;
+    }
+    .nav-links .main-nav-links > ul {
+        justify-content: flex-end;
+        > li {
+            flex: inherit;
+            padding: 0 24px;
+            &:last-child {
+                padding-right: 0;
+            }
+            > a {
+                padding: 20px 0;
+            }
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: 1440px) {
+            flex-direction: row;
+
+            .main-nav-links {
+                display: flex;
+                justify-content: flex-start;
+                padding-left: 24px;
+            }
+        }
+    }
+    .top-bar-content {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 16px;
+        align-items: center;
+        .phone-info {
+            align-items: center;
+        }
+
+        @media (min-width: 1440px) {
+            order: 2;
+            width: auto;
+            padding-top: 0;
+        }
+    }
+}
+.menu-fixed {
+    .menu-desktop-5 {
+        .menu-wrap {
+            padding-top: 0;
         }
     }
 }

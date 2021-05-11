@@ -382,6 +382,7 @@
         font-size: 16px;
         line-height: 1.25;
         transition: all 0.4s ease 0s, transform 200ms ease-in-out 0s;
+        display: flex;
         // with icons / img
         span {
             img,
