@@ -464,6 +464,7 @@
   @media screen and (max-width: 767px) {
     flex-direction: column;
     text-align: center;
+    align-items: center;
     .sec-links {
       margin-bottom: 4px;
     }
@@ -694,6 +695,23 @@
     }
     @media screen and (min-width: 1325px) {
       grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+    }
+  }
+  &.obituaries-grid-home-4 {
+    display: grid;
+    gap: 0;
+    row-gap: 24px;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      row-gap: 0;
+    }
+    @media screen and (min-width: 992px) {
+      grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    }
+    @media screen and (min-width: 1325px) {
+      grid-template-columns: repeat(auto-fill, minmax(16.6%, 1fr));
     }
   }
 }
