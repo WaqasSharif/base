@@ -402,7 +402,7 @@
     }
 }
 .menu-fixed {
-    .menu-section-desktop {
+    .menu-section-desktop.fixed {
         .top-bar-section {
             display: none;
         }
@@ -899,6 +899,7 @@ ul.dropdown {
 .menu-desktop-4 {
     .menu-wrap {
         align-items: flex-end;
+        padding: 10px 0;
         .logo-wrapp {
             padding-bottom: 20px;
         }
@@ -938,6 +939,7 @@ ul.dropdown {
     .menu-desktop-4 {
         .menu-wrap {
             align-items: center;
+            padding: 0;
             .logo-wrapp {
                 padding-bottom: 0;
             }
