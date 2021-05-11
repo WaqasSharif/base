@@ -1048,7 +1048,6 @@ ul.dropdown {
 .menu-desktop-5 {
     padding: 10px 0;
     .menu-wrap {
-        padding-top: 20px;
         align-items: center;
     }
     .nav-links .main-nav-links > ul {
@@ -1099,7 +1098,7 @@ ul.dropdown {
     }
 }
 .menu-fixed {
-    .menu-desktop-5 {
+    .menu-desktop-5.fixed {
         padding: 0;
         .menu-wrap {
             padding-top: 0;
