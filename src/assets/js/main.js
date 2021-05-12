@@ -180,6 +180,34 @@ $('body').on('mouseenter mouseleave','.main-nav-links > ul > li',function(e){
     }
   });
 
+  var obituariesSliderVar1 = new Swiper('.obituaries-slider.has-slider.obituaries-slider-home-4 .swiper-container', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.slider-var-4-next',
+      prevEl: '.slider-var-4-prev',
+    },
+    breakpoints: {
+      414: {
+        slidesPerView: 1.8
+      },
+      768: {
+        slidesPerView: 3.5
+      },
+      1024: {
+        slidesPerView: 4
+      },
+      1200: {
+        slidesPerView: 5
+      },
+      1440: {
+        slidesPerView: 6
+      },
+      9999: {
+        slidesPerView: 6
+      }
+    }
+  });
+
  
   
 $('.hamburger').on('click', function(e){

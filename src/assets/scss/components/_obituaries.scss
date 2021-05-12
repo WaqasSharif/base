@@ -1,5 +1,149 @@
 //For Inner pages
-.sec-obituaries-inner{
+.sec-obituaries{
+  &.has-bg-default{
+    padding: 48px 0;
+    background-color: rgba($black, 0.8);
+    .sec-title{
+      h1, h2, h3, h4, h5, h6{
+        color: $white;
+      }
+    }
+    .sec-paragraph{
+      p{
+        color: $white;
+      }
+    }
+    .sec-buttons{
+      .btn{
+        color: $btn-default;
+        background-color: $white;
+      }
+    }
+    .obituaries-tile{
+      a{
+        &:hover{
+          .sec-title{
+            h1, h2, h3, h4, h5, h6{
+              color: $anchor-color;
+            }
+          }
+        }
+      }
+    }
+    .sec-search-filters{
+      &.active{
+        .input-group{
+          .input-group-addon{
+            background-color: $white;
+            svg{
+              fill: $black;
+            }
+          }
+          .form-control{
+            border: 1px solid $black;
+          }
+        }
+      }
+      
+    }
+    
+  }
+  &.has-bg-primary{
+    padding: 48px 0;
+    background-color: rgba($primary, 0.8);
+    .sec-title{
+      h1, h2, h3, h4, h5, h6{
+        color: $white;
+      }
+    }
+    .sec-paragraph{
+      p{
+        color: $white;
+      }
+    }
+    .sec-buttons{
+      .btn{
+        color: $primary;
+        background-color: $white;
+      }
+    }
+    .obituaries-tile{
+      a{
+        &:hover{
+          .sec-title{
+            h1, h2, h3, h4, h5, h6{
+              color: $anchor-color;
+            }
+          }
+        }
+      }
+    }
+    .sec-search-filters{
+      &.active{
+        .input-group{
+          .input-group-addon{
+            background-color: $white;
+            svg{
+              fill: $primary;
+            }
+          }
+          .form-control{
+            border: 1px solid $primary;
+          }
+        }
+      }
+      
+    }
+    
+  }
+  &.has-bg-secondary{
+    padding: 48px 0;
+    background-color: rgba($secondary, 0.8);
+    .sec-title{
+      h1, h2, h3, h4, h5, h6{
+        color: $white;
+      }
+    }
+    .sec-paragraph{
+      p{
+        color: $white;
+      }
+    }
+    .sec-buttons{
+      .btn{
+        color: $secondary;
+        background-color: $white;
+      }
+    }
+    .obituaries-tile{
+      a{
+        &:hover{
+          .sec-title{
+            h1, h2, h3, h4, h5, h6{
+              color: $anchor-color;
+            }
+          }
+        }
+      }
+    }
+    .sec-search-filters{
+      &.active{
+        .input-group{
+          .input-group-addon{
+            background-color: $white;
+            svg{
+              fill: $secondary;
+            }
+          }
+          .form-control{
+            border: 1px solid $secondary;
+          }
+        }
+      }
+      
+    }
+    
+  }
 }
     
     .obituaries-tile{
@@ -103,6 +247,9 @@
               }
               a{
                 text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 &:hover{
                   .info{
                     h1,h2,h3,h4,h5,h6{
@@ -157,6 +304,9 @@
               }
               a{
                 text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 &:hover{
                   .info{
                     h1,h2,h3,h4,h5,h6{
@@ -172,7 +322,7 @@
         &.var-4{
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             text-align: center;
             box-shadow: 0px 6px 6px #0000000A;
             border: 1px solid $border;
@@ -225,6 +375,9 @@
 
               a{
                 text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 &:hover{
                   .info{
                     h1,h2,h3,h4,h5,h6{
@@ -608,6 +761,10 @@
   }
 
   &.obituaries-slider-home-3{
+    display: flex;
+    .swiper-slide{
+      display: flex;
+    }
     .slider-var-3-prev,
     .slider-var-3-next {
       position: absolute;
@@ -640,6 +797,103 @@
       @media screen and (min-width: 1200px) {
         right: -60px;
       }
+    }
+  }
+
+  &.obituaries-slider-home-4{
+    .swiper-wrapper{
+      display: grid;
+      gap: 0;
+      row-gap: 24px;
+      width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        row-gap: 0;
+      }
+      @media screen and (min-width: 992px) {
+        grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+      }
+      @media screen and (min-width: 1325px) {
+        grid-template-columns: repeat(auto-fill, minmax(16.6%, 1fr));
+      }
+    }
+    
+    .slider-var-4-prev,
+    .slider-var-4-next {
+      position: absolute;
+      top: 34%;
+      transition: all .2s ease;
+      z-index: 2;
+      display: none;
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+    }
+    .slider-var-4-prev {
+      left: -32px;
+      transform: translateY(-0) rotate(-180deg);
+      &:hover {
+        svg {
+          transform: translateX(0px) translateY(3px);
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        left: -60px;
+      }
+    }
+    .slider-var-4-next {
+      right: -32px;
+      &:hover {
+        svg {
+          transform: translateX(0px) translateY(-3px);
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        right: -60px;
+      }
+    }
+    &.has-slider{
+      .swiper-wrapper{
+        display: flex;
+      }
+      .slider-var-4-prev,
+      .slider-var-4-next{
+        display: block;
+        @media screen and (max-width: 991px) {
+          display: none;
+        }
+      }
+    }
+    &.flat{
+      .obituaries-tile{
+        .thumbnail{
+          border-radius: 0px;
+          img{
+            border-radius: 0px;
+          }
+        }
+      }
+    }
+    &.radius{
+      .obituaries-tile{
+        .thumbnail{
+          border-radius: 10px;
+          img{
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+    &.round{
+      .obituaries-tile{
+        .thumbnail{
+          border-radius: 100px;
+          img{
+            border-radius: 100px;
+          }
+        }
+      } 
     }
   }
 
