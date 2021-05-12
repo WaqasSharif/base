@@ -80,15 +80,19 @@
         }
         &.white-primary{
             .sec-paragraph{
-                p{
+                &.title{
+                    p{
                     color: $primary;
+                }
                 }
             }
         }
         &.white-secondary{
             .sec-paragraph{
-                p{
+                &.title{
+                    p{
                     color: $secondary;
+                }
                 }
             }
         }
@@ -134,6 +138,24 @@
                     
                 }
               }
+        }
+        &.white-primary{
+            .sec-paragraph{
+                &.title{
+                    p{
+                    color: $primary;
+                }
+                }
+            }
+        }
+        &.white-secondary{
+            .sec-paragraph{
+                &.title{
+                    p{
+                    color: $secondary;
+                }
+                }
+            }
         }
     }
 
@@ -182,7 +204,20 @@
             text-align: center;
             padding-top: 20px;
           }
-        
+    }
+    &.white-primary{
+        .sec-title{
+            h1, h2, h3, h4, h5, h6{
+                color: $primary;
+            }
+        }
+    }
+    &.white-secondary{
+        .sec-title{
+            h1, h2, h3, h4, h5, h6{
+                color: $secondary;
+            }
+        }
     }
 }
     // Our Staff Variation: 4
@@ -231,6 +266,20 @@
                 padding-top: 20px;
             }
             
+        }
+        &.white-primary{
+            .sec-title{
+                h1, h2, h3, h4, h5, h6{
+                    color: $primary;
+                }
+            }
+        }
+        &.white-secondary{
+            .sec-title{
+                h1, h2, h3, h4, h5, h6{
+                    color: $secondary;
+                }
+            }
         }
     }
     // Our Staff Variation: 5
@@ -283,6 +332,20 @@
                 padding-top: 20px;
             }
             
+        }
+        &.white-primary{
+            .sec-title{
+                h1, h2, h3, h4, h5, h6{
+                    color: $primary;
+                }
+            }
+        }
+        &.white-secondary{
+            .sec-title{
+                h1, h2, h3, h4, h5, h6{
+                    color: $secondary;
+                }
+            }
         }
     }
 
@@ -370,6 +433,35 @@
                         }
                     }
                   }
+                }
+                &.white-primary{
+                    .info{
+                        .sec-title{
+                            h1, h2, h3, h4, h5, h6{
+                                color: $primary;
+                            }
+                        }
+                        .sec-paragraph{
+                            p{
+                                color: $primary;
+                            }
+                        }
+                    }
+                    
+                }
+                &.white-secondary{
+                    .info{
+                        .sec-title{
+                            h1, h2, h3, h4, h5, h6{
+                                color: $secondary;
+                            }
+                        }
+                        .sec-paragraph{
+                            p{
+                                color: $secondary;
+                            }
+                        }
+                    }
                 }
     }
 }
