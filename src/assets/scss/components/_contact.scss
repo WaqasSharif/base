@@ -1,24 +1,22 @@
 .sec-contact{
-  &.white{
-    &.white-primary{
-      .sec-title{
-          h1, h2, h3, h4, h5, h6{
-              color: $btn-default;
-          }
-      }
-      .form-group {
-        label {
-          color: $btn-default;
-      }
-      input,
-        textarea {
-            &:focus {
-                border: 1px solid $btn-default;
-            }
+  &.white-default{
+    .sec-title{
+        h1, h2, h3, h4, h5, h6{
+            color: $btn-default;
         }
     }
+    .form-group {
+      label {
+        color: $btn-default;
+    }
+    input,
+      textarea {
+          &:focus {
+              border: 1px solid $btn-default;
+          }
+      }
   }
-  }
+}
   &.white-primary{
     .sec-title{
         h1, h2, h3, h4, h5, h6{
