@@ -1,0 +1,38 @@
+.sec-contact-form {
+  
+  .form-group {
+    margin-bottom: 16px;
+      label {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1;
+        margin-bottom: 0;
+        color: $btn-default;
+  
+    }
+      input {
+        border-radius: 4px;
+        height: 52px;
+        padding: 0 24px;
+  
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+    }
+      input,
+      textarea {
+          border: 1px solid $border;
+          height: 52px;
+          padding: 0;
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+          &:focus {
+              box-shadow: none;
+              outline: none;
+              border: none;
+              border: 1px solid $primary;
+          }
+      }
+  }
+}
