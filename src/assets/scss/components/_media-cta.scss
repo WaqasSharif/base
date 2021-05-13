@@ -1,0 +1,125 @@
+.media-cta {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+    .cta,
+    .image-wrapp {
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 50%;
+        }
+    }
+    .image-wrapp {
+        position: relative;
+        height: 300px;
+        @media (min-width: 768px) {
+            height: 440px;
+        }
+        img {
+            height: 300px;
+            @media (min-width: 768px) {
+                height: 440px;
+            }
+        }
+    }
+    .cta {
+        background-color: #f3f4f7;
+        padding-left: 50px;
+        padding-right: 72px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        @media (min-width: 768px) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &.reverse {
+        .image-wrapp {
+            order: 1;
+            @media (min-width: 768px) {
+                order: 2;
+            }
+        }
+        .cta {
+            order: 2;
+            @media (min-width: 768px) {
+                
+                order: 1;
+            }
+        }
+    }
+}
+.media-cta+.media-cta {
+    margin-top: 26px;
+}
+
+.media-cta { 
+    &.small {
+        background-color: #F4F5F9;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        .image-wrapp {
+            min-width: 180px;
+            height: 180px;
+            width: 180px;
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+            img {
+                height: 180px;
+                @media (max-width: 767px) {
+                    width: 100%;
+                }
+            }
+        }
+        .cta {
+            width: 100%;
+            padding-right: 20px;
+            @media (max-width: 767px) {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+.media-cta {
+    &.medium {
+        background-color: #F4F5F9;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        .image-wrapp {
+            min-width: 320px;
+            height: 390px;
+            width: 320px;
+            @media (max-width: 767px) {
+                width: 100%;
+                height: 200px;
+            }
+            img {
+                height: 390px;
+                @media (max-width: 767px) {
+                    height: 200px;
+                }
+            }
+        }
+        .cta {
+            width: 100%;
+            padding-right: 20px;
+            @media (max-width: 767px) {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+.media-cta.medium+.media-cta.medium {
+    margin-top: 36px;
+}

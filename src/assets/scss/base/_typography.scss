@@ -315,6 +315,277 @@ p {
   margin: 0;
 }
 
+.list {
+  ul, 
+  ol {
+      margin: 0;
+      padding: 0;
+      li {
+          list-style: none;
+          font-size: 16px;
+          line-height: 1.5;
+          margin-bottom: .5rem;
+          position: relative;
+          padding-left: 1rem;
+          color: $text-color;
+          &:before {
+              content: "";
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background-color: $text-color;
+              display: block;
+              position: absolute;
+              left: 0;
+              top: 10px;
+          }
+          ol, ul {
+              margin-top: .75rem;
+              li {
+                  padding-left: 2rem;
+                  &:before {
+                      left: 1rem;
+                  }
+              }
+          }
+      }
+  }
+
+  &.small {
+    ul li, 
+    ol li {
+      font-size: 12px;
+      line-height: 1.5;
+      @media (min-width: 992px) {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+  }
+  &.medium {
+    ul li,
+    ol li {
+      font-size: 16px;
+      line-height: 1.43;
+      @media (min-width: 992px) {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    }
+  }
+  &.big {
+    ul li,
+    ol li {
+      font-size: 18px;
+      line-height: 1.33;
+      letter-spacing: normal;
+      @media (min-width: 992px) {
+        font-size: 20px;
+        line-height: 1.5;
+      }
+    }
+  }
+  &.big-x {
+    ul li,
+    ol li {
+      font-size: 20px;
+      line-height: 1.33;
+      letter-spacing: normal;
+      @media (min-width: 992px) {
+        font-size: 24px;
+        line-height: 1.5;
+      }
+    }
+  }
+  &.big-xx  {
+    ul li,
+    ol li {
+      font-size: 20px;
+      line-height: 1.33;
+      letter-spacing: normal;
+      @media (min-width: 992px) {
+        font-size: 30px;
+        line-height: 1.33;
+      }
+    }
+  }
+  &.font-35 {
+    ul li,
+    ol li {
+      font-size: 24px;
+      line-height: 1.33;
+      letter-spacing: normal;
+      @media (min-width: 992px) {
+        font-size: 35px;
+        line-height: 1.33;
+      }
+    }
+  }
+
+  // color options for li
+  // default color
+  &.dark {
+    ul li,
+    ol li {
+      color: $text-color-dark;
+    }
+  }
+  &.black {
+    ul li,
+    ol li {
+      color: $black;
+    }
+  }
+  &.bold {
+    ul li,
+    ol li {
+      font-weight: bold;
+    }
+  }
+  &.default {
+    ul li,
+    ol li {
+      color: $btn-default;
+      &:before {
+        color: $btn-default;
+        background-color: $btn-default;
+      }
+      
+    }
+    &.square-disc {
+      li {
+        &:before {
+          background-color: $btn-default;
+        }
+      }
+    }
+    &.checkmark {
+      ol li, 
+      ul li {
+        &:after {
+          color: $btn-default;
+        }
+      }
+    }
+  }
+  // primary color
+  &.primary {
+    ul li,
+    ol li {
+      color: $primary;
+      &:before {
+        color: $primary;
+        background-color: $primary;
+      }
+      
+    }
+    &.square-disc {
+      li {
+        &:before {
+          background-color: $primary;
+        }
+      }
+    }
+    &.checkmark {
+      ol li, 
+      ul li {
+        &:after {
+          color: $primary;
+        }
+      }
+    }
+  }
+  &.secondary {
+    ul li,
+    ol li {
+      color: $secondary;
+      &:before {
+        color: $secondary;
+        background-color: $secondary;
+      }
+      
+    }
+    &.square-disc {
+      li {
+        &:before {
+          background-color: $secondary;
+        }
+      }
+    }
+    &.checkmark {
+      ol li, 
+      ul li {
+        &:after {
+          color: $secondary
+        }
+      }
+    }
+  }
+}
+
+// listy style options
+.list {
+  &.square-disc {
+       ul,ol {
+          margin-left: 32px;
+          li {
+              &:before {
+                  content: "";
+                  width: 8px;
+                  height: 2px;
+                  border-radius: 1px;
+                  background-color: #969696;
+                  display: block;
+                  position: absolute;
+                  left: 0;
+                  top: 10px;
+              }
+              ol, ul {
+                  margin-top: .75rem;
+                  li {
+                      padding-left: 2rem;
+                      &:before {
+                          left: 1rem;
+                      }
+                  }
+              }
+          }
+      }
+  }
+  &.checkmark {
+      ul,ol {
+          margin-left: 32px;
+          li {
+              padding-left: 24px;
+              &:before {
+                  display: none;
+              }
+              &:after {
+                  content: "\02714";
+                  font-size: 18px;
+                  color: $text-color;
+                  display: block;
+                  position: absolute;
+                  left: 0 !important;
+                  top: 0;
+              }
+              ol, ul {
+                  margin-top: .75rem;
+                  li {
+                      padding-left: 2rem;
+                      &:before {
+                          display: none;
+                      }
+                      &:after {
+                          left: 1rem;
+                      }
+                  }
+              }
+          }
+      }
+  }
+}
+
 
 //
 // Headings
