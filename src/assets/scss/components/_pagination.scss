@@ -1,0 +1,199 @@
+
+// pagination 
+.sec-pagination {
+  border-top: 1px solid $border;
+  &.white-default{
+    .page-item {
+      .page-link {
+          color: $btn-default;
+          &:hover {
+              background-color: $btn-default;
+          }
+      }
+      &.active {
+          .page-link {
+              background-color: $btn-default;
+          }
+      }
+      &.previous,
+      &.next {
+          .page-link {
+              color: $btn-default;
+              border: 1px solid $btn-default;
+              &:hover {
+                  background-color: $btn-default;
+              }
+          }
+      }
+  }
+}
+  &.white-primary{
+    .page-item {
+      .page-link {
+          color: $primary;
+          &:hover {
+              background-color: $primary;
+          }
+      }
+      &.active {
+          .page-link {
+              background-color: $primary;
+          }
+      }
+      &.previous,
+      &.next {
+          .page-link {
+              color: $primary;
+              border: 1px solid $primary;
+              &:hover {
+                  background-color: $primary;
+              }
+          }
+      }
+  }
+}
+&.white-secondary{
+  .page-item {
+    .page-link {
+        color: $secondary;
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+    &.active {
+        .page-link {
+            background-color: $secondary;
+        }
+    }
+    &.previous,
+    &.next {
+        .page-link {
+            color: $secondary;
+            border: 1px solid $secondary;
+            &:hover {
+                background-color: $secondary;
+            }
+        }
+    }
+}
+}
+  .pagination {
+      justify-content: space-between;
+      align-items: center;
+      .page-item {
+          .page-link {
+              font-size: 17px;
+              border: none;
+              background-color: $white;
+              height: 47px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 0 19px;
+              transition: all .3s ease-in-out;
+              border-radius: 50px;
+              &:hover {
+                  color: $white;
+                  transform: none;
+                  border-radius: 50px;
+              }
+              &:focus,
+              &:active {
+                  outline: none;
+                  box-shadow: none;
+              }
+          }
+          &.active {
+              .page-link {
+                  color: $white;
+                  font-weight: bold;
+              }
+          }
+          &.previous,
+          &.next {
+              .page-link {
+                  background-color:$bg;
+                  font-weight: bold;
+                  width: 118px;
+                  background-color: transparent;
+                  border-radius: 0;
+                  transition: all .3s ease-in-out;
+                  border-radius: 50px;
+                  &:hover {
+                      color: $white;
+                      border-radius: 50px;
+                  }
+                  &:focus,
+                  &:active {
+                      outline: none;
+                      box-shadow: none;
+                  }
+              }
+              &.disabled {
+                  .page-link {
+                      width: 110px;
+                      background-color: $bg;
+                      border: 0;
+                      transition: all .3s ease-in-out;
+                      &:hover {
+                        background-color: $bg;
+                      }
+                  }
+              }
+          }
+          &.previous {
+              margin-right: 94px;
+          }
+          &.next {
+              margin-left: 94px;
+          }
+          &.dots {
+              .page-link {
+                  background-color: transparent;
+                  &:hover,
+                  &:focus,
+                  &:active {
+                      outline: none;
+                      box-shadow: none;
+                  }
+              }
+          }
+      }
+
+      &.desktop {
+          display: none;
+          @media screen and (min-width: 992px) {
+              display: flex;
+          }
+      }
+      &.mobile {
+          display: flex;
+          padding: 0;
+          max-width: 450px;
+          margin: 0 auto;
+          @media screen and (min-width: 992px) {
+              display: none;
+          }
+
+          .page-item {
+              &.previous,
+              &.next {
+                  .page-link {
+                      width: 47px;
+                  }
+                  &.disabled {
+                      .page-link {
+                          width: 47px;
+                      }
+                  }
+              }
+              &.previous {
+                  margin-right: 0;
+              }
+              &.next {
+                  margin-left: 0;
+              }
+          }
+      }
+  }
+}
