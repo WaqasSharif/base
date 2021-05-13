@@ -227,3 +227,13 @@ if (window.innerWidth < 991) {
 }
   
 }); 
+
+//lightgallery lightbox
+$(document).ready(function() {
+  $("#lightgallery").lightGallery({
+    thumbnail:true,
+    pager: true,
+    speed: 500,
+        
+  });
+});
