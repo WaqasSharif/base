@@ -1,4 +1,62 @@
-.sec-contact-form {
+.sec-contact{
+  &.white{
+    &.white-primary{
+      .sec-title{
+          h1, h2, h3, h4, h5, h6{
+              color: $btn-default;
+          }
+      }
+      .form-group {
+        label {
+          color: $btn-default;
+      }
+      input,
+        textarea {
+            &:focus {
+                border: 1px solid $btn-default;
+            }
+        }
+    }
+  }
+  }
+  &.white-primary{
+    .sec-title{
+        h1, h2, h3, h4, h5, h6{
+            color: $primary;
+        }
+    }
+    .form-group {
+      label {
+        color: $primary;
+    }
+    input,
+      textarea {
+          &:focus {
+              border: 1px solid $primary;
+          }
+      }
+  }
+}
+&.white-secondary{
+    .sec-title{
+        h1, h2, h3, h4, h5, h6{
+            color: $secondary;
+        }
+    }
+    .form-group {
+        label {
+          color: $secondary;
+      }
+      input,
+      textarea {
+          &:focus {
+              border: 1px solid $secondary;
+          }
+      }
+    }
+}
+}
+.contact-form {
   
   .form-group {
     margin-bottom: 16px;
@@ -31,7 +89,7 @@
               box-shadow: none;
               outline: none;
               border: none;
-              border: 1px solid $primary;
+              border: 1px solid $btn-default;
           }
       }
   }
