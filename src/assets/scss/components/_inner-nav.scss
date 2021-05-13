@@ -1,0 +1,361 @@
+
+
+.sec-left-nav {
+    @media (max-width: 991px) {
+        display: none;
+    }
+    padding-right: 50px;
+    .links-wrap{
+        .sec-links {
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .link {
+                color: $text-color;
+                position: relative;
+                font-weight: bold;
+
+                width: 100%;
+                display: flex;
+                &:hover {
+                    color: $anchor-color;
+                }
+            }
+
+            &.active {
+                .link {
+                    color: $anchor-color;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    &.right {
+        .links-wrap .sec-links .link{
+            justify-content: flex-end;
+        }
+        .small-heading {
+            text-align: right;
+        }
+    }
+    &.center {
+        &.small-unerline {
+            .sec-links {
+                &.active {
+                    .link {
+                        &:after {
+                            content:'';
+                            height:2px;
+                            width:50%;
+                            background:$anchor-color;
+                            position:absolute;
+                            left: 25%;
+                            bottom:-5px;
+                        }
+                    }
+                }
+                .link {
+                    &:hover {
+                        &:after {
+                            content:'';
+                            height:2px;
+                            width:50%;
+                            background:$anchor-color;
+                            position:absolute;
+                            left: 25%;
+                            bottom:-5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .links-wrap .sec-links .link{
+            justify-content: center;
+        }
+        .small-heading {
+            text-align: center;
+        }
+    }
+
+    &.with-box {
+        background-color: $white;
+        padding: 40px 30px;
+        box-shadow: 0px 3px 10px #00000012;
+        &.radius {
+            border-radius: 8px;
+        }
+        &.border {
+            border: 1px solid $border;
+        }
+    }
+    
+    &.with-lines {
+        .links-wrap {
+
+            .sec-links {
+                
+                margin-bottom: 0;
+                padding-bottom: 0;
+                .link {
+                    width: 100%;
+                    display: flex;
+                    padding-bottom: 16px;
+                    padding-top: 16px;
+                    border-bottom: 1px solid #72727259;
+                    
+                    &:after {    
+                        background: none repeat scroll 0 0 transparent;
+                        bottom: 0;
+                        content: "";
+                        display: block;
+                        height: 2px;
+                        left: 50%;
+                        position: absolute;
+                        background: $anchor-color;
+                        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                        width: 0;
+                        top: 100%;
+                      }
+                      &:hover {
+                          border-color: transparent;
+                        &:after { 
+                            width: 100%; 
+                            left: 0; 
+                        }
+                      }
+                }
+
+                &.active {
+                    .link {
+                        &:after {    
+                            background: none repeat scroll 0 0 transparent;
+                            bottom: 0;
+                            content: "";
+                            display: block;
+                            height: 2px;
+                            left: 50%;
+                            position: absolute;
+                            background: $anchor-color;
+                            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                            width: 100%; 
+                            left: 0; 
+                          }
+                    }
+                }
+    
+            }
+
+        }
+        
+
+        
+    }
+
+    // animations
+    &.animate-top {
+        .links-wrap {
+            .sec-links {
+                .link {
+                    transform: translateX(0px) translateY(0px);
+                    &:hover {
+                        transform: translateX(0px) translateY(-3px);
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+// colors options
+.sec-left-nav {
+    // default color
+    &.default {
+        .links-wrap .sec-links {
+            .link {
+                &:hover {
+                    color: $btn-default;
+                }
+                &:after {
+                    background: $btn-default !important;
+                }
+            }
+            &.active {
+                .link {
+                    color: $btn-default;
+                }
+            }
+        }
+
+        // small heading 
+        .small-heading {
+            p {
+                color: $btn-default;
+            }
+            &:after {
+                background: $btn-default;
+            }
+        }
+    }
+    // primary color
+    &.primary {
+        .links-wrap .sec-links {
+            .link {
+                &:hover {
+                    color: $primary;
+                }
+                &:after {
+                    background: $primary !important;
+                }
+
+            }
+            &.active {
+                .link {
+                    color: $primary;
+                }
+            }
+        }
+
+        // small heading 
+        .small-heading {
+            p {
+                color: $primary;
+            }
+            &:after {
+                background: $primary;
+            }
+        }
+    }
+    // secondary color
+    &.secondary {
+        .links-wrap .sec-links {
+            .link {
+               // color: $primary;
+                &:hover {
+                    color: $secondary
+                }
+                &:after {
+                    background: $secondary !important;
+                }
+            }
+            &.active {
+                .link {
+                    color: $secondary
+                }
+            }
+        }
+
+        // small heading 
+        .small-heading {
+            p {
+                color: $secondary;
+            }
+            &:after {
+                background: $secondary;
+            }
+        }
+    }
+
+
+    // default background box color
+    &.default-bg {
+        &.with-box {
+            background-color: $btn-default;
+            .small-heading {
+                &:after {
+                    background: $white;
+                }
+                p {
+                    color: $white;
+                }
+            }
+            .links-wrap .sec-links {
+                &.active {
+                    .link:after {
+                        background: $white;
+                    }
+                }
+                .link {
+                    color: $white;
+                    &:after {
+                        background: $white;
+                    }
+                    &:hover {
+                        &:after {
+                            background: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // default primary box color
+    &.primary-bg {
+        &.with-box {
+            background-color: $primary;
+            .small-heading {
+                &:after {
+                    background: $white;
+                }
+                p {
+                    color: $white;
+                }
+            }
+            .links-wrap .sec-links {
+                &.active {
+                    .link:after {
+                        background: $white;
+                    }
+                }
+                .link {
+                    color: $white;
+                    &:after {
+                        background: $white;
+                    }
+                    &:hover {
+                        &:after {
+                            background: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // default secondary box color
+    &.secondary-bg {
+        &.with-box {
+            background-color: $secondary;
+            .small-heading {
+                &:after {
+                    background: $white;
+                }
+                p {
+                    color: $white;
+                }
+            }
+            .links-wrap .sec-links {
+                &.active {
+                    .link:after {
+                        background: $white;
+                    }
+                }
+                .link {
+                    color: $white;
+                    &:after {
+                        background: $white;
+                    }
+                    &:hover {
+                        &:after {
+                            background: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
