@@ -210,19 +210,7 @@ $('body').on('mouseenter mouseleave','.main-nav-links > ul > li',function(e){
 
  
   
-$('.hamburger').on('click', function(e){
-  e.preventDefault();
-  $(this).hide();
-  $('.mobile-menu').addClass('active');
-  $('body').addClass('freeze');
-});
-$('.dismiss').on('click', function(e){
-  e.preventDefault();
-  $('.mobile-menu').removeClass('active');
-  $('.expandable').removeClass('active');
-  $('body').removeClass('freeze');
-  $('.hamburger').show();
-})
+
 
 var navExpand = [].slice.call(document.querySelectorAll('.mobile-menu .expandable'));
 

@@ -27,3 +27,16 @@
     }
   
   }());
+
+
+
+$( document ).ready(function() {
+  $('.mega-hamburger').on('click', function(e){
+    e.preventDefault();
+    $(this).toggleClass('is-active'); 
+    $('.menu-expanded-view').toggleClass('active');
+    $('body').toggleClass('freeze');
+  });
+});
+
+
