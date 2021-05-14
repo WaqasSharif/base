@@ -309,10 +309,11 @@
     gap: 24px;
     row-gap: 50px;
     width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(48.5%, 1fr));
-    @media screen and (min-width: 992px) {
+    
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
         row-gap: 80px;
-      }
+    }
   .media-text {
     display: flex;
     flex-direction: column;
@@ -416,8 +417,9 @@
     gap: 24px;
     row-gap: 24px;
     width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(48.5%, 1fr));
-    @media screen and (min-width: 992px) {
+    
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
         row-gap: 24px;
       }
     .media-text {
@@ -484,12 +486,11 @@
 &.media-text-grid-2{
   display: grid;
   gap: 24px;
-  row-gap: 24px;
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(48.5%, 1fr));
-  @media screen and (min-width: 992px) {
-      row-gap: 32px;
-    }
+  
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  }
 .media-text {
   display: flex;
   flex-direction: column;
@@ -662,9 +663,10 @@
   gap: 24px;
   row-gap: 50px;
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(48.5%, 1fr));
-  @media screen and (min-width: 992px) {
+  
+  @media screen and (min-width: 768px) {
       row-gap: 80px;
+      grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
     }
 .media-text {
   display: flex;
@@ -787,8 +789,9 @@
   gap: 24px;
   row-gap: 24px;
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(48.5%, 1fr));
-  @media screen and (min-width: 992px) {
+  
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
       row-gap: 24px;
     }
   .media-text {
