@@ -2,7 +2,7 @@
 var windowHeight = window.innerHeight;
 var heroBanner = $('.dynamic-height');
 heroBanner.css('height', windowHeight);
-heroBanner.find('.cover img').css('height', windowHeight);
+heroBanner.find('.banner-img .cover img').css('height', windowHeight);
 
 
 var sliderSwiper = new Swiper('.hero-banner.with-slider .swiper-container', {
