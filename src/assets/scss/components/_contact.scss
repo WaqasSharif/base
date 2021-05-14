@@ -90,5 +90,63 @@
               border: 1px solid $btn-default;
           }
       }
+      textarea {
+          height: auto !important;
+      }
+  }
+}
+
+
+// contact information box
+.contact-information {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #F4F5F9;
+  @media (max-width: 991px) {
+      margin-top: 1.5rem;
+  }
+  .head {
+      background-color: $btn-default;
+      padding: 32px 0;
+      text-align: center;
+  }
+  .body {
+      padding: 80px 40px;
+  }
+}
+
+
+
+.contact-us-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f6f8;
+  @media (min-width: 768px) {
+      flex-direction: row;
+  }
+  .small-heading.with-icon {
+      justify-content: flex-start;
+  }
+  .contact-info,
+  .img-wrap {
+      width: 100%;
+      @media (min-width: 768px) {
+          width: 50%;
+      }
+  }
+  .contact-info {
+        padding: 20px;
+        padding-left: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+  }
+  .img-wrap {
+      position: relative;
+      height: 362px;
+      img {
+          height: 362px;
+      }
   }
 }

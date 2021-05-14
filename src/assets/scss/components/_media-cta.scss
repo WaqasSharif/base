@@ -54,6 +54,12 @@
             }
         }
     }
+
+    &.no-bg {
+        .cta {
+            background-color: transparent !important;
+        }
+    }
 }
 .media-cta+.media-cta {
     margin-top: 26px;
@@ -66,14 +72,14 @@
         overflow: hidden;
         position: relative;
         .image-wrapp {
-            min-width: 180px;
-            height: 180px;
-            width: 180px;
+            min-width: 240px;
+            height: 240px;
+            width: 240px;
             @media (max-width: 767px) {
                 width: 100%;
             }
             img {
-                height: 180px;
+                height: 240px;
                 @media (max-width: 767px) {
                     width: 100%;
                 }
