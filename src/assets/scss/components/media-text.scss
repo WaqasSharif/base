@@ -865,4 +865,250 @@
 }
 
 
+
+&.media-text-grid-5{
+  display: grid;
+  gap: 24px;
+  row-gap: 50px;
+  width: 100%;
+  
+  @media screen and (min-width: 768px) {
+      row-gap: 80px;
+      grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    }
+.media-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @media (min-width: 992px) {
+      flex-direction: column;
+  }
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .media-text-head{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .thumbnail {
+      margin-right: 1rem;
+      height: 50px;
+      width: 50px;
+      min-width: 50px !important;
+      background-color: $btn-default;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      @media (min-width: 992px) {
+          margin-right: 1.25rem;
+          height: 78px;
+          width: 78px;
+          min-width: 78px !important;
+          margin-bottom: 2rem;
+      }
+      svg, img{
+        height: 44px;
+        width: 44px;
+          @media (min-width: 992px) {
+              height: 58px;
+              width: 58px;
+          }
+        *{
+          fill: $white;
+        }
+      }
+  }
+}
+
+&.icon-small {
+  .media-text {
+    .thumbnail {
+      margin-right: 24px;
+      min-width: auto;
+      svg, img{
+        height: 32px;
+        width: 32px;
+          @media (min-width: 992px) {
+              height: 32px;
+              width: 32px;
+          }
+      }
+  }
+  }
+}
+
+&.icon-big {
+  .media-text {
+    @media (min-width: 992px) {
+      align-items: flex-start;
+    }
+    .thumbnail {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      overflow: hidden;
+      margin-right:0 ;
+      margin-left: .25rem;
+      margin-bottom: 0;
+      @media (min-width: 992px) {
+          margin-bottom: 0;
+          min-width: 188px;
+          min-height: 188px;
+          margin-left: 0;
+          margin-right: 72px;
+      }
+      img {
+          height: 150px;
+          width: 150px;
+          @media (min-width: 992px) {
+              height: 150px;
+              width: 150px;
+          }
+      }
+      svg{
+        height: 150px;
+        width: 150px;
+          @media (min-width: 992px) {
+              height: 150px;
+              width: 150px;
+          }
+      }
+      
+  }
+  }
+}
+
+&.box {
+  display: grid;
+  gap: 24px;
+  row-gap: 24px;
+  width: 100%;
+  
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+      row-gap: 24px;
+    }
+  .media-text {
+    padding: 30px;
+    border: 1px solid $border;
+    border-radius: 5px;
+    box-shadow: 0 6px 5px 0 #0000000d;
+    background-color: $white;
+  }
+  
+}
+&.light-bg{
+    display: grid;
+    gap: 16px;
+    row-gap: 16px;
+    width: 100%;
+  
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+      row-gap: 16px;
+    }
+  .media-text {
+    padding:0 30px 30px 30px;
+    border-radius: 5px;
+    background-color: $bg;
+  }
+}
+&.white-default{
+  .media-text {
+    .sec-title{
+      h1, h2, h3, h4, h5, h6{
+        color: $btn-default;
+    }
+  }
+    a{
+      .sec-title{
+        h1, h2, h3, h4, h5, h6{
+          color: $btn-default;
+      }
+    }
+    
+    }
+    .thumbnail {
+      background-color: $btn-default;
+        svg{
+          *{
+            fill: $white;
+          }
+        }
+    }
+  }
+  }
+  &.white-primary{
+    .media-text {
+      .sec-title{
+        h1, h2, h3, h4, h5, h6{
+          color: $primary;
+      }
+    }
+      a{
+        .sec-title{
+          h1, h2, h3, h4, h5, h6{
+            color: $primary;
+        }
+      }
+      
+      }
+      .thumbnail {
+        background-color: $primary;
+          svg{
+            *{
+              fill: $white;
+            }
+          }
+      }
+    }
+  }
+  &.white-secondary{
+    .media-text {
+      .sec-title{
+        h1, h2, h3, h4, h5, h6{
+          color: $secondary;
+      }
+    }
+      a{
+        .sec-title{
+          h1, h2, h3, h4, h5, h6{
+            color: $secondary;
+        }
+      }
+      
+      }
+      .thumbnail {
+        background-color: $secondary;
+          svg{
+            *{
+              fill: $white;
+            }
+          }
+      }
+    }
+  }
+  &.radius{
+    .media-text {
+      .thumbnail {
+        border-radius: 8px;
+      }
+    }
+  }
+  &.round{
+    .media-text {
+      .thumbnail {
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
 }

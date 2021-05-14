@@ -34,10 +34,24 @@ body {
 }
 
 
-.title.with-action {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.sec-title{
+  &.with-action {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+    }
+    .sec-buttons{
+      margin-top: 1rem;
+      @media (min-width: 768px) {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 .sec-paragraph {
