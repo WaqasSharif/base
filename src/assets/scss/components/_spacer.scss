@@ -104,3 +104,25 @@
     background-color: transparent;
   }
 }
+
+.divider{
+  border-bottom: solid 1px $border;
+    &.height-small {
+      margin: 1rem 0;
+      @media (max-width: 991px) {
+        margin: .5rem 0;
+      }
+    }
+    &.height-medium {
+      margin: 1.5rem 0;
+      @media (max-width: 991px) {
+        margin: .75rem 0;
+      }
+    }
+    &.height-large {
+      margin: 2rem 0;
+      @media (max-width: 991px) {
+        margin: 1rem 0;
+      }
+    }
+}

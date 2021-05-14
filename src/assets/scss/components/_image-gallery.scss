@@ -22,7 +22,17 @@
             @media screen and (min-width: 992px) {
                 height: 680px;
             }
-            img{
+            img, iframe{
+                height: 100%;
+            }
+        }
+    }
+    &.medium {
+        .banner {
+            @media screen and (min-width: 992px) {
+                height: 450px;
+            }
+            img, iframe{
                 height: 100%;
             }
         }
@@ -44,8 +54,8 @@
                 transform: scale(1.1);
                 transition: all 0.7s ease-in-out;
             }
-            img {
-                width: 100%;
+            img, iframe{
+                height: 100%;
             }
             
         }

@@ -1,0 +1,892 @@
+.sec-media-text{
+  &.media-text-1{
+      display: grid;
+      gap: 0;
+      row-gap: 24px;
+      width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      @media screen and (min-width: 768px) {
+          row-gap: 24px;
+        }
+    .media-text {
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 992px) {
+          flex-direction: row;
+      }
+      .thumbnail {
+          margin-right: 1rem;
+          margin-left: .25rem;
+          margin-bottom: 1rem;
+          min-width: 75px;
+          @media (min-width: 992px) {
+              margin-right: 1.25rem;
+              margin-left: .75rem;
+              margin-bottom: 0;
+          }
+          img {
+              height: 48px;
+              object-fit: cover;
+              @media (min-width: 992px) {
+                  height: 70px;
+              }
+          }
+          svg{
+            height: 44px;
+            width: 44px;
+              @media (min-width: 992px) {
+                  height: 78px;
+                  width: 78px;
+              }
+            *{
+              fill: $btn-default;
+            }
+          }
+      }
+    }
+
+    &.icon-small {
+      .media-text {
+        .thumbnail {
+          margin-right: 24px;
+          min-width: auto;
+          margin-top: 8px;
+          img {
+              height: 24px;
+          }
+          svg{
+            height: 24px;
+            width: 24px;
+              @media (min-width: 992px) {
+                  height: 24px;
+                  width: 24px;
+              }
+          }
+      }
+      }
+    }
+
+    &.icon-big {
+      .media-text {
+        @media (min-width: 992px) {
+          align-items: flex-start;
+        }
+        .thumbnail {
+          width: 150px;
+          height: 150px;
+          position: relative;
+          overflow: hidden;
+          margin-right:0 ;
+          margin-left: .25rem;
+          margin-bottom: 1rem;
+          @media (min-width: 992px) {
+              margin-bottom: 0;
+              min-width: 150px;
+              min-height: 150px;
+              margin-left: 0;
+              margin-right: 72px;
+          }
+          img {
+              height: 150px;
+              width: 150px;
+              @media (min-width: 992px) {
+                  height: 150px;
+                  width: 150px;
+              }
+          }
+          svg{
+            height: 150px;
+            width: 150px;
+              @media (min-width: 992px) {
+                  height: 150px;
+                  width: 150px;
+              }
+          }
+      }
+      }
+    }
+
+    &.box {
+      .media-text {
+        padding: 30px;
+        border: 1px solid $border;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 6px 5px 0 #0000000d;
+        box-shadow: 0 6px 5px 0 #0000000d;
+        background-color: $white;
+      }
+      
+    }
+
+    &.white-default{
+      .media-text {
+        .sec-title{
+          h1, h2, h3, h4, h5, h6{
+            color: $btn-default;
+        }
+        }
+        .thumbnail {
+            svg{
+              *{
+                fill: $btn-default;
+              }
+            }
+        }
+      }
+      }
+      &.white-primary{
+        .media-text {
+          .sec-title{
+            h1, h2, h3, h4, h5, h6{
+              color: $primary;
+          }
+          }
+          .thumbnail {
+              svg{
+                *{
+                  fill: $primary;
+                }
+              }
+          }
+        }
+      }
+      &.white-secondary{
+        .media-text {
+          .sec-title{
+            h1, h2, h3, h4, h5, h6{
+              color: $secondary;
+          }
+          }
+          .thumbnail {
+              svg{
+                *{
+                  fill: $secondary;
+                }
+              }
+          }
+        }
+      }
+
+  }
+
+  &.media-text-2{
+      display: grid;
+      gap: 0;
+      row-gap: 24px;
+      width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      @media screen and (min-width: 768px) {
+          row-gap: 40px;
+        }
+    .media-text {
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 992px) {
+          flex-direction: row;
+      }
+      .thumbnail {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        overflow: hidden;
+        margin-right:0 ;
+        margin-left: .25rem;
+        margin-bottom: 1rem;
+        @media (min-width: 992px) {
+            margin-bottom: 0;
+            min-width: 188px;
+            min-height: 188px;
+            margin-left: 0;
+            margin-right: 72px;
+        }
+        img {
+            height: 150px;
+            width: 150px;
+            @media (min-width: 992px) {
+                height: 188px;
+                width: 188px;
+            }
+        }
+    }
+    }
+    &.img-round{
+      .media-text{
+        @media (min-width: 992px) {
+          align-items: center;
+        }
+        .thumbnail {
+          width: 150px;
+          height: 150px;
+          position: relative;
+          overflow: hidden;
+          margin-right:0 ;
+          margin-left: .25rem;
+          border-radius: 50%;
+          margin-bottom: 1rem;
+          @media (min-width: 992px) {
+              margin-bottom: 0;
+              min-width: 214px;
+              min-height: 214px;
+              margin-right: 72px;
+          }
+          img {
+              height: 150px;
+              width: 150px;
+              @media (min-width: 992px) {
+                  height: 214px;
+                  width: 214px;
+              }
+          }
+          }
+      }
+      
+    }
+    &.box {
+      .media-text {
+        padding: 30px;
+        border: 1px solid $border;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 6px 5px 0 #0000000d;
+        box-shadow: 0 6px 5px 0 #0000000d;
+        background-color: $white;
+      }
+      
+    }
+    &.white-default{
+      .media-text {
+        .sec-title{
+          h1, h2, h3, h4, h5, h6{
+            color: $btn-default;
+        }
+        }
+        .thumbnail {
+            svg{
+              *{
+                fill: $btn-default;
+              }
+            }
+        }
+      }
+      }
+      &.white-primary{
+        .media-text {
+          .sec-title{
+            h1, h2, h3, h4, h5, h6{
+              color: $primary;
+          }
+          }
+          .thumbnail {
+              svg{
+                *{
+                  fill: $primary;
+                }
+              }
+          }
+        }
+      }
+      &.white-secondary{
+        .media-text {
+          .sec-title{
+            h1, h2, h3, h4, h5, h6{
+              color: $secondary;
+          }
+          }
+          .thumbnail {
+              svg{
+                *{
+                  fill: $secondary;
+                }
+              }
+          }
+        }
+      }
+  }
+
+  &.media-text-grid-1{
+    display: grid;
+    gap: 24px;
+    row-gap: 50px;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(48.5%, 1fr));
+    @media screen and (min-width: 992px) {
+        row-gap: 80px;
+      }
+  .media-text {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 992px) {
+        flex-direction: column;
+    }
+    .thumbnail {
+        margin-right: 1rem;
+        margin-left: .25rem;
+        margin-bottom: 1rem;
+        min-width: 75px;
+        @media (min-width: 992px) {
+            margin-right: 1.25rem;
+            margin-left: .75rem;
+            margin-bottom: 1.5rem;
+        }
+        img {
+            height: 48px;
+            object-fit: cover;
+            @media (min-width: 992px) {
+                height: 70px;
+            }
+        }
+        svg{
+          height: 44px;
+          width: 44px;
+            @media (min-width: 992px) {
+                height: 78px;
+                width: 78px;
+            }
+          *{
+            fill: $btn-default;
+          }
+        }
+    }
+  }
+
+  &.icon-small {
+    .media-text {
+      .thumbnail {
+        margin-right: 24px;
+        min-width: auto;
+        img {
+            height: 24px;
+        }
+        svg{
+          height: 24px;
+          width: 24px;
+            @media (min-width: 992px) {
+                height: 24px;
+                width: 24px;
+            }
+        }
+    }
+    }
+  }
+
+  &.icon-big {
+    .media-text {
+      @media (min-width: 992px) {
+        align-items: flex-start;
+      }
+      .thumbnail {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        overflow: hidden;
+        margin-right:0 ;
+        margin-left: .25rem;
+        margin-bottom: 1rem;
+        @media (min-width: 992px) {
+            margin-bottom: 1rem;
+            min-width: 188px;
+            min-height: 188px;
+            margin-left: 0;
+            margin-right: 72px;
+        }
+        img {
+            height: 150px;
+            width: 150px;
+            @media (min-width: 992px) {
+                height: 150px;
+                width: 150px;
+            }
+        }
+        svg{
+          height: 150px;
+          width: 150px;
+            @media (min-width: 992px) {
+                height: 150px;
+                width: 150px;
+            }
+        }
+        
+    }
+    }
+  }
+
+  &.box {
+    display: grid;
+    gap: 24px;
+    row-gap: 24px;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(48.5%, 1fr));
+    @media screen and (min-width: 992px) {
+        row-gap: 24px;
+      }
+    .media-text {
+      padding: 30px;
+      border: 1px solid $border;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 6px 5px 0 #0000000d;
+      box-shadow: 0 6px 5px 0 #0000000d;
+      background-color: $white;
+    }
+    
+  }
+  &.white-default{
+    .media-text {
+      .sec-title{
+        h1, h2, h3, h4, h5, h6{
+          color: $btn-default;
+      }
+      }
+      .thumbnail {
+          svg{
+            *{
+              fill: $btn-default;
+            }
+          }
+      }
+    }
+    }
+    &.white-primary{
+      .media-text {
+        .sec-title{
+          h1, h2, h3, h4, h5, h6{
+            color: $primary;
+        }
+        }
+        .thumbnail {
+            svg{
+              *{
+                fill: $primary;
+              }
+            }
+        }
+      }
+    }
+    &.white-secondary{
+      .media-text {
+        .sec-title{
+          h1, h2, h3, h4, h5, h6{
+            color: $secondary;
+        }
+        }
+        .thumbnail {
+            svg{
+              *{
+                fill: $secondary;
+              }
+            }
+        }
+      }
+    }
+}
+
+
+&.media-text-grid-2{
+  display: grid;
+  gap: 24px;
+  row-gap: 24px;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(48.5%, 1fr));
+  @media screen and (min-width: 992px) {
+      row-gap: 24px;
+    }
+.media-text {
+  display: flex;
+  flex-direction: column;
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .media-text-head{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  @media (min-width: 992px) {
+      flex-direction: column;
+  }
+  .thumbnail {
+      margin-right: 1rem;
+      margin-left: 0;
+      margin-bottom: 0;
+      min-width: auto;
+      @media (min-width: 992px) {
+          margin-right: 1.25rem;
+          margin-left: 0;
+          margin-bottom: 0;
+      }
+      img {
+          height: 44px;
+          object-fit: cover;
+          @media (min-width: 992px) {
+              height: 78px;
+          }
+      }
+      svg{
+        height: 44px;
+        width: 44px;
+          @media (min-width: 992px) {
+              height: 44px;
+              width: 44px;
+          }
+        *{
+          fill: $btn-default;
+        }
+      }
+  }
+}
+
+&.icon-small {
+  .media-text {
+    .thumbnail {
+      margin-right: 24px;
+      min-width: auto;
+      img {
+          height: 44px;
+      }
+      svg{
+        height: 24px;
+        width: 24px;
+          @media (min-width: 992px) {
+              height: 24px;
+              width: 24px;
+          }
+      }
+  }
+  }
+}
+
+&.box {
+  .media-text {
+    padding: 30px;
+    border: 1px solid $border;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 6px 5px 0 #0000000d;
+    box-shadow: 0 6px 5px 0 #0000000d;
+    background-color: $white;
+    &:hover{
+      background-color: $bg;
+    }
+    a{
+      color: $btn-default;
+    }
+  }
+  
+  
+}
+&.white-default{
+  .media-text {
+
+    .sec-paragraph{
+      p{
+        color: $btn-default;
+    }
+    }
+    a{
+      .sec-paragraph{
+        p{
+          color: $btn-default;
+      }
+      }
+    
+    }
+  
+    
+    .thumbnail {
+        svg{
+          *{
+            fill: $btn-default;
+          }
+        }
+    }
+  }
+  }
+  &.white-primary{
+    .media-text {
+      .sec-paragraph{
+        p{
+          color: $primary;
+      }
+      }
+      a{
+        .sec-paragraph{
+          p{
+            color: $primary;
+        }
+        }
+      
+      }
+      .thumbnail {
+          svg{
+            *{
+              fill: $primary;
+            }
+          }
+      }
+    }
+  }
+  &.white-secondary{
+    .media-text {
+      .sec-paragraph{
+        p{
+          color: $secondary;
+      }
+      }
+      a{
+        .sec-paragraph{
+          p{
+            color: $secondary;
+        }
+        }
+      
+      }
+      .thumbnail {
+          svg{
+            *{
+              fill: $secondary;
+            }
+          }
+      }
+    }
+  }
+}
+
+
+
+&.media-text-grid-4{
+  display: grid;
+  gap: 24px;
+  row-gap: 50px;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(48.5%, 1fr));
+  @media screen and (min-width: 992px) {
+      row-gap: 80px;
+    }
+.media-text {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 992px) {
+      flex-direction: column;
+  }
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .media-text-head{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .thumbnail {
+      margin-right: 1rem;
+      height: 50px;
+      width: 50px;
+      background-color: $btn-default;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (min-width: 992px) {
+          margin-right: 1.25rem;
+          height: 78px;
+          width: 95px;
+      }
+      img {
+          height: 48px;
+          object-fit: cover;
+          @media (min-width: 992px) {
+              height: 70px;
+          }
+      }
+      svg{
+        height: 44px;
+        width: 44px;
+          @media (min-width: 992px) {
+              height: 58px;
+              width: 58px;
+          }
+        *{
+          fill: $white;
+        }
+      }
+  }
+}
+
+&.icon-small {
+  .media-text {
+    .thumbnail {
+      margin-right: 24px;
+      min-width: auto;
+      img {
+          height: 24px;
+      }
+      svg{
+        height: 24px;
+        width: 24px;
+          @media (min-width: 992px) {
+              height: 24px;
+              width: 24px;
+          }
+      }
+  }
+  }
+}
+
+&.icon-big {
+  .media-text {
+    @media (min-width: 992px) {
+      align-items: flex-start;
+    }
+    .thumbnail {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      overflow: hidden;
+      margin-right:0 ;
+      margin-left: .25rem;
+      margin-bottom: 0;
+      @media (min-width: 992px) {
+          margin-bottom: 0;
+          min-width: 188px;
+          min-height: 188px;
+          margin-left: 0;
+          margin-right: 72px;
+      }
+      img {
+          height: 150px;
+          width: 150px;
+          @media (min-width: 992px) {
+              height: 150px;
+              width: 150px;
+          }
+      }
+      svg{
+        height: 150px;
+        width: 150px;
+          @media (min-width: 992px) {
+              height: 150px;
+              width: 150px;
+          }
+      }
+      
+  }
+  }
+}
+
+&.box {
+  display: grid;
+  gap: 24px;
+  row-gap: 24px;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(48.5%, 1fr));
+  @media screen and (min-width: 992px) {
+      row-gap: 24px;
+    }
+  .media-text {
+    padding: 30px;
+    border: 1px solid $border;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 6px 5px 0 #0000000d;
+    box-shadow: 0 6px 5px 0 #0000000d;
+    background-color: $white;
+  }
+  
+}
+&.white-default{
+  .media-text {
+    .sec-title{
+      h1, h2, h3, h4, h5, h6{
+        color: $btn-default;
+    }
+  }
+    a{
+      .sec-title{
+        h1, h2, h3, h4, h5, h6{
+          color: $btn-default;
+      }
+    }
+    
+    }
+    .thumbnail {
+      background-color: $btn-default;
+        svg{
+          *{
+            fill: $white;
+          }
+        }
+    }
+  }
+  }
+  &.white-primary{
+    .media-text {
+      .sec-title{
+        h1, h2, h3, h4, h5, h6{
+          color: $primary;
+      }
+    }
+      a{
+        .sec-title{
+          h1, h2, h3, h4, h5, h6{
+            color: $primary;
+        }
+      }
+      
+      }
+      .thumbnail {
+        background-color: $primary;
+          svg{
+            *{
+              fill: $white;
+            }
+          }
+      }
+    }
+  }
+  &.white-secondary{
+    .media-text {
+      .sec-title{
+        h1, h2, h3, h4, h5, h6{
+          color: $secondary;
+      }
+    }
+      a{
+        .sec-title{
+          h1, h2, h3, h4, h5, h6{
+            color: $secondary;
+        }
+      }
+      
+      }
+      .thumbnail {
+        background-color: $secondary;
+          svg{
+            *{
+              fill: $white;
+            }
+          }
+      }
+    }
+  }
+  &.radius{
+    .media-text {
+      .thumbnail {
+        border-radius: 8px;
+      }
+    }
+  }
+  &.round{
+    .media-text {
+      .thumbnail {
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+
+}
