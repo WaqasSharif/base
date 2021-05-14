@@ -208,3 +208,30 @@
         }
     }
 }
+
+
+
+// inner variations
+.testimonial-box {
+    &.inner {
+        &.light-bg {
+            box-shadow: none;
+            border: 1px solid $border;
+            background-color: $bg;
+        }
+
+        .reviewer-wrapper {
+            display: flex;
+            align-items: center;
+            .icon {
+                margin-right: 24px;
+                width: 50px;
+                height: 50px;
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+        
+    }
+}
