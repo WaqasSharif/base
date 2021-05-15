@@ -272,6 +272,49 @@ body {
       color: $secondary;
     }
   }
+  &.small p {
+    font-size: 12px;
+    line-height: 1.5;
+    @media (min-width: 992px) {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+  &.medium p {
+    font-size: 16px;
+    line-height: 1.43;
+    @media (min-width: 992px) {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+  &.big p {
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: normal;
+    @media (min-width: 992px) {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  }
+  &.big-x p {
+    font-size: 20px;
+    line-height: 1.33;
+    letter-spacing: normal;
+    @media (min-width: 992px) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+  &.big-xx p {
+    font-size: 20px;
+    line-height: 1.33;
+    letter-spacing: normal;
+    @media (min-width: 992px) {
+      font-size: 30px;
+      line-height: 1.33;
+    }
+  }
 }
 
 

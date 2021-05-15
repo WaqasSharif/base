@@ -325,3 +325,73 @@
         
     }
 }
+
+
+
+// our location full view
+
+.our-location {
+    position: relative;
+    .two-col {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+        .right,
+        .left {
+            width: 100%;
+            @media (min-width: 768px) {
+                width: 50%;
+            }
+        }
+    }
+    .right {
+        height: 380px;
+        @media (min-width: 768px) {
+            height: 580px;
+        }
+        position: relative;
+        iframe {
+            width: 100%;
+            height: inherit;
+        }
+    }
+    .left {
+        height: 380px;
+        @media (min-width: 768px) {
+            height: 580px;
+        }
+        background-color: $primary;
+        .img {
+            height: inherit;
+            position: relative;
+            overflow: hidden;
+            opacity: .15;
+        }
+    }
+    >.container {
+        height: 100%;
+        //background: red;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        .content {
+            //background-color: yellow;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 380px;
+            @media (min-width: 768px) {
+                width: 50%;
+                text-align: left;
+                height: 580px;
+            }
+        }
+    }
+}
