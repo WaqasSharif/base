@@ -979,3 +979,15 @@
     }
   }
 }
+
+
+// on mobile screen ob grid view
+.obituaries-slider {
+  .swiper-wrapper {
+    @media screen and (max-width: 991px) {
+      display: grid !important;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    }
+  }
+}
