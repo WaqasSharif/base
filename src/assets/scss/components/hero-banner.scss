@@ -152,6 +152,7 @@
       .content {
         align-items: center;
         text-align: center;
+        margin: 0 auto;
       }
     }
     &.h-left {
@@ -213,6 +214,31 @@
     }
     .swiper-button-next {
       padding-right: 3rem;
+    }
+  }
+}
+
+// slider 2 variation
+.hero-banner-slider-2 {
+  .banner-img {
+    box-shadow: 0 10px 10px 0 #0000001a;
+    border: 10px solid $white;
+  }
+  .swiper-pagination {
+    bottom: 24px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    .swiper-pagination-bullet {
+      margin: 0 8px;
+      background-color: $primary;
+      opacity: 1;
+      width: 12px;
+      height: 12px;
+    }
+    .swiper-pagination-bullet-active {
+      background: darken($primary, 5%);
     }
   }
 }

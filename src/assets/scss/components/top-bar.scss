@@ -74,4 +74,15 @@
             }
         }
     }
+
+    .dropdown {
+        .dropdown-menu {
+            a {
+                padding: 12px 6px;
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
 }
