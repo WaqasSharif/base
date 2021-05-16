@@ -83,21 +83,32 @@
     &.two-images {
         .content-wrapper {
             .img {
+                position: relative;
+                padding-right: 200px;
+                padding-bottom: 50px;
                 @media (max-width: 991px) {
-                    height: 250px;
+                    padding-right: 0px;
+                    padding-bottom: 0px;
                     
                 }
-                img {
+                .cover{
+                    border-radius: 8px;
                     @media (max-width: 991px) {
-                        height: 250px;
+                        padding-top: 50px;
+                        background-color: transparent;
+                        position: relative;
+                        
                     }
-                }
-            }
-            @media (min-width: 992px) {
-                .img {
-                    position: relative;
-                    padding-right: 200px;
-                    padding-bottom: 50px;
+                    img{
+                        border-radius: 8px;
+                        @media (max-width: 991px) {
+                            z-index: 0;
+                            position: relative;
+                        }
+                        @media (max-width:375px) {
+                            height: 300px;
+                        }
+                    }
                     img + img {
                         width: 300px;
                         height: 300px;
@@ -108,11 +119,140 @@
                         right: 120px;
                         bottom: 0;
                         border-radius: 8px;
+                        @media (max-width: 991px) {
+                            right: 0;
+                            left: 0;
+                            top: 0;
+                            bottom: auto;
+                            margin: auto;
+                            z-index: 9;
+                            
+                        }
+                        @media (max-width:375px) {
+                            width: 250px;
+                            height: 250px;
+                        }
                     }
                 }
+                
+                
             }
 
             
+        }
+        &.reverse{
+            .content-wrapper {
+                .content {
+                    order: 2;
+                    @media (min-width: 992px) {
+                        order: 1;
+                    }
+                }
+                .img {
+                    order: 1;
+                    @media (min-width: 992px) {
+                        padding-left: 200px;
+                        padding-right: 0;
+                        order: 2;
+                    }
+                    .cover{
+                        img + img {
+                            left: 120px;
+                            @media (max-width: 992px) {
+                                right: 0;
+                                left: 0;
+                                top: 0;
+                                bottom: auto;
+                                margin: auto;
+                                z-index: 9;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.four-images {
+        .content-wrapper{
+            .content{
+                @media (max-width: 992px) {
+                    order: 0;
+                }
+            }
+            .img{
+                padding: 0;
+                height: auto;
+                padding-right: 100px;
+                @media (max-width: 992px) {
+                    padding-right: 0px;
+                    order: 1;
+                    margin-bottom: 0;
+                    margin-top: 24px;
+                }
+                .img-row{
+                    display: grid;
+                    gap: 26px;
+                    row-gap: 26px;
+                    width: 100%;
+                    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+                    padding: 0;
+                    height: auto;
+                    @media (max-width: 992px) {
+                        gap: 16px;
+                        row-gap: 16px;
+                    }
+                    .img-col{
+                        .cover{
+                            background-color: transparent;
+                            img{
+                                max-width: 100%;
+                                height: 200px;
+                                border-radius: 8px;
+                                opacity: 1;
+                            }
+                            img + img{
+                                height: 300px;
+                                margin-top: 26px;
+                                @media (max-width: 992px) {
+                                    margin-top: 16px;
+                                }
+                            }
+                        }
+                        &:first-child{
+                            .cover{
+                                img{
+                                    max-width: 100%;
+                                    height: 300px;
+                                }
+                                img + img{
+                                    height: 200px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.reverse{
+            .content-wrapper {
+                .content {
+                    order: 0;
+                    @media (max-width: 991px) {
+                        order: 0;
+                    }
+                }
+                .img {
+                    order: 1;
+                    padding-right: 0;
+                    padding-left: 100px;
+                    @media (max-width: 992px) {
+                        order: 1;
+                        padding-right: 0px;
+                        padding-left:0px;
+                }
+            }
+            }
         }
     }
 }
