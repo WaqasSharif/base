@@ -177,7 +177,7 @@
         .content-wrapper{
             .content{
                 @media (max-width: 992px) {
-                    order: 0;
+                    order: 1;
                 }
             }
             .img{
@@ -186,9 +186,9 @@
                 padding-right: 100px;
                 @media (max-width: 992px) {
                     padding-right: 0px;
-                    order: 1;
+                    order: 0;
                     margin-bottom: 0;
-                    margin-top: 24px;
+                    margin-bottom: 24px;
                 }
                 .img-row{
                     display: grid;
@@ -230,6 +230,12 @@
                                 }
                             }
                         }
+                        &:last-child{
+                            margin-top: 70px;
+                            @media (max-width: 991px) {
+                                margin-top: 0px;
+                            }
+                        }
                     }
                 }
             }
@@ -239,7 +245,7 @@
                 .content {
                     order: 0;
                     @media (max-width: 991px) {
-                        order: 0;
+                        order: 1;
                     }
                 }
                 .img {
@@ -247,7 +253,7 @@
                     padding-right: 0;
                     padding-left: 100px;
                     @media (max-width: 992px) {
-                        order: 1;
+                        order: 0;
                         padding-right: 0px;
                         padding-left:0px;
                 }
