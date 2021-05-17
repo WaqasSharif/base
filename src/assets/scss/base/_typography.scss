@@ -76,6 +76,15 @@ body {
       }
   }
   // paragraph colors flexibility
+  
+  &.anchor-primary a{
+    color: $primary;
+    font-weight: bold;
+  }
+  &.anchor-secondary a{
+    color: $secondary;
+    font-weight: bold;
+  }
   &.light {
     p,
     a {
@@ -83,12 +92,12 @@ body {
     }
   }
   &.dark {
-    p, a {
+    p {
       color: $text-color-dark;
     }
   }
   &.black {
-    p, a {
+    p{
       color: $black;
     }
   }
