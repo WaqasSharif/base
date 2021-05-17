@@ -7,7 +7,7 @@
     .links-wrap{
         .sec-links {
             margin-bottom: 16px;
-            padding-bottom: 16px;
+            //padding-bottom: 16px;
             &:last-child {
                 margin-bottom: 0;
             }
@@ -15,11 +15,14 @@
                 color: $text-color;
                 position: relative;
                 font-weight: bold;
-
+                padding-bottom: 16px;
                 width: 100%;
                 display: flex;
                 &:hover {
                     color: $anchor-color;
+                    &:before {
+                        border-color: $anchor-color !important;
+                    }
                 }
             }
 
@@ -27,6 +30,9 @@
                 .link {
                     color: $anchor-color;
                     font-weight: bold;
+                    &:before {
+                        border-color: $anchor-color !important;
+                    }
                 }
             }
         }
@@ -52,7 +58,7 @@
                             background:$anchor-color;
                             position:absolute;
                             left: 25%;
-                            bottom:-5px;
+                            bottom: 10px;
                         }
                     }
                 }
@@ -65,7 +71,7 @@
                             background:$anchor-color;
                             position:absolute;
                             left: 25%;
-                            bottom:-5px;
+                            bottom: 10px;
                         }
                     }
                 }
@@ -154,6 +160,25 @@
         
     }
 
+    &.with-arrow {
+        .links-wrap .sec-links {
+            .link {
+                &:before {
+                    border: solid $text-color;
+                    border-width: 0 2px 2px 0;
+                    padding: 3.6px;
+                    content: "";
+                    position: absolute;
+                    line-height: 1;
+                    top: 42%;
+                    transform: translateY(0) rotate(-45deg);
+                    transition: all .3s ease-in-out;
+                    right: 4px;
+                }
+            }
+        }
+    }
+
     // animations
     &.animate-top {
         .links-wrap {
@@ -162,6 +187,18 @@
                     transform: translateX(0px) translateY(0px);
                     &:hover {
                         transform: translateX(0px) translateY(-3px);
+                    }
+                }
+            }
+        }
+    }
+    &.animate-left {
+        .links-wrap {
+            .sec-links {
+                .link {
+                    transform: translateX(0px) translateX(0px);
+                    &:hover {
+                        transform: translateX(0px) translateX(4px);
                     }
                 }
             }
@@ -179,6 +216,9 @@
             .link {
                 &:hover {
                     color: $btn-default;
+                    &:before {
+                        border-color: $btn-default !important;
+                    }
                 }
                 &:after {
                     background: $btn-default !important;
@@ -187,6 +227,9 @@
             &.active {
                 .link {
                     color: $btn-default;
+                    &:before {
+                        border-color: $btn-default !important;
+                    }
                 }
             }
         }
@@ -207,6 +250,9 @@
             .link {
                 &:hover {
                     color: $primary;
+                    &:before {
+                        border-color: $primary !important;
+                    }
                 }
                 &:after {
                     background: $primary !important;
@@ -216,6 +262,9 @@
             &.active {
                 .link {
                     color: $primary;
+                    &:before {
+                        border-color: $primary !important;
+                    }
                 }
             }
         }
@@ -236,7 +285,10 @@
             .link {
                // color: $primary;
                 &:hover {
-                    color: $secondary
+                    color: $secondary;
+                    &:before {
+                        border-color: $secondary !important;
+                    }
                 }
                 &:after {
                     background: $secondary !important;
@@ -244,7 +296,10 @@
             }
             &.active {
                 .link {
-                    color: $secondary
+                    color: $secondary;
+                    &:before {
+                        border-color: $secondary !important;
+                    }
                 }
             }
         }
