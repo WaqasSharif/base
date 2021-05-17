@@ -72,6 +72,28 @@ function compileHTML() {
     .pipe(browserSync.stream());
 }
 
+
+function compileHTMLTWO() {
+  log(chalk.red.bold('---------------COMPILING HTML WITH PANINI---------------'));
+  panini.refresh();
+  return src('src/sites/**/*.html')
+    .pipe(panini({
+      root: 'src/sites/',
+      layouts: 'src/layouts/',
+      // pageLayouts: {
+           // All pages inside src/pages/blog will use the blog.html layout
+      //     'blog': 'blog'
+      // }
+      partials: 'src/partials/',
+      helpers: 'src/helpers/',
+      data: 'src/data/'
+    }))
+    .pipe(dest('dist'))
+    .pipe(browserSync.stream());
+}
+
+
+
 // COPY CUSTOM JS
 function compileJS() {
   log(chalk.red.bold('---------------COMPILE CUSTOM.JS---------------'));
@@ -127,6 +149,7 @@ function jsLint() {
 // WATCH FILES
 function watchFiles() {
   watch('src/**/*.html', compileHTML);
+  watch('src/**/*.html', compileHTMLTWO);
   watch(['src/assets/scss/**/*.scss', 'src/assets/scss/*.scss'] , compileSCSS);
   watch('src/assets/js/*.js', compileJS);
   watch('src/assets/img/**/*', copyImages);
@@ -299,10 +322,10 @@ function minifyCss() {
 }
 
 // DEVELOPMENT
-exports.development = series(cleanDist, copyFont, jsVendor, cssVendor, copyImages, compileHTML, compileJS, resetPages, prettyHTML, compileSCSS, browserSyncInit, watchFiles);
+exports.development = series(cleanDist, copyFont, jsVendor, cssVendor, copyImages, compileHTML, compileHTMLTWO, compileJS, resetPages, prettyHTML, compileSCSS, browserSyncInit, watchFiles);
 
 // PRODUCTION
-exports.production = series(cleanDist, compileSCSS, copyFont, copyImages, compileHTML, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, generateDocs, browserSyncInit);
+exports.production = series(cleanDist, compileSCSS, copyFont, copyImages, compileHTML, compileHTMLTWO, concatScripts, minifyScripts, minifyCss, renameSources, prettyHTML, generateDocs, browserSyncInit);
 
 // RUN ALL LINTERS
 exports.lint = series(htmlLint, scssLint, jsLint);
