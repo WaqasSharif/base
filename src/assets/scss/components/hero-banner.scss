@@ -184,6 +184,35 @@
           }
         }
     }
+    &.height-medium{
+        height: 350px;
+        @media (min-width: 768px) {
+            height: 556px;
+        }
+        div.cover {
+            img {
+                height: 350px;
+                @media (min-width: 768px) {
+                    height: 556px;
+                }
+            }
+        }
+    }
+    &.height-small{
+      height: 350px;
+      @media (min-width: 768px) {
+          height: 456px;
+      }
+      div.cover {
+          img {
+              height: 350px;
+              @media (min-width: 768px) {
+                  height: 456px;
+              }
+          }
+      }
+  }
+    
 }
 
 
