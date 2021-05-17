@@ -76,6 +76,15 @@ body {
       }
   }
   // paragraph colors flexibility
+  &.anchor-primary a{
+    color: $primary;
+    font-weight: bold;
+  }
+  &.anchor-secondary a{
+    color: $secondary;
+    font-weight: bold;
+  }
+
   &.light {
     p,
     a {
