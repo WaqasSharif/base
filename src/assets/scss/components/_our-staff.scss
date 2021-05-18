@@ -72,7 +72,7 @@
           }
         .our-staff-tile{
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             position: relative;
             @media (max-width: 575.98px) {
               flex-direction:column;
