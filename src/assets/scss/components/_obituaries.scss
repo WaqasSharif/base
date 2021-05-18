@@ -83,17 +83,6 @@
         background-color: $white;
       }
     }
-    .obituaries-tile{
-      a{
-        &:hover{
-          .sec-title{
-            h1, h2, h3, h4, h5, h6{
-              color: $anchor-color;
-            }
-          }
-        }
-      }
-    }
     .sec-search-filters{
       &.active{
         .input-group{
@@ -131,17 +120,6 @@
         background-color: $white;
       }
     }
-    .obituaries-tile{
-      a{
-        &:hover{
-          .sec-title{
-            h1, h2, h3, h4, h5, h6{
-              color: $anchor-color;
-            }
-          }
-        }
-      }
-    }
     .sec-search-filters{
       &.active{
         .input-group{
@@ -177,17 +155,6 @@
       .btn{
         color: $secondary;
         background-color: $white;
-      }
-    }
-    .obituaries-tile{
-      a{
-        &:hover{
-          .sec-title{
-            h1, h2, h3, h4, h5, h6{
-              color: $anchor-color;
-            }
-          }
-        }
       }
     }
     .sec-search-filters{
@@ -266,6 +233,28 @@
         }
         &.round{
             border-radius: 50px;   
+        }
+        &.primary{
+          a{
+            &:hover {
+              .info{
+                h1,h2,h3,h4,h5,h6{
+                  color: $primary !important;
+                }
+              }
+            }
+          }
+        }
+        &.secondary{
+          a{
+            &:hover {
+              .info{
+                h1,h2,h3,h4,h5,h6{
+                  color: $primary !important;
+                }
+              }
+            }
+          }
         }
         // Variation Rounded
         &.var-2{

@@ -434,6 +434,68 @@
       }
       
     }
+    &.primary-transparent{
+      .input-group{
+        .form-control{
+          border: 1px solid $primary;
+          background-color: transparent;
+          color:$white;
+        }
+        .input-group-addon{
+          background-color: transparent;
+          svg {
+            fill: $primary;
+          }
+        }
+      }
+      .input-group .form-control::-webkit-input-placeholder {
+        color: $white;
+      }
+      
+      .input-group .form-control:-ms-input-placeholder {
+        color: $white;
+      }
+      
+      .input-group .form-control::-ms-input-placeholder {
+        color: $white;
+      }
+      
+      .input-group .form-control::placeholder {
+        color: $white;
+      }
+      
+    }
+    &.secondary-transparent{
+      .input-group{
+        .form-control{
+          border: 1px solid $secondary;
+          background-color: transparent;
+          color:$white;
+        }
+        .input-group-addon{
+          background-color: transparent;
+          svg {
+            fill: $secondary;
+          }
+        }
+      }
+      .input-group .form-control::-webkit-input-placeholder {
+        color: $white;
+      }
+      
+      .input-group .form-control:-ms-input-placeholder {
+        color: $white;
+      }
+      
+      .input-group .form-control::-ms-input-placeholder {
+        color: $white;
+      }
+      
+      .input-group .form-control::placeholder {
+        color: $white;
+      }
+      
+    }
     
     &.active{
       .input-group{
