@@ -37,6 +37,16 @@
             }
         }
     }
+    &.small {
+        .banner {
+            @media screen and (min-width: 992px) {
+                height: 197px;
+            }
+            img, iframe{
+                height: 100%;
+            }
+        }
+    }
     .thumbnails {
         display: grid;
         grid-gap: 20px;

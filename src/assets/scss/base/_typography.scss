@@ -213,6 +213,20 @@ body {
   }
 }
 
+.sec-content-img{
+  margin-bottom: 30px;
+  @media (min-width: 768px) {
+    float: left;
+    margin-right: 50px;
+    margin-bottom: 10px;
+  }
+  .cover{
+    border-radius: 8px;
+    img{
+      border-radius: 8px;
+    }
+  }
+}
 .small-heading {
   p {
     font-size: 15px;

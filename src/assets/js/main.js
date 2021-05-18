@@ -66,7 +66,7 @@ $(document).ready(function() {
 
 //lightgallery lightbox
 $(document).ready(function() {
-  $("#lightgallery").lightGallery({
+  $(".lightgallery").lightGallery({
     thumbnail:true,
     pager: true,
     speed: 500,
