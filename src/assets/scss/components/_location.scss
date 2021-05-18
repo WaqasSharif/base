@@ -16,6 +16,13 @@
             padding: 80px 0;
         }
     }
+    &.has-bg-repeat{
+        position: relative;
+        background-image: url(/assets/img/beige-paper-1.png);
+        background-position: 50% 50%;
+        background-size: auto;
+        background-repeat: repeat;
+    }
     &.has-img{
         position: relative;
         overflow: hidden;
@@ -350,6 +357,68 @@
                   height: 297px;
                 }
               }
+        }
+        &.box{
+            .info{
+                background-color: $white;
+                margin-top: 0;
+                padding: 20px 10px;
+            }
+            .map{
+                margin-bottom: 0px;
+            }
+            &.default{
+                .sec-title{
+                    h1, h2, h3, h4, h5, h6{
+                        color: $btn-default;
+                    }
+                }
+                .sec-paragraph{
+                    p{
+                        color: $btn-default;
+                    }
+                }
+            }
+            &.primary{
+                .sec-title{
+                    h1, h2, h3, h4, h5, h6{
+                        color: $primary;
+                    }
+                }
+                .sec-paragraph{
+                    p{
+                        color: $btn-default;
+                    }
+                }
+                .sec-paragraph.title{
+                    p{
+                        color: $primary;
+                    }
+                }
+            }
+            &.secondary{
+                .sec-title{
+                    h1, h2, h3, h4, h5, h6{
+                        color: $secondary;
+                    }
+                }
+                .sec-paragraph{
+                    p{
+                        color: $btn-default;
+                    }
+                }
+                .sec-paragraph.title{
+                    p{
+                        color: $secondary;
+                    }
+                }
+            }
+         }
+    }
+    &.location-full-2{
+        display: flex;
+        .map{
+            height: 297px;
         }
     }
 }
