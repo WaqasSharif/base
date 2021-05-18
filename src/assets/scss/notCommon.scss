@@ -1,3 +1,78 @@
-body {
-    background-color: red;
-}  
+.slider-auto {
+    padding-top: 100px;
+    @media (min-width: 992px) {
+        padding-top: 175px;
+    }
+}
+
+.menu-fixed {
+    .slider-auto {
+        @media (min-width: 992px) {
+            padding-top: 100px;
+        }
+    } 
+}
+
+
+.media-cta {
+    &.big {
+        .image-wrapp {
+            height: 850px;
+            @media (max-width: 767px) {
+                height: 350px;
+            }
+            img {
+                height: 850px;
+                @media (max-width: 767px) {
+                    height: 350px;
+                }
+            }
+        }
+    }
+}
+
+
+// tiles boxes
+.sec-tile-boxes .text-with-details {
+    @media screen and (min-width: 992px) {
+        grid-template-columns: repeat(auto-fill, minmax(28%, 1fr));
+    }
+}
+
+
+// testimonials
+.sec-testimonails.default .swiper-button-prev, .sec-testimonails.default .swiper-button-next, .sec-testimonails.primary .swiper-button-prev, 
+.sec-testimonails.primary .swiper-button-next, .sec-testimonails.secondary .swiper-button-prev, .sec-testimonails.secondary .swiper-button-next {
+    &:after {
+        color: #731620;
+    }
+    &:hover {
+        &:after {
+            color: darken(#731620, 10%);
+        }
+    }
+}
+.sec-testimonails {
+    .swiper-pagination {
+        display: none;
+    }
+}
+
+.sec-testimonial-inner {
+    .testimonial-inner .stars {
+        img {
+            width: 200px;
+        }
+    }
+}
+
+
+// footer 
+.sec-footer.footer-8 {
+    background-color: #f3f0e1 !important;
+}
+
+.sec-footer.white .footer-logo img {
+    max-width: 280px;
+    width: 280px;
+}

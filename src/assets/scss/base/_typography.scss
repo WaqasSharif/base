@@ -343,6 +343,11 @@ body {
       line-height: 1.33;
     }
   }
+
+  &.heading-font-family p {
+    font-family: $font-family-heading;
+  }
+  
 }
 
 
@@ -753,7 +758,7 @@ p {
       font-size: 64px;
     }
     @media (min-width: 992px) {
-      font-size: 92px;
+      font-size: 82px;
     }
   }
   h2 {
