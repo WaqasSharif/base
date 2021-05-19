@@ -26,6 +26,19 @@
     }
 }
 
+// our location
+@media screen and (min-width: 992px) {
+    .sec-location-grid .sec-location {
+        margin-right: 20px;
+    }
+}
+
+//buttons font family
+.sec-buttons .btn,
+.small-heading p,
+.sec-links .link {
+    font-family: "Poppins", sans-serif;
+}
 
 
 // tiles boxes
@@ -61,4 +74,13 @@
 }
 .menu-desktop-inner-3 .nav-links .main-nav-links > ul {
     flex-wrap: wrap;
+}
+
+// menu mobile 
+.mobile-menu {
+    &.font-family-heading {
+        .menu-wrapper ul  li a {
+            font-family: "Poppins", sans-serif;
+        }
+    }
 }
