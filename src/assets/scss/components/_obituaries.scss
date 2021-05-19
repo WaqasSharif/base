@@ -1,5 +1,8 @@
 //For Inner pages
 .sec-obituaries{
+  @media screen and (max-width: 991px) {
+    margin-bottom: 24px;
+  }
   &.has-img{
     position: relative;
     overflow: hidden;
@@ -125,6 +128,14 @@
     .obituaries-home-search-3{
       .sec-title{
         border-right: solid 1px $white;
+        @media (max-width: 991.98px) {
+          border-right: 0;
+        }
+      }
+      .sec-buttons{
+        @media (max-width: 991.98px) {
+          margin-bottom: 16px;
+        }
       }
     }
     
@@ -775,7 +786,11 @@
       }
     }
   }
-
+  .sec-buttons{
+    @media screen and (max-width: 991px) {
+      margin-bottom: 16px;
+    }
+  }
 }
 
 // sliders options
