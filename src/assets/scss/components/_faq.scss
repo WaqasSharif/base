@@ -158,7 +158,24 @@
         }
         
     }
-    
+    &.bg-default{
+        background-color: $white !important;
+        .card, .card-header{
+            background-color: $bg !important;
+        }
+    }
+    &.bg-primary{
+        background-color: $white !important;
+        .card, .card-header{
+            background-color: $primary !important;
+        }
+    }
+    &.bg-secondary{
+        background-color: $white !important;
+        .card, .card-header{
+            background-color: $secondary !important;
+        }
+    }
 }
 
 // faq variations
