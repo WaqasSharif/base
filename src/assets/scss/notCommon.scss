@@ -11,25 +11,21 @@
             padding-top: 100px;
         }
     } 
-}
-
-
-.media-cta {
-    &.big {
-        .image-wrapp {
-            height: 850px;
-            @media (max-width: 767px) {
-                height: 350px;
-            }
-            img {
-                height: 850px;
-                @media (max-width: 767px) {
-                    height: 350px;
-                }
-            }
+    .inner-banner-wrapper {
+        @media (min-width: 992px) {
+            padding-top: 100px;
         }
     }
 }
+
+// hero banner inner 
+.inner-banner-wrapper {
+    padding-top: 100px;
+    @media (min-width: 992px) {
+        padding-top: 145px;
+    }
+}
+
 
 
 // tiles boxes
@@ -39,32 +35,6 @@
     }
 }
 
-
-// testimonials
-.sec-testimonails.default .swiper-button-prev, .sec-testimonails.default .swiper-button-next, .sec-testimonails.primary .swiper-button-prev, 
-.sec-testimonails.primary .swiper-button-next, .sec-testimonails.secondary .swiper-button-prev, .sec-testimonails.secondary .swiper-button-next {
-    &:after {
-        color: #731620;
-    }
-    &:hover {
-        &:after {
-            color: darken(#731620, 10%);
-        }
-    }
-}
-.sec-testimonails {
-    .swiper-pagination {
-        display: none;
-    }
-}
-
-// .sec-testimonial-inner {
-//     .testimonial-inner .stars {
-//         img {
-//             width: 200px;
-//         }
-//     }
-// }
 
 
 // footer 
@@ -86,48 +56,9 @@
         max-width: 75px;
     }
 }
-
-
-
-
-
-// send floerws using obi
-.sendflower-view {
-    display: grid;
-    gap: 16px;
-    width: 100%;
-    row-gap: 24px;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    @media screen and (min-width: 768px) {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      row-gap: 42px;
-    }
-    @media screen and (min-width: 992px) {
-      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    }
-    @media screen and (min-width: 1325px) {
-      grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
-    }
-
-    .obituaries-tile {
-        align-items: center;
-
-        .thumbnail {
-            width: 125px;
-            min-width: 125px;
-            img {
-              height: 125px;
-            }
-          }
-          @media screen and (min-width: 768px) {
-            .thumbnail {
-                width: 128px;
-                margin-right: 16px;
-                img {
-                    height: 150px;
-                  }
-                
-            }
-          }
-    }
+.menu-desktop-inner-3 .nav-links .main-nav-links > ul > li {
+    padding: 0 12px;
+}
+.menu-desktop-inner-3 .nav-links .main-nav-links > ul {
+    flex-wrap: wrap;
 }
