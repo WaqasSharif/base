@@ -13,7 +13,7 @@
     } 
     .inner-banner-wrapper {
         @media (min-width: 992px) {
-            padding-top: 100px;
+            padding-top: 69px;
         }
     }
 }
@@ -37,6 +37,11 @@
 .sec-buttons .btn,
 .small-heading p,
 .sec-links .link {
+    font-family: "Poppins", sans-serif;
+}
+
+// faq font-family
+.sec-faq .card .card-header a {
     font-family: "Poppins", sans-serif;
 }
 
