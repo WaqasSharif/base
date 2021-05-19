@@ -124,6 +124,20 @@
             }
         }
     }
+    &.big {
+        .image-wrapp {
+            height: 850px;
+            @media (max-width: 767px) {
+                height: 350px;
+            }
+            img {
+                height: 850px;
+                @media (max-width: 767px) {
+                    height: 350px;
+                }
+            }
+        }
+    }
 }
 
 .media-cta.medium+.media-cta.medium {

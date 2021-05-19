@@ -207,6 +207,27 @@
             left: -32px;
         }
     }
+
+    &.dark-controls {
+        .swiper-button-prev,
+        .swiper-button-next {
+            &:after {
+                color: $primary;
+            }
+            &:hover {
+                &:after {
+                    color: darken($primary, 10%);
+                }
+            }
+        }
+ 
+        .swiper-pagination-bullet {
+            background-color: $btn-default;
+        }
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background-color: $primary;
+        }
+    }
 }
 
 // inner variations

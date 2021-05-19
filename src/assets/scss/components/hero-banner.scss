@@ -40,6 +40,7 @@
       .content {
         @media (min-width: 992px) {
           max-width: 600px;
+          padding: 0 24px
         }
       }
     }
@@ -271,6 +272,53 @@
     }
   }
 }
+
+// hero banner sizes 
+.hero-banner {
+  &.small {
+    height: 400px;
+    @media (min-width: 768px) {
+      height: 450px;
+    }
+    div.cover {
+      img {
+          height: 400px;
+          @media (min-width: 768px) {
+              height: 450px;
+          }
+      }
+    }
+  }
+  &.medium {
+    height: 450px;
+    @media (min-width: 768px) {
+      height: 550px;
+    }
+    div.cover {
+      img {
+          height: 450px;
+          @media (min-width: 768px) {
+              height: 550px;
+          }
+      }
+    }
+  }
+  &.medium-two {
+    height: 450px;
+    @media (min-width: 768px) {
+      height: 650px;
+    }
+    div.cover {
+      img {
+          height: 450px;
+          @media (min-width: 768px) {
+              height: 650px;
+          }
+      }
+    }
+  }
+}
+
 
 
 // hero banner with location 

@@ -392,6 +392,20 @@
         border-top: 1px solid #FFFFFF1A;
     }
 
+    &.uppercase {
+        .nav-links {
+            .main-nav-links {
+                 ul {
+                     li {
+                         a {
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 // if desktop menu is sticky
@@ -432,7 +446,7 @@
 
 // dropdown list styling
 ul.dropdown {
-    min-width: 200px;
+    min-width: 250px;
     display: flex;
     position: absolute;
     top: 90%;
@@ -802,6 +816,18 @@ ul.dropdown {
                 }
             }
         } 
+        ul.dropdown {
+            > li {
+                a {
+                    &:hover {
+                        text-decoration: none;
+                        color: $primary !important;
+                        background-color: $bg !important;
+                    }
+                }
+                
+            }
+        }
     }
     &.secondary-link-hover {
         .nav-links {
@@ -836,6 +862,18 @@ ul.dropdown {
                 }
             }
         } 
+        ul.dropdown {
+            > li {
+                a {
+                    &:hover {
+                        text-decoration: none;
+                        color: $secondary !important;
+                        background-color: $bg !important;
+                    }
+                }
+                
+            }
+        }
     }
     
 }
