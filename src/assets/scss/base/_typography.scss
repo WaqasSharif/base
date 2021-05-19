@@ -197,18 +197,33 @@ body {
     padding-left: 1.5rem;
     &.light {
       border-left: solid 5px $white;
+      p{
+        color: $white;
+      }
     }
     &.dark {
       border-left: solid 5px $btn-default;
+      p{
+        color: $btn-default;
+      }
     }
     &.black {
       border-left: solid 5px $black;
+      p{
+        color: $black;
+      }
     }
     &.primary {
       border-left: solid 5px $primary;
+      p{
+        color: $btn-default;
+      }
     }
     &.secondary {
       border-left: solid 5px $secondary;
+      p{
+        color: $btn-default;
+      }
     }
   }
 }
