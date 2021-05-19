@@ -83,6 +83,28 @@
         background-color: $white;
       }
     }
+    .sec-buttons{
+      .btn{
+        &.primary{
+        color: $primary;
+        background-color: $white;
+        &:hover{
+          color: $white;
+          background-color: $primary;
+        }
+      }
+    }
+    .btn{
+      &.secondary{
+      color: $primary;
+      background-color: $white;
+      &:hover{
+        color: $white;
+        background-color: $primary;
+      }
+    }
+  }
+  }
     .sec-search-filters{
       &.active{
         .input-group{
@@ -98,6 +120,11 @@
         }
       }
       
+    }
+    .obituaries-home-search-3{
+      .sec-title{
+        border-right: solid 1px $white;
+      }
     }
     
   }
@@ -120,6 +147,28 @@
         background-color: $white;
       }
     }
+    .sec-buttons{
+      .btn{
+        &.primary{
+        color: $primary;
+        background-color: $white;
+        &:hover{
+          color: $white;
+          background-color: $primary;
+        }
+      }
+    }
+    .btn{
+      &.secondary{
+      color: $primary;
+      background-color: $white;
+      &:hover{
+        color: $white;
+        background-color: $primary;
+      }
+    }
+  } 
+  }
     .sec-search-filters{
       &.active{
         .input-group{
@@ -156,6 +205,28 @@
         color: $secondary;
         background-color: $white;
       }
+    }
+    .sec-buttons{
+        .btn{
+          &.primary{
+          color: $primary;
+          background-color: $white;
+          &:hover{
+            color: $white;
+            background-color: $primary;
+          }
+        }
+      }
+      .btn{
+        &.secondary{
+        color: $primary;
+        background-color: $white;
+        &:hover{
+          color: $white;
+          background-color: $primary;
+        }
+      }
+    } 
     }
     .sec-search-filters{
       &.active{
@@ -863,13 +934,15 @@
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       @media screen and (min-width: 768px) {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        row-gap: 0;
+        row-gap: 24px;
       }
       @media screen and (min-width: 992px) {
         grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+        row-gap: 24px;
       }
       @media screen and (min-width: 1325px) {
         grid-template-columns: repeat(auto-fill, minmax(16.6%, 1fr));
+        row-gap: 24px;
       }
     }
     
