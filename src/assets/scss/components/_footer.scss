@@ -767,12 +767,12 @@
       li{
         a{
           svg *{
-            fill: $white;
+            fill: $white !important;
           }
           &:hover{
-            background-color: $white;
+            background-color: $white !important;
             svg, *{
-              fill: $primary;
+              fill: $primary !important;
             
         }
       }
@@ -786,12 +786,12 @@
       li{
         a{
           svg *{
-            fill: $white;
+            fill: $white !important;
           }
           &:hover{
-            background-color: $white;
+            background-color: $white !important;
             svg, *{
-              fill: $secondary;
+              fill: $secondary !important;
             
         }
       }
