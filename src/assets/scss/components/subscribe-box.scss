@@ -3,6 +3,7 @@
     position: relative;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0px 3px 8px #00000029;
     @media screen and (max-width: 991px) {
         margin-top: 2rem;
     }
@@ -33,24 +34,8 @@
         border: 1px solid $btn-default;
         border-radius: 8px;
         background-color: $white;
-        .sec-title,
-        .sec-paragraph {
-            h1,h2,h3,h4,h5,h6,p {
-                color: $black;
-            }
-        }
-
         .input-group .form-control {
             border: 1px solid $btn-default !important;
-        }
-        .sec-buttons {
-            .btn {
-                background-color: $btn-default;
-                border-color: $btn-default;
-                &:hover {
-                    color: $white;
-                }
-            }
         }
     }
 
