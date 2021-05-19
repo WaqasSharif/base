@@ -204,6 +204,22 @@
             }
         }
     }
+
+    &.font-family-heading {
+        .links-wrap{
+            .sec-links {
+                .link {
+                    font-family: $font-family-headings;
+                }
+            }
+        }
+        .small-heading {
+            p, a {
+                font-family: $font-family-headings;
+            }
+        }
+        
+    }
     
 }
 
