@@ -76,3 +76,58 @@
     max-width: 280px;
     width: 280px;
 }
+
+// menu
+.mobile-menu {
+    .logo-wrapp {
+        padding-top: 0;
+    }
+    .logo-wrapp, .logo-wrapp a, .logo-wrapp img, .logo-wrapp svg {
+        max-width: 75px;
+    }
+}
+
+
+
+
+
+// send floerws using obi
+.sendflower-view {
+    display: grid;
+    gap: 16px;
+    width: 100%;
+    row-gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      row-gap: 42px;
+    }
+    @media screen and (min-width: 992px) {
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    }
+    @media screen and (min-width: 1325px) {
+      grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+    }
+
+    .obituaries-tile {
+        align-items: center;
+
+        .thumbnail {
+            width: 125px;
+            min-width: 125px;
+            img {
+              height: 125px;
+            }
+          }
+          @media screen and (min-width: 768px) {
+            .thumbnail {
+                width: 128px;
+                margin-right: 16px;
+                img {
+                    height: 150px;
+                  }
+                
+            }
+          }
+    }
+}
