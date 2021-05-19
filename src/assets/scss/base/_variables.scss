@@ -56,7 +56,7 @@ $grid-row-columns:            6 !default;
 
 
 // stylelint-disable value-keyword-case
-$font-family-heading:               'Playfair Display', serif;
+$font-family-headings:               'Playfair Display', serif;
 $font-family-base:                  'Arial', 'Helvetica Neue', Helvetica, sans-serif;
  
 
@@ -85,7 +85,7 @@ $line-height-base:            1.5 !default;
 // $h6-font-size:                $font-size-base * 1.25!default;
 
 $headings-margin-bottom:      0 !default; 
-$font-family-heading:        $font-family-Quattrocento !default;
+$font-family-heading:         $font-family-headings !default;
 $headings-font-weight:        normal !default;
 $headings-line-height:        1.1 !default;
 $headings-speical:            120px;
