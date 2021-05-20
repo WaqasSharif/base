@@ -39,7 +39,7 @@
               }
             }
             svg {
-              fill: $primary;
+              fill: $white;
             }
           }
         }
@@ -407,11 +407,12 @@
     &.light-transparent{
       .input-group{
         .form-control{
-          border: 1px solid $white;
+          border: 1px solid $white !important;
           background-color: transparent;
           color:$white;
         }
         .input-group-addon{
+          background-color: transparent;
           svg {
             fill: $white;
           }
@@ -432,7 +433,96 @@
       .input-group .form-control::placeholder {
         color: $white;
       }
+      &.active{
+        .input-group{
+          .input-group-addon{
+            background-color:$white;
+            svg {
+              fill: $btn-default !important;
+            }
+          }
+        }
+      }
+    }
+    &.primary-transparent{
+      .input-group{
+        .form-control{
+          border: 1px solid $primary !important;
+          background-color: transparent;
+          color:$white;
+        }
+        .input-group-addon{
+          background-color: transparent;
+          svg {
+            fill: $primary;
+          }
+        }
+      }
+      .input-group .form-control::-webkit-input-placeholder {
+        color: $white;
+      }
       
+      .input-group .form-control:-ms-input-placeholder {
+        color: $white;
+      }
+      
+      .input-group .form-control::-ms-input-placeholder {
+        color: $white;
+      }
+      
+      .input-group .form-control::placeholder {
+        color: $white;
+      }
+      &.active{
+        .input-group{
+          .input-group-addon{
+            background-color:$white;
+            svg {
+              fill: $primary !important;
+            }
+          }
+        }
+      }
+    }
+    &.secondary-transparent{
+      .input-group{
+        .form-control{
+          border: 1px solid $secondary !important;
+          background-color: transparent;
+          color:$white;
+        }
+        .input-group-addon{
+          background-color: transparent;
+          svg {
+            fill: $primary;
+          }
+        }
+      }
+      .input-group .form-control::-webkit-input-placeholder {
+        color: $white;
+      }
+      
+      .input-group .form-control:-ms-input-placeholder {
+        color: $white;
+      }
+      
+      .input-group .form-control::-ms-input-placeholder {
+        color: $white;
+      }
+      
+      .input-group .form-control::placeholder {
+        color: $white;
+      }
+      &.active{
+        .input-group{
+          .input-group-addon{
+            background-color:$white;
+            svg {
+              fill: $secondary !important;
+            }
+          }
+        }
+      }
     }
     
     &.active{

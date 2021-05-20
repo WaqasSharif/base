@@ -1,5 +1,8 @@
 //For Inner pages
 .sec-obituaries{
+  @media screen and (max-width: 991px) {
+    margin-bottom: 24px;
+  }
   &.has-img{
     position: relative;
     overflow: hidden;
@@ -63,6 +66,7 @@
     background-position: 50% 50%;
     background-size: auto;
     background-repeat: repeat;
+    background-color: rgba(0, 0, 0, 1) !important;
 }
   &.has-bg-default{
     padding: 32px 0;
@@ -83,17 +87,28 @@
         background-color: $white;
       }
     }
-    .obituaries-tile{
-      a{
+    .sec-buttons{
+      .btn{
+        &.primary{
+        color: $primary;
+        background-color: $white;
         &:hover{
-          .sec-title{
-            h1, h2, h3, h4, h5, h6{
-              color: $anchor-color;
-            }
-          }
+          color: $white;
+          background-color: $primary;
         }
       }
     }
+    .btn{
+      &.secondary{
+      color: $primary;
+      background-color: $white;
+      &:hover{
+        color: $white;
+        background-color: $primary;
+      }
+    }
+  }
+  }
     .sec-search-filters{
       &.active{
         .input-group{
@@ -109,6 +124,19 @@
         }
       }
       
+    }
+    .obituaries-home-search-3{
+      .sec-title{
+        border-right: solid 1px $white;
+        @media (max-width: 991.98px) {
+          border-right: 0;
+        }
+      }
+      .sec-buttons{
+        @media (max-width: 991.98px) {
+          margin-bottom: 16px;
+        }
+      }
     }
     
   }
@@ -131,17 +159,28 @@
         background-color: $white;
       }
     }
-    .obituaries-tile{
-      a{
+    .sec-buttons{
+      .btn{
+        &.primary{
+        color: $primary;
+        background-color: $white;
         &:hover{
-          .sec-title{
-            h1, h2, h3, h4, h5, h6{
-              color: $anchor-color;
-            }
-          }
+          color: $white;
+          background-color: $primary;
         }
       }
     }
+    .btn{
+      &.secondary{
+      color: $primary;
+      background-color: $white;
+      &:hover{
+        color: $white;
+        background-color: $primary;
+      }
+    }
+  } 
+  }
     .sec-search-filters{
       &.active{
         .input-group{
@@ -179,16 +218,27 @@
         background-color: $white;
       }
     }
-    .obituaries-tile{
-      a{
-        &:hover{
-          .sec-title{
-            h1, h2, h3, h4, h5, h6{
-              color: $anchor-color;
-            }
+    .sec-buttons{
+        .btn{
+          &.primary{
+          color: $primary;
+          background-color: $white;
+          &:hover{
+            color: $white;
+            background-color: $primary;
           }
         }
       }
+      .btn{
+        &.secondary{
+        color: $primary;
+        background-color: $white;
+        &:hover{
+          color: $white;
+          background-color: $primary;
+        }
+      }
+    } 
     }
     .sec-search-filters{
       &.active{
@@ -266,6 +316,28 @@
         }
         &.round{
             border-radius: 50px;   
+        }
+        &.primary{
+          a{
+            &:hover {
+              .info{
+                h1,h2,h3,h4,h5,h6{
+                  color: $primary !important;
+                }
+              }
+            }
+          }
+        }
+        &.secondary{
+          a{
+            &:hover {
+              .info{
+                h1,h2,h3,h4,h5,h6{
+                  color: $primary !important;
+                }
+              }
+            }
+          }
         }
         // Variation Rounded
         &.var-2{
@@ -714,7 +786,11 @@
       }
     }
   }
-
+  .sec-buttons{
+    @media screen and (max-width: 991px) {
+      margin-bottom: 16px;
+    }
+  }
 }
 
 // sliders options
@@ -874,13 +950,15 @@
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       @media screen and (min-width: 768px) {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        row-gap: 0;
+        row-gap: 24px;
       }
       @media screen and (min-width: 992px) {
         grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+        row-gap: 24px;
       }
       @media screen and (min-width: 1325px) {
         grid-template-columns: repeat(auto-fill, minmax(16.6%, 1fr));
+        row-gap: 24px;
       }
     }
     
@@ -1025,7 +1103,6 @@
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     @media screen and (min-width: 768px) {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      row-gap: 0;
     }
     @media screen and (min-width: 992px) {
       grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));

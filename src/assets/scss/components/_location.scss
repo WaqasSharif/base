@@ -427,18 +427,22 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
         flex-direction: row;
-        
+        flex-wrap: wrap;
     }
     .sec-location{
         margin-right: 0px; 
+        width: 100%;
+        margin-right: 0 !important;
+        @media screen and (min-width: 768px) {
+            width: 48.5%;
+        }
         @media screen and (min-width: 992px) {
-            margin-right: 60px;
+            //margin-right: 60px;
             max-width: 512px;
-            &:last-child{
-                margin-right: 0;
-            } 
+            width: 23.5%;
+             
         }
         
     }
