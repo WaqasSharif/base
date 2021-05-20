@@ -77,12 +77,13 @@ body {
   }
   // paragraph colors flexibility
   &.anchor-primary a{
-    color: $primary;
-    font-weight: bold;
+    color: $primary !important;
   }
   &.anchor-secondary a{
-    color: $secondary;
-    font-weight: bold;
+    color: $secondary !important;
+  }
+  &.anchor-bold a{
+    font-weight: bold !important;
   }
 
   &.light {
