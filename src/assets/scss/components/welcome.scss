@@ -312,3 +312,32 @@
         }
     }
 }
+
+
+// welcome with slider
+.sec-welcome-msg.with-slider {
+    .content-wrapper .img, 
+    .content-wrapper .content {
+        flex: auto;
+        width: 100%;
+        @media (min-width: 992px) {
+            flex-direction: row;
+            width: 46%;
+        }
+    }
+
+    .swiper-slide {
+        position: relative;
+    }
+    .swiper-pagination {
+        position: absolute;
+        bottom: 50px;
+        .swiper-pagination-bullet {
+            background-color: $white;
+        }
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background-color: $secondary;
+            transform: scale(1.25);
+        }   
+    }
+}

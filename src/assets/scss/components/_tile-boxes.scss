@@ -483,3 +483,35 @@
     }
 
 }
+
+
+// with paragraph show and hide
+.sec-tile-boxes {
+     &.with-paragraph {
+         .content {
+             flex-direction: column;
+             justify-content: flex-end;
+             padding-bottom: 24px !important;
+             .sec-paragraph {
+                 width: 100%;
+             }
+         }
+         .show-hide {
+            height: 0;
+            padding: 0 24px;
+            opacity: 0;
+            transition: all 0.4s ease 0s, transform 200ms ease-in-out 0s;
+         }
+
+         .tile-box {
+             &:hover {
+                .show-hide {
+                    height: auto;
+                    padding: 0 24px;
+                    opacity: 1;
+                    transition: all 0.4s ease 0s, transform 200ms ease-in-out 0s;
+                 }
+             }
+         }
+     }
+}
