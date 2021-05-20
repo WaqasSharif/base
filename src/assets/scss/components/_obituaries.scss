@@ -738,7 +738,14 @@
                 flex-direction: column;
               }
         }
-
+        a{
+          &:hover {
+            img {
+              transform: scale(1.2);
+            }
+          }
+          
+        }
     }
     a{
         &.obituaries-tile{
@@ -1095,7 +1102,8 @@
       grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
     }
   }
-  &.obituaries-grid-home-4 {
+  &.obituaries-grid-home-4,
+  &.obituaries-grid-home-5 {
     display: grid;
     gap: 0;
     row-gap: 24px;
@@ -1106,6 +1114,7 @@
     }
     @media screen and (min-width: 992px) {
       grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+      row-gap: 0;
     }
     @media screen and (min-width: 1325px) {
       grid-template-columns: repeat(auto-fill, minmax(16.6%, 1fr));
