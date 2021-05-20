@@ -40,7 +40,7 @@ const files = {
 // COMPILE SCSS INTO CSS
 function compileSCSS() {
   log(chalk.red.bold('---------------COMPILING SCSS---------------'));
-  return src(['src/assets/scss/main.scss' , 'src/assets/scss/notCommon.scss'])
+  return src(['src/assets/scss/main.scss' , 'src/assets/scss/custom_overrides.scss'])
     .pipe(sass({
       outputStyle: 'expanded',
       sourceComments: 'map',
