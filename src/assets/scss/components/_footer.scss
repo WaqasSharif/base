@@ -1,14 +1,18 @@
 .sec-footer{
   &.small-social-links{
     .social-links{
-      ul li a{
-        width: 40px;
-        height: 40px;
-        svg{
-          width: 25px;
-          height: 25px;
+      ul li{
+        padding-right: 10px;
+        a{
+          width: 40px;
+          height: 40px;
+          svg{
+            width: 25px;
+            height: 25px;
+          }
         }
       }
+      
     }
   }
  
@@ -69,6 +73,26 @@
               svg *{
                 fill: $white;
               }
+            }
+          }
+        }
+      }
+    }
+    .sec-links{
+      .link.light{
+        &.primary-hover{
+          &:hover{
+            color: $primary;
+            &::after{
+              background: $primary;
+            }
+          }
+        }
+        &.secondary-hover{
+          &:hover{
+            color: $secondary;
+            &::after{
+              background: $secondary;
             }
           }
         }

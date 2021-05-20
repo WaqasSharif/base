@@ -725,17 +725,17 @@ p {
   // colors
   &.primary { 
     h1,h2,h3,h4,h5,h6{
-      color: $primary;
+      color: $primary !important;
     }
   }
   &.secondary { 
     h1,h2,h3,h4,h5,h6{
-      color: $secondary;
+      color: $secondary !important;
     }
   }
   &.light {
     h1,h2,h3,h4,h5,h6 {
-      color: $white;
+      color: $white ;
     }
   }
 
