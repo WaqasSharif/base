@@ -415,7 +415,7 @@
             }
          }
     }
-    &.location-full-2{
+    &.section-location-full-2{
         display: flex;
         .map{
             height: 297px;
@@ -448,7 +448,7 @@
 
 // our location full view
 
-.our-location {
+.sec-location-full {
     position: relative;
     .two-col {
         display: flex;
@@ -480,13 +480,13 @@
         @media (min-width: 768px) {
             height: 580px;
         }
-        background-color: $primary;
         .img {
             height: inherit;
             position: relative;
             overflow: hidden;
             opacity: .15;
         }
+
     }
     >.container {
         height: 100%;
@@ -510,6 +510,22 @@
                 text-align: left;
                 height: 580px;
             }
+        }
+    }
+
+    &.primary {
+        .left {
+            background-color: $primary;
+        }
+    }
+    &.secondary {
+        .left {
+            background-color: $secondary;
+        }
+    }
+    &.default {
+        .left {
+            background-color: $btn-default;
         }
     }
 }
