@@ -1,0 +1,8 @@
+
+.sec-left-nav {
+    &.no-under-lines {
+        .links-wrap .sec-links .link {
+            border-bottom: none;
+        }
+    }
+}
