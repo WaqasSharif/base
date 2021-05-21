@@ -220,6 +220,38 @@
         }
         
     }
+
+    &.with-heading-bg {
+        position: relative;
+        .links-wrap {
+            padding-top: 60px;
+        }
+        .small-heading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            &.default {
+                background-color: $btn-default;
+                p {
+                    color: $white;
+                }
+            }
+            &.primary {
+                background-color: $primary;
+                p {
+                    color: $white;
+                }
+            }
+            &.secondary {
+                background-color: $secondary;
+                p {
+                    color: $white;
+                }
+            }
+        }
+    }
     
 }
 
