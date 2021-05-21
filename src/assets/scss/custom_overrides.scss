@@ -6,3 +6,37 @@
         }
     }
 }
+
+// logo fixed 
+.logo-wrapp, .logo-wrapp a, .logo-wrapp img, .logo-wrapp svg {
+    max-width: 235px;
+}
+.mobile-menu {
+    .logo-wrapp, .logo-wrapp a, .logo-wrapp img, .logo-wrapp svg {
+        max-width: 200px;
+    }
+}
+.menu-fixed .menu-section-desktop.fixed .logo-wrapp, .menu-fixed .menu-section-desktop.fixed .logo-wrapp a, .menu-fixed .menu-section-desktop.fixed .logo-wrapp img, .menu-fixed .menu-section-desktop.fixed .logo-wrapp svg {
+    max-width: 180px;
+}
+
+.nav-links .main-nav-links > ul > li > a {
+    font-size: 18px;
+    font-weight: normal;
+}
+.menu-expanded-view .view ul li a {
+    font-size: 18px;
+}
+
+.menu-expanded-view {
+    padding-top: 100px;
+    top: 94px;
+    .small-heading p {
+        font-size: 18px;
+    }
+}
+
+//tile boxed 
+.sec-tile-boxes .single-tile-big .tile-box {
+    overflow: hidden;
+}
