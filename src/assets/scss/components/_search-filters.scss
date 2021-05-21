@@ -281,6 +281,44 @@
       
     }
 
+    &.primary-input-focus{
+      .input-group{
+        .form-control{
+          &:focus{
+            border: 1px solid $primary;
+          }
+        }
+        .input-group-addon{
+          &:hover, &:focus{
+            box-shadow: none;
+            background-color: transparent;
+            svg {
+              fill: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    &.secondary-input-focus{
+      .input-group{
+        .form-control{
+          &:focus{
+            border: 1px solid $secondary;
+          }
+        }
+        .input-group-addon{
+          &:hover, &:focus{
+            box-shadow: none;
+            background-color: transparent;
+            svg {
+              fill: $secondary;
+            }
+          }
+        }
+      }
+    }
+
     &.radius{
       .input-group{
         .form-control{

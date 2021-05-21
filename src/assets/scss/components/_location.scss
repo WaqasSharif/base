@@ -481,6 +481,9 @@
     }
     .left {
         height: 380px;
+        @media (max-width: 767px) {
+            height: 480px;
+        }
         @media (min-width: 768px) {
             height: 580px;
         }
@@ -492,7 +495,9 @@
         }
 
     }
-    >.container {
+    >.container,
+    .container-xl {
+        
         height: 100%;
         //background: red;
         position: absolute;
@@ -509,6 +514,9 @@
             justify-content: center;
             flex-direction: column;
             height: 380px;
+            @media (max-width: 767px) {
+                height: 480px;
+            }
             @media (min-width: 768px) {
                 width: 50%;
                 text-align: left;
@@ -531,5 +539,34 @@
         .left {
             background-color: $btn-default;
         }
+    }
+}
+.sec-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media (min-width: 992px) {
+        flex-direction: row;
+    }
+    img{
+        max-width: 230px;
+        max-height: 100px;
+        object-fit: cover;
+    }
+    .logo-list{
+        padding:16px;
+        @media (max-width: 767px) {
+            padding: 8px;
+        }
+        @media (min-width: 992px) {
+            padding: 0 16px;
+        }
+        img{
+            max-width: 150px;
+            max-height: 100px;
+            object-fit: cover;
+        }
+        
     }
 }

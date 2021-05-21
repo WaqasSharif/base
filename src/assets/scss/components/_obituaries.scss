@@ -768,7 +768,7 @@
   }
   &.default {
     background-color: $black;
-    padding: 1rem;
+    padding: 1.5rem;
     .sec-paragraph{
       p{
         color: $white;
@@ -777,7 +777,7 @@
   }
   &.primary {
     background-color: $primary;
-    padding: 1rem;
+    padding: 1.5rem;
     .sec-paragraph{
       p{
         color: $white;
@@ -786,12 +786,35 @@
   }
   &.secondary {
     background-color: $secondary;
-    padding: 1rem;
+    padding: 1.5rem;
     .sec-paragraph{
       p{
         color: $white;
       }
     }
+  }
+
+
+  &.bg-default{
+    padding: 1rem;
+    @media screen and (min-width: 992px) {
+      padding: 1.5rem;
+    }
+    background-color: $btn-default !important;
+  }
+  &.bg-primary{
+    padding: 1rem;
+    @media screen and (min-width: 992px) {
+      padding: 1.5rem;
+    }
+    background-color: $primary !important;
+  }
+  &.bg-secondary{
+    padding: 1rem;
+    @media screen and (min-width: 992px) {
+      padding: 1.5rem;
+    }
+    background-color: $secondary !important;
   }
   .sec-buttons{
     @media screen and (max-width: 991px) {
