@@ -25,7 +25,7 @@
         }
     }
     .cta {
-        background-color: #f3f4f7;
+        background-color: $bg;
         padding-left: 50px;
         padding-right: 72px;
         display: flex;
@@ -67,7 +67,7 @@
 
 .media-cta { 
     &.small {
-        background-color: #F4F5F9;
+        background-color: $bg;
         border-radius: 8px;
         overflow: hidden;
         position: relative;
@@ -97,7 +97,7 @@
 
 .media-cta {
     &.medium {
-        background-color: #F4F5F9;
+        background-color: $bg;
         border-radius: 8px;
         overflow: hidden;
         position: relative;
@@ -142,4 +142,30 @@
 
 .media-cta.medium+.media-cta.medium {
     margin-top: 36px;
+}
+
+// top bottom
+.media-cta {
+    &.top-bottom {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 768px) {
+            flex-direction: column;
+        }
+        .cta,
+        .image-wrapp {
+            width: 100%;
+            @media (min-width: 768px) {
+                width: 100%;
+            }
+        }
+        .cta {
+            background-color: $bg;
+            padding-left: 20px;
+            padding-right: 20px;
+            @media (min-width: 768px) {
+                padding: 40px !important;
+            }
+        }
+    }
 }
