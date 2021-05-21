@@ -1145,6 +1145,12 @@
   }
 }
 
+.obituaries-grid-wrapper.obituaries-grid-home-5 {
+  @media screen and (min-width: 576px) {
+    row-gap: 0;
+  }
+}
+
 
 // on mobile screen ob grid view
 .obituaries-slider {
