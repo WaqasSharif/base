@@ -31,6 +31,22 @@
 
 
 $( document ).ready(function() {
+
+  $('.hamburger').on('click', function (e) {
+    e.preventDefault();
+    $(this).hide();
+    $('.mobile-menu').addClass('active');
+    $('body').addClass('freeze');
+  });
+  $('.dismiss').on('click', function (e) {
+    e.preventDefault();
+    $('.mobile-menu').removeClass('active');
+    $('.expandable').removeClass('active');
+    $('body').removeClass('freeze');
+    $('.hamburger').show();
+  });
+
+  
   $('.mega-hamburger').on('click', function(e){
     e.preventDefault();
     $(this).toggleClass('is-active'); 
