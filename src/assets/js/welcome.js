@@ -1,14 +1,15 @@
 function initWelcome() {
     $(document).find('.sec-welcome-msg.with-slider').each(function (index) {
-      $(this).addClass('slider'+index);
+      $(this).addClass('welcome-slider'+index);
       var $slider = $(this);
-      $slider.find('.swiper-pagination').addClass('pagination-'+index);
-      var $welcome = new Swiper('.slider'+index+' .swiper-container', {
+      $slider.find('.swiper-pagination').addClass('welcome-'+index);
+      var $welcome = new Swiper('.welcome-slider'+index+' .swiper-container', {
+        slidesPerView: 1,
         pagination: {
-          el: ".swiper-pagination.pagination-"+index,
+          el: ".swiper-pagination.welcome-"+index,
           clickable: true
         },
-        slidesPerView: 1,
+        
       });
       
     });
