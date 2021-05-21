@@ -45,3 +45,11 @@
 .sec-tile-boxes .single-tile-big .tile-box {
     overflow: hidden;
 }
+
+
+// sticky subscribe box
+.subscribe-box,
+.sec-left-nav {
+    position: sticky;
+    top: 140px;
+}
