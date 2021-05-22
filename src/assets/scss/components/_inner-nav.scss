@@ -258,6 +258,12 @@
 
 // colors options
 .sec-left-nav {
+    &.dark {
+        .links-wrap .sec-links .link {
+            color: $text-color-dark;
+        }
+    }
+
     // default color
     &.default {
         .links-wrap .sec-links {
