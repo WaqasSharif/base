@@ -203,20 +203,20 @@ body {
   &.blockquotes{
     padding: 10px 20px;
     padding-left: 1.5rem;
-    &.light {
-      border-left: solid 5px $white;
+    &.border-light {
+      border-left: solid 5px $white !important;
     }
-    &.dark {
-      border-left: solid 5px $btn-default;
+    &.border-dark {
+      border-left: solid 5px $btn-default !important;
     }
-    &.black {
-      border-left: solid 5px $black;
+    &.border-black {
+      border-left: solid 5px $black !important;
     }
-    &.primary {
-      border-left: solid 5px $primary;
+    &.border-primary {
+      border-left: solid 5px $primary !important;
     }
-    &.secondary {
-      border-left: solid 5px $secondary;
+    &.border-secondary {
+      border-left: solid 5px $secondary !important;
     }
   }
 }

@@ -1,5 +1,6 @@
 //For Inner pages
 .sec-obituaries{
+  
   @media screen and (max-width: 991px) {
     margin-bottom: 24px;
   }
@@ -1160,5 +1161,39 @@
       gap: 24px;
       grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
     }
+  }
+}
+
+
+.sec-obituaries-inner{
+  &.flat{
+    .obituaries-tile{
+      .thumbnail{
+        border-radius: 0px;
+        img{
+          border-radius: 0px;
+        }
+      }
+    }
+  }
+  &.radius{
+    .obituaries-tile{
+      .thumbnail{
+        border-radius: 10px;
+        img{
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  &.round{
+    .obituaries-tile{
+      .thumbnail{
+        border-radius: 100px;
+        img{
+          border-radius: 100px;
+        }
+      }
+    } 
   }
 }

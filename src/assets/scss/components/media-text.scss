@@ -1,4 +1,37 @@
 .sec-media-text{
+  &.icon-default{
+    .media-text {
+      .thumbnail {
+          svg{
+            *{
+              fill: $btn-default !important;
+            }
+          }
+      }
+    }
+    }
+    &.icon-primary{
+      .media-text {
+        .thumbnail {
+            svg{
+              *{
+                fill: $primary !important;
+              }
+            }
+        }
+      }
+    }
+    &.icon-secondary{
+      .media-text {
+        .thumbnail {
+            svg{
+              *{
+                fill: $secondary !important;
+              }
+            }
+        }
+      }
+    } 
   &.media-text-1,
   &.media-text-3 {
       display: grid;
@@ -165,6 +198,8 @@
         }
       }
 
+      
+      
   }
 
   &.media-text-2{
