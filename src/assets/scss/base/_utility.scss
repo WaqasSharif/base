@@ -21,3 +21,10 @@ div.cover {
         background-color: $secondary !important;
     }
 }
+
+// logo inside page
+.logo-inside-page {
+    img {
+        max-width: 185px;
+    }
+}

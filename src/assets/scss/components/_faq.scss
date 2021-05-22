@@ -176,6 +176,17 @@
             background-color: $secondary !important;
         }
     }
+
+    &.normal {
+        .card .card-header a  {
+            font-weight: normal;
+        }
+    }
+    &.font-24 {
+        .card .card-header a  {
+            font-size: 24px;
+        }
+    }
 }
 
 // faq variations

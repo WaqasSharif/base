@@ -52,6 +52,12 @@ body {
       }
     }
   }
+  // shadow for headings
+  &.text-shadow {
+    h1,h2,h3,h4,h5,h6 {
+        text-shadow: #00000073 0 0 4px;
+    }
+}
 }
 
 .sec-paragraph {
@@ -690,6 +696,12 @@ p {
   }
 }
 
+.list {
+  .list ul {
+      margin-left: 0;
+  }
+}
+
 
 //
 // Headings
@@ -807,6 +819,37 @@ p {
     font-size: 16px;
     @media (min-width: 768px) {
       font-size: 18px;
+    }
+  }
+
+  &.font-28 {
+    h1,h2,h3,h4,h5,h6 {
+      font-size: 24px;
+      line-height: 1.1;
+      letter-spacing: normal;
+      @media (min-width: 992px) {
+        font-size: 28px;
+      }
+    }
+  }
+  &.font-36 {
+    h1,h2,h3,h4,h5,h6 {
+      font-size: 28px;
+      line-height: 1.1;
+      letter-spacing: normal;
+      @media (min-width: 992px) {
+        font-size: 36px;
+      }
+    }
+  }
+  &.font-32  {
+    h1,h2,h3,h4,h5,h6 {
+      font-size: 28px;
+      line-height: 1.1;
+      letter-spacing: normal;
+      @media (min-width: 992px) {
+        font-size: 32px;
+      }
     }
   }
 }
