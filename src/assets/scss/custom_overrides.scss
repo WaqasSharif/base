@@ -10,86 +10,50 @@
     justify-content: center;
 }
 
+
+
+
+// obi home
+.hero-banner-and-obituaries {
+    .heading-special {
+        h2 {
+            font-family: 'Parisienne', sans-serif;
+            font-size: 200px;
+            margin-top: -70px;
+        }
+    }
+}
+
+// top bar
+.top-bar-section {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
 // menu overrides 
 .menu-section-desktop {
     &.center-logo-top {
-        .logo-wrapp {
-            margin-top: 20px;
-        }
         .logo-wrapp, .logo-wrapp a {
-            width: 100%;
-            max-width: 100%;
-            display:flex;
-            align-items: center;
-            justify-content: center;
             img {
                 width: 375px;
                 max-width: 375px;
             }
         }
+    }
+}
+.mobile-menu .logo-wrapp {
+    padding-top: 0;
+}
+.logo-wrapp, .logo-wrapp a, .logo-wrapp img, .logo-wrapp svg {
+    max-width: 250px;
+}
 
-        .nav-links .main-nav-links > ul {
-            justify-content: center;
-        }
+// welcome msg
+@media (min-width: 992px) {
+    .sec-welcome-msg .content-wrapper {
+        align-items: flex-start;
     }
 }
 
-
-// obi home
-.hero-banner-and-obituaries {
-    .sec-obituaries {
-        padding: 32px;
-        margin-top: 0 !important; // this needs to be removed from sections
-    }
-    .pos-absolute { 
-        margin-top: 32px;
-        position: relative;
-        @media (min-width: 1324px) {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            left: 0;
-            right: 0;
-        }
-        
-    }
-}
-
-
-// this needs to put in sections
-.sec-title {
-    &.text-shadow {
-        h1,h2,h3,h4,h5,h6 {
-            text-shadow: #00000073 0 0 4px;
-        }
-    }
-}
-// need to add below into sections
-.logo-inside-page {
-    img {
-        max-width: 185px;
-    }
-}
-
-.list {
-    .list ul {
-        margin-left: 0;
-    }
-}
-
-
-.sec-faq {
-
-    &.normal {
-        .card .card-header a  {
-            font-weight: normal;
-        }
-    }
-    &.font-24 {
-        .card .card-header a  {
-            font-size: 24px;
-        }
-    }
-
-}
 

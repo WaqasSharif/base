@@ -43,17 +43,18 @@ $(document).ready(function() {
 
 var navExpand = [].slice.call(document.querySelectorAll('.mobile-menu .expandable'));
 
-if (window.innerWidth < 991) {
-  navExpand.forEach(function (item) {
-    item.querySelector('.mobile-menu .expandable > a').addEventListener('click', function (e) {
-      e.preventDefault();
-      item.classList.add('active');
+  if (window.innerWidth < 991) {
+    navExpand.forEach(function (item) {
+      item.querySelector('.mobile-menu .expandable > a').addEventListener('click', function (e) {
+        e.preventDefault();
+        item.classList.add('active');
+      });
+      item.querySelector('.back-to-menu').addEventListener('click', function (e) {
+        e.preventDefault();
+        item.classList.remove('active');
+      });
     });
-    item.querySelector('.back-to-menu').addEventListener('click', function () {
-      item.classList.remove('active');
-    });
-  });
-}
+  }
   
 }); 
 
