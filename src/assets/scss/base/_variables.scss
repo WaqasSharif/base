@@ -56,8 +56,9 @@ $grid-row-columns:            6 !default;
 
 
 // stylelint-disable value-keyword-case
-$font-family-headings:                'Parisienne', sans-serif;
-$font-family-base:                    'Roboto Condensed', sans-serif;
+$font-family-headings:                'Roboto Condensed', sans-serif;
+$font-family-base:                    'Source Sans Pro', sans-serif;
+$font-family-special:                 'Parisienne', sans-serif;
 
 
 // stylelint-enable value-keyword-case
@@ -85,7 +86,7 @@ $line-height-base:            1.5 !default;
 // $h6-font-size:                $font-size-base * 1.25!default;
 
 $headings-margin-bottom:      0 !default; 
-$font-family-heading:         $font-family-base !default;
+$font-family-heading:         $font-family-headings !default;
 $headings-font-weight:        normal !default;
 $headings-line-height:        1.1 !default;
 $headings-speical:            120px;
