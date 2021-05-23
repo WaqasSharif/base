@@ -917,13 +917,8 @@
   
 }
 &.white-default{
-  .media-text {
+  .media-text-head{
 
-    .sec-paragraph{
-      p{
-        color: $btn-default;
-    }
-    }
     a{
       .sec-paragraph{
         p{
@@ -932,6 +927,15 @@
       }
     
     }
+  }
+  .media-text {
+
+    .sec-paragraph{
+      p{
+        color: $btn-default;
+    }
+    }
+  
   
     
     .thumbnail {
@@ -945,18 +949,21 @@
   }
   &.white-primary{
     .media-text {
+      .media-text-head{
+
+        a{
+          .sec-paragraph{
+            p{
+              color: $primary;
+          }
+          }
+        
+        }
+      }
       .sec-paragraph{
         p{
-          color: $primary;
+          color: $btn-default;
       }
-      }
-      a{
-        .sec-paragraph{
-          p{
-            color: $primary;
-        }
-        }
-      
       }
       .thumbnail {
           svg{
@@ -969,18 +976,21 @@
   }
   &.white-secondary{
     .media-text {
+      .media-text-head{
+
+        a{
+          .sec-paragraph{
+            p{
+              color: $secondary;
+          }
+          }
+        
+        }
+      }
       .sec-paragraph{
         p{
-          color: $secondary;
+          color: $btn-default;
       }
-      }
-      a{
-        .sec-paragraph{
-          p{
-            color: $secondary;
-        }
-        }
-      
       }
       .thumbnail {
           svg{
