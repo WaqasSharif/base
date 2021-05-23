@@ -10,8 +10,8 @@ $btn-default:         #353535 !default;
 $anchor-color:            #007bff;
 
 //variable colors - need to change as per theme
-$primary:             #690908 !default;
-$secondary:          #e0a40a !default;
+$primary:             #7e001f !default;
+$secondary:          #ffb81f !default;
 
 // can be changes as per requirement
 $bg:             #eee;
@@ -56,10 +56,9 @@ $grid-row-columns:            6 !default;
 
 
 // stylelint-disable value-keyword-case
-$font-family-headings:               'Playfair Display', serif;
-$font-family-base:                  'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+$font-family-headings:              'Italianno', cursive;
+$font-family-base:                  'Lato', sans-serif;
  
-
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
