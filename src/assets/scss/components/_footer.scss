@@ -162,6 +162,26 @@
         }
       }
     }
+    .sec-links{
+      .link.light{
+        &.primary-hover{
+          &:hover{
+            color: $primary;
+            &::after{
+              background: $primary;
+            }
+          }
+        }
+        &.secondary-hover{
+          &:hover{
+            color: $secondary;
+            &::after{
+              background: $secondary;
+            }
+          }
+        }
+      }
+    }
   }
   //secondary footer 
   &.secondary{
@@ -222,6 +242,26 @@
               svg *{
                 fill: $white;
               }
+            }
+          }
+        }
+      }
+    }
+    .sec-links{
+      .link.light{
+        &.primary-hover{
+          &:hover{
+            color: $primary;
+            &::after{
+              background: $primary;
+            }
+          }
+        }
+        &.secondary-hover{
+          &:hover{
+            color: $secondary;
+            &::after{
+              background: $secondary;
             }
           }
         }

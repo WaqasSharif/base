@@ -19,6 +19,7 @@
         img, iframe{
             height: 100%;
         }
+        
     }
     &.big {
         .banner {
@@ -61,6 +62,16 @@
                 height: 100%;
             }
             
+        }
+    }
+    &.flat{
+        .banner{
+            border-radius: 0;
+        }
+        .thumbnails {
+            .img {
+                border-radius: 0; 
+            }
         }
     }
 }

@@ -474,7 +474,7 @@
       &.active{
         .input-group{
           .input-group-addon{
-            background-color:$white;
+            background-color:transparent !important;
             svg {
               fill: $btn-default !important;
             }
@@ -490,7 +490,7 @@
           color:$white;
         }
         .input-group-addon{
-          background-color: transparent;
+          background-color: transparent !important;
           svg {
             fill: $primary;
           }
@@ -514,7 +514,7 @@
       &.active{
         .input-group{
           .input-group-addon{
-            background-color:$white;
+            background-color:transparent !important;
             svg {
               fill: $primary !important;
             }
@@ -526,11 +526,11 @@
       .input-group{
         .form-control{
           border: 1px solid $secondary !important;
-          background-color: transparent;
+          background-color: transparent !important;
           color:$white;
         }
         .input-group-addon{
-          background-color: transparent;
+          background-color: transparent !important;
           svg {
             fill: $primary;
           }
@@ -554,7 +554,7 @@
       &.active{
         .input-group{
           .input-group-addon{
-            background-color:$white;
+            background-color:transparent;
             svg {
               fill: $secondary !important;
             }

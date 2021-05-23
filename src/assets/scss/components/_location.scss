@@ -495,6 +495,36 @@
         }
 
     }
+    &.medium{
+        .right {
+            height: 380px;
+            @media (min-width: 768px) {
+                height: 480px;
+            }
+        }
+        .left {
+            height: 380px;
+            @media (max-width: 767px) {
+                height: 380px;
+            }
+            @media (min-width: 768px) {
+                height: 480px;
+            }
+        }
+        >.container,
+        .container-xl{
+        .content {
+            height: 380px;
+            @media (max-width: 767px) {
+                height: 380px;
+            }
+            @media (min-width: 768px) {
+                height: 480px;
+            }
+        }
+    }
+        
+    }
     >.container,
     .container-xl {
         

@@ -243,51 +243,51 @@
             }
         }
         &.primary-outline {
-            background-color: transparent;
-            border-color: $primary;
-            color: $primary;
+            background-color: transparent !important;
+            border-color: $primary !important;
+            color: $primary !important;
             span {
                 img,
                 svg {
                     path, g {
-                        fill: $primary;
+                        fill: $primary !important;
                     }
                 }
             }
             &:hover {
-                background-color: $primary;
-                color: $white;
+                background-color: $primary !important;
+                color: $white !important;
                 span {
                     img,
                     svg {
                         path, g {
-                            fill: $white;
+                            fill: $white !important;
                         }
                     }
                 }
             }
         }
         &.primary-outline-light {
-            background-color: transparent;
-            border-color: $white;
-            color: $white;
+            background-color: transparent !important;
+            border-color: $white !important;
+            color: $white !important;
             span {
                 img,
                 svg {
                     path, g {
-                        fill: $white;
+                        fill: $white !important;
                     }
                 }
             }
             &:hover {
-                background-color: $white;
-                border-color: $white;
-                color: $primary;
+                background-color: $white !important;
+                border-color: $white !important;
+                color: $primary !important;
                 span {
                     img,
                     svg {
                         path, g {
-                            fill: $primary;
+                            fill: $primary !important;
                         }
                     }
                 }
@@ -304,51 +304,51 @@
             }
         }
         &.secondary-outline {
-            background-color: transparent;
-            border-color: $secondary;
-            color: $secondary;
+            background-color: transparent !important;
+            border-color: $secondary !important;
+            color: $secondary !important;
             span {
                 img,
                 svg {
                     path, g {
-                        fill: $secondary;
+                        fill: $secondary !important;
                     }
                 }
             }
             &:hover {
-                background-color: $secondary;
-                color: $white;
+                background-color: $secondary !important;
+                color: $white !important;
                 span {
                     img,
                     svg {
                         path, g {
-                            fill: $white;
+                            fill: $white !important;
                         }
                     }
                 }
             }
         }
         &.secondary-outline-light {
-            background-color: transparent;
-            border-color: $white;
-            color: $white;
+            background-color: transparent !important;
+            border-color: $white !important;
+            color: $white !important;
             span {
                 img,
                 svg {
                     path, g {
-                        fill: $white;
+                        fill: $white !important;
                     }
                 }
             }
             &:hover {
-                background-color: $white;
-                border-color: $white;
-                color: $secondary;
+                background-color: $white !important;
+                border-color: $white !important;
+                color: $secondary !important;
                 span {
                     img,
                     svg {
                         path, g {
-                            fill: $secondary;
+                            fill: $secondary !important;
                         }
                     }
                 }

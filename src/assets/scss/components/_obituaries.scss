@@ -1,5 +1,57 @@
 //For Inner pages
 .sec-obituaries{
+
+  &.default-hover{
+    .obituaries-tile {
+      a{
+        &:hover{
+          color: $btn-default;
+          .info{
+            .sec-title{
+              h1, h2, h3, h4, h5, h6{
+                color: $btn-default;
+              }
+            }
+        }
+        }
+      }
+    }
+    }
+
+    &.primary-hover{
+      .obituaries-tile {
+        a{
+          &:hover{
+            color: $primary;
+            .info{
+              .sec-title{
+                h1, h2, h3, h4, h5, h6{
+                  color: $primary;
+                }
+              }
+          }
+          }
+        }
+      }
+      }
+
+      &.secondary-hover{
+        .obituaries-tile {
+          a{
+            &:hover{
+              color: $secondary;
+              .info{
+                .sec-title{
+                  h1, h2, h3, h4, h5, h6{
+                    color: $secondary;
+                  }
+                }
+            }
+            }
+          }
+        }
+        }
+  
   @media screen and (max-width: 991px) {
     margin-bottom: 24px;
   }
@@ -100,11 +152,11 @@
     }
     .btn{
       &.secondary{
-      color: $primary;
+      color: $secondary;
       background-color: $white;
       &:hover{
         color: $white;
-        background-color: $primary;
+        background-color: $secondary;
       }
     }
   }
@@ -1160,5 +1212,39 @@
       gap: 24px;
       grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
     }
+  }
+}
+
+
+.sec-obituaries-inner{
+  &.flat{
+    .obituaries-tile{
+      .thumbnail{
+        border-radius: 0px;
+        img{
+          border-radius: 0px;
+        }
+      }
+    }
+  }
+  &.radius{
+    .obituaries-tile{
+      .thumbnail{
+        border-radius: 10px;
+        img{
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  &.round{
+    .obituaries-tile{
+      .thumbnail{
+        border-radius: 100px;
+        img{
+          border-radius: 100px;
+        }
+      }
+    } 
   }
 }
