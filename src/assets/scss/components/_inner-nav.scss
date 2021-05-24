@@ -6,7 +6,7 @@
     }
     .links-wrap{
         .sec-links {
-            margin-bottom: 16px;
+            //margin-bottom: 16px;
             //padding-bottom: 16px;
             &:last-child {
                 margin-bottom: 0;
@@ -14,8 +14,8 @@
             .link {
                 color: $text-color;
                 position: relative;
-                font-weight: bold;
                 padding-bottom: 16px;
+                padding-top: 16px;
                 width: 100%;
                 display: flex;
                 &:hover {
@@ -29,7 +29,6 @@
             &.active {
                 .link {
                     color: $anchor-color;
-                    font-weight: bold;
                     &:before {
                         border-color: $anchor-color !important;
                     }
@@ -41,6 +40,7 @@
     &.right {
         .links-wrap .sec-links .link{
             justify-content: flex-end;
+            padding-right: 12px;
         }
         .small-heading {
             text-align: right;
@@ -258,12 +258,237 @@
 
 // colors options
 .sec-left-nav {
+
+    // default background box color
+    &.default-bg {
+        &.with-box {
+            background-color: $btn-default;
+            .small-heading {
+                &:after {
+                    background: $white;
+                }
+                p {
+                    color: $white;
+                }
+            }
+            .links-wrap .sec-links {
+                &.active {
+                    .link:after {
+                        background: $white;
+                    }
+                }
+                .link {
+                    color: $white;
+                    // &:after {
+                    //     background: $white;
+                    // }
+                    // &:hover {
+                    //     &:after {
+                    //         background: $white;
+                    //     }
+                    // }
+                }
+            }
+        }
+    }
+    // default primary box color
+    &.primary-bg {
+        &.with-box {
+            background-color: $primary;
+            .small-heading {
+                &:after {
+                    background: $white;
+                }
+                p {
+                    color: $white;
+                }
+            }
+            .links-wrap .sec-links {
+                &.active {
+                    .link:after {
+                        background: $white;
+                    }
+                }
+                .link {
+                    color: $white;
+                    &:after {
+                        background: $white;
+                    }
+                    &:hover {
+                        &:after {
+                            background: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // default secondary box color
+    &.secondary-bg {
+        &.with-box {
+            background-color: $secondary;
+            .small-heading {
+                &:after {
+                    background: $white;
+                }
+                p {
+                    color: $white;
+                }
+            }
+            .links-wrap .sec-links {
+                &.active {
+                    .link:after {
+                        background: $white;
+                    }
+                }
+                .link {
+                    color: $white;
+                    &:after {
+                        background: $white;
+                    }
+                    &:hover {
+                        &:after {
+                            background: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // hover and active link bg
+    &.hover-bg-light {
+        .links-wrap .sec-links {
+            .link {
+                &:hover {
+                    background-color: $bg;
+                    padding-left: 12px;
+                }
+            }
+            &.active {
+                .link {
+                    background-color: $bg;
+                    padding-left: 12px;
+                }
+            } 
+        }
+    }
+
+    &.hover-bg-default {
+        .links-wrap .sec-links {
+            .link {
+                &:hover {
+                    background-color: $btn-default;
+                    padding-left: 12px;
+                }
+            }
+            &.active {
+                .link {
+                    background-color: $btn-default;
+                    padding-left: 12px;
+                }
+            } 
+        }
+    }
+
+    &.hover-bg-primary {
+        .links-wrap .sec-links {
+            .link {
+                &:hover {
+                    background-color: $primary;
+                    padding-left: 12px;
+                }
+            }
+            &.active {
+                .link {
+                    background-color: $primary;
+                    padding-left: 12px;
+                }
+            } 
+        }
+    }
+    &.hover-bg-secondary {
+        .links-wrap .sec-links {
+            .link {
+                &:hover {
+                    background-color: $secondary;
+                    padding-left: 12px;
+                }
+            }
+            &.active {
+                .link {
+                    background-color: $secondary;
+                    padding-left: 12px;
+                }
+            } 
+        }
+    }
+
+
+    // white links
+    &.white {
+        .links-wrap .sec-links {
+            .link {
+                &:hover {
+                    color: $white;
+                    &:before {
+                        border-color: $white !important;
+                    }
+                }
+            }
+            &.active {
+                .link {
+                    color: $white;
+                    &:before {
+                        border-color: $white !important;
+                    }
+                }
+            } 
+        }
+    }
+    // dark links
     &.dark {
         .sec-links .link {
             color: $text-color-dark;
         }
+        &.sec-left-nav.with-arrow .links-wrap .sec-links .link:before {
+            border-color: $text-color-dark;
+        }
     }
+    // blue color
+    &.anchor {
+        .links-wrap .sec-links {
+            .link {
+                &:hover {
+                    color: $anchor-color;
+                    &:before {
+                        border-color: $anchor-color !important;
+                    }
+                }
+                &:after {
+                    background: $anchor-color !important;
+                }
+            }
+            &.active {
+                .link {
+                    color: $anchor-color;
+                    &:before {
+                        border-color: $anchor-color !important;
+                    }
+                }
+            }
+        }
 
+        // small heading 
+        .small-heading {
+            p {
+                color: $anchor-color;
+            }
+            &:after {
+                background: $anchor-color;
+            }
+        }
+    }
     // default color
     &.default {
         .links-wrap .sec-links {
@@ -370,100 +595,5 @@
     }
 
 
-    // default background box color
-    &.default-bg {
-        &.with-box {
-            background-color: $btn-default;
-            .small-heading {
-                &:after {
-                    background: $white;
-                }
-                p {
-                    color: $white;
-                }
-            }
-            .links-wrap .sec-links {
-                &.active {
-                    .link:after {
-                        background: $white;
-                    }
-                }
-                .link {
-                    color: $white;
-                    &:after {
-                        background: $white;
-                    }
-                    &:hover {
-                        &:after {
-                            background: $white;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    // default primary box color
-    &.primary-bg {
-        &.with-box {
-            background-color: $primary;
-            .small-heading {
-                &:after {
-                    background: $white;
-                }
-                p {
-                    color: $white;
-                }
-            }
-            .links-wrap .sec-links {
-                &.active {
-                    .link:after {
-                        background: $white;
-                    }
-                }
-                .link {
-                    color: $white;
-                    &:after {
-                        background: $white;
-                    }
-                    &:hover {
-                        &:after {
-                            background: $white;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    // default secondary box color
-    &.secondary-bg {
-        &.with-box {
-            background-color: $secondary;
-            .small-heading {
-                &:after {
-                    background: $white;
-                }
-                p {
-                    color: $white;
-                }
-            }
-            .links-wrap .sec-links {
-                &.active {
-                    .link:after {
-                        background: $white;
-                    }
-                }
-                .link {
-                    color: $white;
-                    &:after {
-                        background: $white;
-                    }
-                    &:hover {
-                        &:after {
-                            background: $white;
-                        }
-                    }
-                }
-            }
-        }
-    }
+    
 }
