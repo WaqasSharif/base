@@ -44,6 +44,11 @@
         }
       }
     }
+    // border big
+    &.white-border {
+      box-shadow: 0 10px 10px 0 #0000001a;
+      border: 10px solid #fff;
+    }
 
     &.solid-bg {
       .content {
@@ -360,6 +365,32 @@
 } 
 
 
+// hero background
+.hero-bg {
+  background-image: linear-gradient(180deg, transparent 43%, #202f16 81%, #202f16), url(../../assets/img/bg-7.jpg);
+  background-position: 0px 0px, 50% 0%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  padding-top: 92px;
+  @media (max-width: 991px) {
+    padding-top: 72px;
+    .top-bar-content .hide-tablet {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .top-bar-content .hide-mobile {
+      display: none;
+    }
+    .top-bar-section .top-bar-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+}
 // hero-banner-and-obituaries
 .hero-banner-and-obituaries {
   position: relative;
@@ -391,3 +422,4 @@
       }
   }
 }
+
