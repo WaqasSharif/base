@@ -37,6 +37,11 @@
         }
     }
 
+    &.sticky {
+        position: sticky;
+        top: 140px;
+    }
+
     &.right {
         .links-wrap .sec-links .link{
             justify-content: flex-end;
