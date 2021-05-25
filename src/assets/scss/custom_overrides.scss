@@ -1,7 +1,99 @@
 
-
 .ob-search.obituaries-home-search-3{
     .sec-title{
         border-right: solid 1px white;
     }
 }
+
+// footer colors matched
+.sec-footer.primary {
+    background-color: #33000d;
+}
+.sec-copyrights.primary {
+    background-color: #180006;
+}
+.footer-wrapper {
+    .footer-logo {
+        align-items: center;
+        img {
+            width: 200px;
+        }
+    }
+    .social-links {
+        margin: 0 auto;
+    }
+    .sec-buttons {
+        @media (max-width: 991.98px) {
+            width: 100%;
+            margin-top: 12px;
+        }
+    }
+}
+
+// google analytics
+.google-translate-option {
+    padding: 12px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff !important;
+    &.primary {
+        background-color: #33000d;
+    }
+}
+
+
+.top-bar-section.with-logo .logo-wrapper img {
+    max-width: 100%;
+    width: 300px
+}
+
+.menu-section-desktop {
+    .nav-links .main-nav-links > ul > li > a {
+        padding: 24px 0;
+    }
+}
+
+// hero padding not needed as we have menu with background and fixed
+.hero-bg {
+    padding-top: 66px !important;
+    @media (min-width: 992px) {
+        padding-top: 0 !important;
+    }
+}
+
+.mobile-menu {
+    min-height: 66px;
+}
+.menu-wrapper {
+    top: 0;
+}
+
+.menu-desktop-inner-2 {
+    .nav-links .main-nav-links > ul > li {
+        padding: 0 10px;
+    }
+
+    .logo-wrapp, .logo-wrapp a, .logo-wrapp img, .logo-wrapp svg {
+        width: 100%;
+        max-width: 200px;
+        display: block;
+    }
+}
+
+.menu-fixed{
+    .menu-desktop-inner-2 {
+        .logo-wrapp, .logo-wrapp a, .logo-wrapp img, .logo-wrapp svg {
+            width: 100%;
+            max-width: 160px !important;
+        }
+    }
+}
+
+
