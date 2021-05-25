@@ -1,5 +1,27 @@
 //For Inner pages
 .sec-obituaries{
+  &.img-border{
+    .obituaries-tile {
+      .thumbnail{
+        border: 4px solid $white;
+        .cover{
+          background-color: $white;
+          img{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  &.animate-tile-scale{
+    .obituaries-tile{
+      padding-top: 5px;
+      transition: $transitions;
+      &:hover{
+        transform: scale(1.04);
+      }
+    }
+  }
 
   &.white-hover{
     .obituaries-tile {
