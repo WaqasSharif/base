@@ -8,7 +8,7 @@
   <div class="container-fluid">
     <div class="content">
       <div class="sec-title heading-special text-shadow light">
-        <h1>ABOUT US</h1>
+        <h1>About Us</h1>
       </div>
     </div>
   </div>
@@ -60,12 +60,12 @@
         </div>
 
         <!-- Section Paragraph -->
-        <div class="sec-paragraph dark medium mb-42">
+        <div class="sec-paragraph dark medium mb-32">
             <p>Oftentimes the best way to get a sense of how you’ll feel is to hear directly from families that have held services for loved ones at Harris - Nadeau Mortuary. We invite you to read and explore a range of testimonials and get the best sense possible of what your experience can be. Please ask us any questions, any time. We want nothing more than to help you through a difficult time with ease, peace and healing.</p>
           </div>
 
-          <div class="sec-buttons mb-42">
-            <a href="#" class="btn primary uppercase font-12 big round bold letter-spacing-2"> Send your testimonial </a>  
+          <div class="sec-buttons mb-32">
+            <a href="#" data-toggle="modal" data-target="#testimonialsModal" class="btn primary uppercase font-12 big round bold letter-spacing-2"> Send your testimonial </a>  
         </div>
 
         <div class="sec-testimonial-inner box testimonial-inner-5">
@@ -136,3 +136,69 @@
   <!-- spacer -->
   <div class="spacer height-80 transparent"></div>
   <!-- spacer -->
+
+  <!-- Testimonial Popup -->
+
+  <div class="testimonial-modal testimonial-popup-1">
+    <div class="modal fade" id="testimonialsModal" tabindex="-1" aria-labelledby="testimonialsModal" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px" viewBox="0 0 22 22" version="1.1" class="replaced-svg">
+                    <g id="eLife-Flows---Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="dd_eLifeConfig-1.0.7" transform="translate(-1297.000000, -629.000000)" stroke="#242424">
+                            <g id="verifyEligibility" transform="translate(0.000000, 576.000000)">
+                                <g id="title" transform="translate(609.000000, 40.000000)">
+                                    <g id="closeIcon" transform="translate(675.000000, 0.000000)">
+                                        <g id="Close-icon-Icon/Outline-1pt/close/close_black" transform="translate(12.000000, 12.000000)">
+                                            <line x1="22.5" y1="1.5" x2="1.5" y2="22.5" id="Line"></line>
+                                            <line x1="22.5" y1="22.5" x2="1.5" y2="1.5" id="Line"></line>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+
+            <div class="modal-body">
+              <!-- page title -->
+              <div class="sec-title uppercase font-base primary bold mb-32">
+                <h4>Submit a Testimonial</h4>
+              </div>
+                <div class="sec-paragraph dark medium mb-42">
+                    <p>We are always interested in hearing from the families that we serve.  Please take a moment to let us know how well we served you in your time of need. We very much appreciate your feedback.</p>
+                </div>
+
+                <section class="contact-us-form testimonials">
+                    <form>
+                        <div class="form-group">
+                            <label for="Name">Your Name</label>
+                            <input type="text" class="form-control" id="name" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Your Testimonial</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        </div>
+                          
+                        
+                        
+                        <div class="sec-buttons">
+                            <button type="submit" class="letter-spacing-2 btn round uppercase font-12 primary">Submit</button>
+                        </div>
+
+                    </form>
+                </section>
+
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

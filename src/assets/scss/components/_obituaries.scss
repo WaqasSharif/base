@@ -1,6 +1,23 @@
 //For Inner pages
 .sec-obituaries{
 
+  &.white-hover{
+    .obituaries-tile {
+      a{
+        &:hover{
+          color: $white;
+          .info{
+            .sec-title{
+              h1, h2, h3, h4, h5, h6{
+                color: $white;
+              }
+            }
+        }
+        }
+      }
+    }
+    }
+
   &.default-hover{
     .obituaries-tile {
       a{

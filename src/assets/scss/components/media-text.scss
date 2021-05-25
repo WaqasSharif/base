@@ -793,6 +793,7 @@
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
   }
+  
 .media-text {
   display: flex;
   flex-direction: column;
@@ -801,6 +802,12 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
+    text-decoration: none;
+    &:hover{
+      .sec-paragraph{
+
+      }
+    }
   }
   .media-text-head{
     display: flex;
@@ -914,7 +921,44 @@
     }
   }
   
-  
+  &.primary-hover{
+    .media-text {
+      a{
+        color: $primary;
+        &:hover{
+          .sec-paragraph{
+            p{
+              color: $primary;
+            }
+          }
+          .thumbnail{
+            svg *{
+              fill: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.secondary-hover{
+    .media-text {
+      a{
+        color: $secondary;
+        &:hover{
+          .sec-paragraph{
+            p{
+              color: $secondary;
+            }
+          }
+          .thumbnail{
+            svg *{
+              fill: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 &.white-default{
   .media-text-head{
