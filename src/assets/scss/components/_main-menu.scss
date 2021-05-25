@@ -474,6 +474,9 @@
         left: 0;
         z-index: 1030;
     }
+    &.fixed-with-background {
+        position: relative;
+    }
 }
 
 
@@ -1048,6 +1051,31 @@ ul.dropdown {
 // fixed menu desktop
 .menu-fixed {
     .menu-section-desktop.fixed {
+        top: 0 !important;
+        transition: $transitions;
+        position: fixed;
+        .nav-links .main-nav-links > ul > li > a {
+            padding: 24px 0;
+        }
+
+        .logo-wrapp,
+        .logo-wrapp a,
+        .logo-wrapp img,
+        .logo-wrapp svg {
+            max-width: 110px;
+        }
+
+        &.default {
+            background-color: $btn-default;
+        }
+        &.primary {
+            background-color: $primary;
+        }
+        &.secondary {
+            background-color: $secondary;
+        }
+    }
+    .menu-section-desktop.fixed-with-background {
         top: 0 !important;
         transition: $transitions;
         position: fixed;

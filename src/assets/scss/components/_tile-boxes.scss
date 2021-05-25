@@ -99,7 +99,7 @@
         }
     }
 
-    &.hover-color {
+    &.hover-color-secondary {
         .tile-box {
             &:hover {
                 .content {
@@ -109,6 +109,48 @@
                         }
                         &:after {
                             border-color: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tile-box  {
+            .content {
+                .sec-paragraph {
+                    p {
+                        position: relative;
+                        &:after {
+                            background: $secondary !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.hover-color-primary {
+        .tile-box {
+            &:hover {
+                .content {
+                    .sec-paragraph {
+                        p {
+                            color: $primary;
+                        }
+                        &:after {
+                            border-color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tile-box  {
+            .content {
+                .sec-paragraph {
+                    p {
+                        position: relative;
+                        &:after {
+                            background: $primary !important;
                         }
                     }
                 }
@@ -157,6 +199,59 @@
             }
         }
     }
+
+    // with margin
+    .tiles-boxes-wrapper {
+        &.with-margin {
+            .tile-box  {
+                @media (min-width: 992px) {
+                    margin-right: 20px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // hover underline
+    .tiles-boxes-wrapper {
+        &.hover-underline {
+            .tile-box  {
+                .content {
+                    .sec-paragraph {
+                        p {
+                            position: relative;
+                            &:after {
+                                bottom: -1.25rem;
+                                content: "";
+                                display: block;
+                                height: 4px;
+                                left: 50%;
+                                position: absolute;
+                                background: #fff;
+                                -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                                width: 0;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .content {
+                        .sec-paragraph.heading-font-family {
+                            p:after {
+                                width: 100%;
+                                left: 0;
+                                content: "";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 
     // text with arrow
     .text-with-arrow {
@@ -504,6 +599,7 @@
          }
 
          .tile-box {
+             overflow: hidden;
              &:hover {
                 .show-hide {
                     height: auto;
