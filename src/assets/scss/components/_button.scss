@@ -528,6 +528,7 @@
         &.primary {
             color: $primary;
             span {
+                border-color: $primary;
                 img,
                 svg {
                     path, g {
@@ -558,6 +559,7 @@
         &.default {
             color: $btn-default;
             span {
+                border-color: $btn-default;
                 img,
                 svg {
                     path, g {
@@ -629,6 +631,7 @@
         &.secondary {
             color: $secondary;
             span {
+                border-color: $secondary;
                 img,
                 svg {
                     path, g {

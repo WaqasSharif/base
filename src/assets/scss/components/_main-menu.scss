@@ -141,7 +141,7 @@
                 text-transform: uppercase;
                 padding: 11px 0;
                 display: flex;
-                font-weight: bold;
+                font-weight: normal;
                 padding-right: 1rem;
                 &:hover {
                     text-decoration: none;
@@ -267,6 +267,11 @@
         }
 
 
+    }
+    &.bold {
+        .menu-wrapper ul li a {
+            font-weight: bold;
+        }
     }
 }
 
@@ -445,6 +450,20 @@
         }
     }
 
+    &.bold {
+        .nav-links {
+            .main-nav-links {
+                  ul {
+                      li {
+                          a {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 // if desktop menu is sticky
@@ -506,7 +525,7 @@ ul.dropdown {
             position: relative;
             padding: 16px 20px;
             display: flex;
-            font-weight: bold;
+            font-weight: normal;
         }
         &:last-child {
             a {
@@ -547,7 +566,7 @@ ul.dropdown {
                     display: flex;
                     position: relative;
                     justify-content: center;
-                    font-weight: bold;
+                    font-weight: normal;
                     &:hover {
                         text-decoration: none;
                     }

@@ -42,6 +42,9 @@
     &.secondary {
         background-color: $secondary;
     }
+    &.transparent {
+        background-color: transparent;
+    }
 
     .top-bar-content {
         display: flex;
